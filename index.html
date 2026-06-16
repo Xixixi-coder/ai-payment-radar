@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>AI支付场景雷达</title>
+<style>
+  :root {
+    --jd-red: #E2231A;
+    --jd-dark: #1A1A2E;
+    --jd-card: #16213E;
+    --jd-card2: #0F3460;
+    --accent-gold: #F2A900;
+    --accent-green: #00C9A7;
+    --accent-blue: #4CC9F0;
+    --text-primary: #F8F9FA;
+    --text-secondary: #A0AEC0;
+    --danger: #FF6B6B;
+    --warning: #FFD93D;
+    --success: #6BCB77;
+    --bg: #0D1117;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding-bottom: 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--jd-red) 0%, #B91C1C 50%, var(--jd-dark) 100%);
+    padding: 28px 20px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .header-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-title .icon { font-size: 28px; }
+  .header-date {
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 16px;
+    margin: -12px 12px 12px;
+    background: var(--jd-card);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+  }
+  .stat-item {
+    text-align: center;
+    padding: 8px 4px;
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-gold), #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-num.green { background: linear-gradient(135deg, var(--accent-green), var(--accent-blue)); -webkit-background-clip: text; }
+  .stat-num.red { background: linear-gradient(135deg, #FF6B6B, var(--jd-red)); -webkit-background-clip: text; }
+  .stat-num.blue { background: linear-gradient(135deg, var(--accent-blue), #7B61FF); -webkit-background-clip: text; }
+  .stat-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  /* Section */
+  .section {
+    padding: 0 12px;
+    margin-bottom: 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .section-header .badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-hot { background: var(--jd-red); color: #fff; }
+  .badge-new { background: var(--accent-green); color: #000; }
+
+  /* News Cards */
+  .news-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 4px 0 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .news-scroll::-webkit-scrollbar { display: none; }
+  .news-card {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--jd-card);
+    border-radius: 14px;
+    padding: 16px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  .news-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .news-card:nth-child(1)::before { background: var(--jd-red); }
+  .news-card:nth-child(2)::before { background: var(--accent-gold); }
+  .news-card:nth-child(3)::before { background: var(--accent-blue); }
+  .news-rank {
+    width: 22px; height: 22px;
+    background: var(--jd-red);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .news-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .news-summary {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .news-source {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Expandable Cards */
+  .card {
+    background: var(--jd-card);
+    border-radius: 14px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.04);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .card.expanded {
+    border-color: rgba(226,35,26,0.3);
+    box-shadow: 0 4px 20px rgba(226,35,26,0.1);
+  }
+  .card-head {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .card-head:active { opacity: 0.8; }
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .card-info { flex: 1; min-width: 0; }
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-subtitle {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+  .card.expanded .card-arrow { transform: rotate(180deg); }
+
+  .card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .card.expanded .card-body { max-height: 2000px; }
+  .card-content {
+    padding: 0 16px 16px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* Scene Items */
+  .scene-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .scene-item:last-child { border-bottom: none; }
+  .scene-name {
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .scene-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+  .scene-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .tag-volume { background: rgba(76,201,240,0.15); color: var(--accent-blue); }
+  .tag-tech { background: rgba(123,97,255,0.15); color: #7B61FF; }
+  .tag-pay { background: rgba(242,169,0,0.15); color: var(--accent-gold); }
+
+  /* Opportunity Indicator */
+  .opp {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .opp-high { background: rgba(226,35,26,0.2); color: #FF6B6B; }
+  .opp-mid { background: rgba(255,217,61,0.2); color: var(--warning); }
+  .opp-low { background: rgba(107,203,119,0.15); color: var(--success); }
+
+  .opp-box {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(226,35,26,0.08);
+    border-left: 3px solid var(--jd-red);
+  }
+  .opp-box.mid { background: rgba(255,217,61,0.06); border-left-color: var(--warning); }
+  .opp-box.low { background: rgba(107,203,119,0.06); border-left-color: var(--success); }
+  .opp-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--jd-red);
+    margin-bottom: 4px;
+  }
+  .opp-box.mid .opp-title { color: var(--warning); }
+  .opp-box.low .opp-title { color: var(--success); }
+  .opp-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Opportunity Board */
+  .opp-board {
+    background: linear-gradient(135deg, rgba(226,35,26,0.12), rgba(242,169,0,0.08));
+    border: 1px solid rgba(226,35,26,0.2);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 10px;
+  }
+  .opp-board-title {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .opp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .opp-row:last-child { border-bottom: none; }
+  .opp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .opp-dot.high { background: var(--danger); box-shadow: 0 0 8px rgba(255,107,107,0.5); }
+  .opp-dot.mid { background: var(--warning); box-shadow: 0 0 8px rgba(255,217,61,0.5); }
+  .opp-dot.low { background: var(--success); box-shadow: 0 0 8px rgba(107,203,119,0.5); }
+  .opp-text { flex: 1; }
+  .opp-text-title { font-size: 13px; font-weight: 700; }
+  .opp-text-desc { font-size: 11px; color: var(--text-secondary); margin-top: 3px; line-height: 1.5; }
+  .opp-value {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: rgba(226,35,26,0.15);
+    color: #FF6B6B;
+  }
+
+  /* Competitor Section */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .comp-card {
+    background: var(--jd-card);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .comp-name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .comp-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Suggestion Box */
+  .suggest-box {
+    background: linear-gradient(135deg, var(--jd-card2), var(--jd-card));
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid rgba(76,201,240,0.2);
+  }
+  .suggest-title {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .suggest-item {
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .suggest-item strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .suggest-item:last-child { margin-bottom: 0; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+  }
+  .footer a { color: var(--jd-red); text-decoration: none; }
+
+  /* Data loading placeholder */
+  .data-time { font-size: 10px; color: var(--text-secondary); }
+
+  /* Pulse animation for live dot */
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  .live-dot {
+    width: 6px; height: 6px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="header-label">JINGDONG AI PAY · DAILY RADAR</div>
+  <div class="header-title">
+    <span class="icon">📡</span>
+    AI支付场景雷达
+  </div>
+  <div class="header-date">
+    <span class="live-dot"></span>
+    <span id="report-date">2026年6月16日 周一</span> · 第24周
+  </div>
+</div>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red" id="stat-high">3</div>
+    <div class="stat-label">🔴 高优商机</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" id="stat-scenes">12</div>
+    <div class="stat-label">📍 追踪场景</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green" id="stat-news">8</div>
+    <div class="stat-label">📰 今日动态</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num blue" id="stat-compete">4</div>
+    <div class="stat-label">⚔️ 竞品动态</div>
+  </div>
+</div>
+
+<!-- ===== TOP NEWS ===== -->
+<div class="section">
+  <div class="section-header">
+    🔥 今日要闻 <span class="badge badge-hot">TOP 3</span>
+  </div>
+  <div class="news-scroll" id="news-scroll">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== OPPORTUNITY BOARD ===== -->
+<div class="section">
+  <div class="opp-board" id="opp-board">
+    <div class="opp-board-title">🎯 商机看板</div>
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== SCENE TRACKING ===== -->
+<div class="section">
+  <div class="section-header">
+    📍 场景追踪 <span class="badge badge-new">点击展开</span>
+  </div>
+  <div id="scene-cards">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== COMPETITORS ===== -->
+<div class="section">
+  <div class="section-header">⚔️ 竞品动态</div>
+  <div class="comp-grid" id="comp-grid">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== SUGGESTIONS ===== -->
+<div class="section">
+  <div class="suggest-box" id="suggest-box">
+    <div class="suggest-title">💡 今日建议</div>
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  POWERED BY京东AI付 · HERMES AGENT<br>
+  每日 09:00 自动更新 · <a href="#">查看历史日报</a>
+</div>
+
+<script>
+// ============================================================
+// DATA — cron job replaces this block each day
+// ============================================================
+const REPORT = {
+  date: "2026年6月16日 周一",
+  week: 24,
+  stats: { high: 3, scenes: 12, news: 8, compete: 4 },
+
+  news: [
+    {
+      title: "京东智能体支付协议正式发布",
+      summary: "京东科技发布智能体支付协议，允许AI Agent在授权范围内自主完成支付决策，覆盖京东全场景。",
+      source: "36氪",
+      time: "2天前"
+    },
+    {
+      title: "KFC小K助手日均语音点单突破50万笔",
+      summary: "肯德基小K助手接入语音点单+自动支付流程，日均单量超50万，AI渠道占比达18%，覆盖全国超9000家门店。",
+      source: "虎嗅",
+      time: "3天前"
+    },
+    {
+      title: "蚂蚁集团AI支付开放平台内测商户超500家",
+      summary: "蚂蚁智能体支付开放平台内测中，已接入超500家商户，涵盖餐饮、零售、出行三大赛道。",
+      source: "钛媒体",
+      time: "5天前"
+    }
+  ],
+
+  opportunities: [
+    {
+      level: "high",
+      scene: "网易游戏虚拟商品支付",
+      reason: "网易游戏充值/道具购买尚无AI语音支付入口，日均充值流水超千万",
+      action: "联合网易游戏推出「语音购皮肤/充值」，切入游戏场景AI付",
+      value: "百万级/日"
+    },
+    {
+      level: "high",
+      scene: "瑞幸咖啡AI点单",
+      reason: "瑞幸目前仅App自助下单，未接入任何AI语音支付通道",
+      action: "为瑞幸提供京东AI付SDK，实现智能眼镜/车载语音点咖啡",
+      value: "十万级/日"
+    },
+    {
+      level: "high",
+      scene: "滴滴/高德车载支付",
+      reason: "车载语音叫车→支付链路断裂，用户仍需手机确认",
+      action: "京东AI付声纹验证能力接入车机，实现全语音叫车+免密支付",
+      value: "十万级/日"
+    },
+    {
+      level: "mid",
+      scene: "携程AI助手订票",
+      reason: "携程AI助手可对话查票但支付仍跳转传统收银台",
+      action: "接入京东AI付实现对话式订票全流程，无需跳转",
+      value: "万级/日"
+    },
+    {
+      level: "mid",
+      scene: "盒马AI购物车",
+      reason: "盒马线上有AI推荐但支付环节无AI能力",
+      action: "与盒马合作智能补货→自动结算，打通AI付免密通道",
+      value: "万级/日"
+    },
+    {
+      level: "low",
+      scene: "蚂蚁AI支付生态",
+      reason: "蚂蚁开放平台内测中，500+商户接入，需关注其扩张速度",
+      action: "加快京东AI付开放平台建设，抢夺未签约商户",
+      value: "—"
+    }
+  ],
+
+  scenes: [
+    {
+      icon: "🍔",
+      color: "#FF6B6B",
+      name: "快餐茶饮",
+      summary: "KFC领跑，瑞幸/蜜雪空白",
+      items: [
+        {
+          name: "KFC 小K助手",
+          opp: "low",
+          oppLabel: "防守",
+          desc: "日均语音点单50万笔，AI占比18%，已接入支付宝AI支付。覆盖全国9000+门店。",
+          tags: [
+            { text: "50万单/日", type: "volume" },
+            { text: "语音+NLU", type: "tech" },
+            { text: "支付宝", type: "pay" }
+          ],
+          oppBox: { type: "low", title: "🟢 防守关注", desc: "已深度绑定蚂蚁，短期难切入。关注合约到期时间，储备差异化方案。" }
+        },
+        {
+          name: "瑞幸咖啡",
+          opp: "high",
+          oppLabel: "高优",
+          desc: "日均单量680万杯，App自助下单为主，暂无AI语音支付能力。",
+          tags: [
+            { text: "680万杯/日", type: "volume" },
+            { text: "暂无AI支付", type: "tech" },
+            { text: "微信/支付宝", type: "pay" }
+          ],
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "瑞幸为纯自助点单模式，接入AI语音支付可提升下单效率。建议为其定制「语音点咖啡」SDK，适配智能眼镜/车载/手表端。" }
+        },
+        {
+          name: "蜜雪冰城",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "日均2000万杯，加盟模式为主，支付数字化程度较低。",
+          tags: [
+            { text: "2000万杯/日", type: "volume" },
+            { text: "传统POS", type: "tech" },
+            { text: "微信/支付宝", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "体量巨大但加盟商分散，可从总部层面推AI收银方案+京东AI付通道。" }
+        }
+      ]
+    },
+    {
+      icon: "🛒",
+      color: "#E2231A",
+      name: "电商平台",
+      summary: "京东AI付已落地，蚂蚁紧追",
+      items: [
+        {
+          name: "京东AI付（自有）",
+          opp: "low",
+          oppLabel: "自有",
+          desc: "搭载JoyAI大模型，已在智能眼镜、JoyAI App落地。支持语音下单+声纹免密支付。最新发布智能体支付协议。",
+          tags: [
+            { text: "JoyAI大模型", type: "tech" },
+            { text: "声纹验证", type: "tech" },
+            { text: "京东支付", type: "pay" }
+          ],
+          oppBox: null
+        },
+        {
+          name: "淘宝/支付宝 AI购物",
+          opp: "low",
+          oppLabel: "竞品",
+          desc: "蚂蚁AI支付开放平台内测中，500+商户接入。淘宝AI购物助手已支持对话式下单。",
+          tags: [
+            { text: "500+商户内测", type: "volume" },
+            { text: "通义大模型", type: "tech" },
+            { text: "支付宝", type: "pay" }
+          ],
+          oppBox: { type: "low", title: "🟢 防守关注", desc: "蚂蚁生态闭环优势大，需关注其开放平台商户增速及合约排他性条款。" }
+        }
+      ]
+    },
+    {
+      icon: "🚗",
+      color: "#4CC9F0",
+      name: "出行/车载",
+      summary: "语音支付刚需场景，空白较大",
+      items: [
+        {
+          name: "滴滴出行",
+          opp: "high",
+          oppLabel: "高优",
+          desc: "日均3000万单，车载语音叫车已有但支付仍需手机确认。",
+          tags: [
+            { text: "3000万单/日", type: "volume" },
+            { text: "语音叫车已有", type: "tech" },
+            { text: "微信/支付宝", type: "pay" }
+          ],
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "驾驶场景下手机操作危险，声纹免密支付是刚需。京东AI付声纹能力可完美适配此场景。" }
+        },
+        {
+          name: "蔚来/小鹏车机",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "车载语音助手已成熟，但支付链路尚未打通。车内消费场景潜力大（加油/充电/停车/外卖）。",
+          tags: [
+            { text: "新势力300万+保有量", type: "volume" },
+            { text: "车载NLU", type: "tech" },
+            { text: "暂无闭环", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "与车企合作嵌入京东AI付SDK，实现车内语音消费闭环，抢占车载支付标准。" }
+        }
+      ]
+    },
+    {
+      icon: "🛍️",
+      color: "#7B61FF",
+      name: "线下零售",
+      summary: "AI收银渐起，改造空间大",
+      items: [
+        {
+          name: "盒马鲜生",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "自助结算+扫码购已普及。线上有AI推荐能力但支付环节传统。",
+          tags: [
+            { text: "300+门店", type: "volume" },
+            { text: "视觉识别结算", type: "tech" },
+            { text: "支付宝", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "盒马属阿里系，短期难直接切入。可通过京东七鲜对标，做AI智能补货+自动结算标杆。" }
+        },
+        {
+          name: "便利蜂/7-11",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "便利店高频低客单价，自助收银已普及，AI语音收银可进一步提效。",
+          tags: [
+            { text: "高频低客单", type: "volume" },
+            { text: "自助POS", type: "tech" },
+            { text: "微信/支付宝", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "可为便利店提供轻量AI收银终端，支持语音报菜+自动结算+京东支付通道。" }
+        }
+      ]
+    },
+    {
+      icon: "🎮",
+      color: "#F2A900",
+      name: "游戏/虚拟商品",
+      summary: "充值场景AI化空白，体量巨大",
+      items: [
+        {
+          name: "网易游戏",
+          opp: "high",
+          oppLabel: "高优",
+          desc: "网易游戏年收入超800亿，充值/道具交易全部传统流程，无AI支付入口。",
+          tags: [
+            { text: "800亿+/年", type: "volume" },
+            { text: "暂无AI支付", type: "tech" },
+            { text: "微信/支付宝/Apple", type: "pay" }
+          ],
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "游戏语音充值/道具购买是全新场景——玩家不离开游戏即可语音购买，体验颠覆。可联合网易推「说句话就充值」能力。" }
+        },
+        {
+          name: "腾讯游戏",
+          opp: "low",
+          oppLabel: "防守",
+          desc: "腾讯有微信支付自有生态，AI支付大概率自建。",
+          tags: [
+            { text: "1500亿+/年", type: "volume" },
+            { text: "自有生态", type: "tech" },
+            { text: "微信支付", type: "pay" }
+          ],
+          oppBox: { type: "low", title: "🟢 防守关注", desc: "腾讯自建闭环概率高，关注其AI支付产品节奏，作为竞争参照。" }
+        }
+      ]
+    },
+    {
+      icon: "✈️",
+      color: "#00C9A7",
+      name: "酒旅/生活服务",
+      summary: "AI对话订票已有，支付链路待闭环",
+      items: [
+        {
+          name: "携程AI助手",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "携程AI助手支持对话查票/推荐，但支付仍跳转传统收银台。",
+          tags: [
+            { text: "对话式查询", type: "tech" },
+            { text: "支付跳转", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "接入京东AI付可实现「帮我订明天去上海的高铁」→语音确认→自动支付全流程。" }
+        },
+        {
+          name: "美团外卖/闪购",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "美团AI助手已具备推荐能力，外卖日均超6000万单。支付环节传统。",
+          tags: [
+            { text: "6000万单/日", type: "volume" },
+            { text: "AI推荐", type: "tech" },
+            { text: "微信/支付宝/美团支付", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "美团体量大但自有支付弱。可探索京东AI付作为美团第三方AI支付通道合作。" }
+        }
+      ]
+    }
+  ],
+
+  competitors: [
+    { icon: "🐜", name: "蚂蚁AI支付", desc: "开放平台内测500+商户，餐饮/零售/出行三赛道铺开，合约可能含排他条款" },
+    { icon: "💚", name: "微信支付", desc: "暂未公开AI支付产品，但微信内置AI助手已有下单能力雏形" },
+    { icon: "🍎", name: "Apple Pay", desc: "Apple Intelligence 有望集成Siri购物支付，海外已在测试" },
+    { icon: "🤖", name: "银联智付", desc: "银联推进「无感支付」标准制定，与车企合作车载免密" }
+  ],
+
+  suggestions: [
+    "<strong>【本周BD】</strong>建议优先接触<strong>瑞幸咖啡</strong>和<strong>网易游戏</strong>——前者是高频刚需 + AI空白，后者是高客单 + 全新场景。两者都不在蚂蚁内测名单中，窗口期有限。",
+    "<strong>【产品迭代】</strong>加速<strong>车载SDK</strong>开发，声纹+语音支付在驾驶场景几乎是刚需，滴滴和蔚来都有合作切入口。先做demo跑通链路，Q3争取POC。",
+    "<strong>【防御策略】</strong>关注蚂蚁开放平台从内测转公测的节奏。建议在其公测前，锁定20家头部商户签合作意向书，形成先发壁垒。"
+  ]
+};
+
+// ============================================================
+// RENDER
+// ============================================================
+function render(data) {
+  // Date
+  document.getElementById('report-date').textContent = data.date;
+
+  // Stats
+  document.getElementById('stat-high').textContent = data.stats.high;
+  document.getElementById('stat-scenes').textContent = data.stats.scenes;
+  document.getElementById('stat-news').textContent = data.stats.news;
+  document.getElementById('stat-compete').textContent = data.stats.compete;
+
+  // News
+  const newsHtml = data.news.map((n, i) => `
+    <div class="news-card">
+      <div class="news-rank">${i + 1}</div>
+      <div class="news-title">${n.title}</div>
+      <div class="news-summary">${n.summary}</div>
+      <div class="news-source">
+        <span>${n.source}</span>
+        <span>${n.time}</span>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('news-scroll').innerHTML = newsHtml;
+
+  // Opportunity Board
+  const oppHtml = data.opportunities.map(o => `
+    <div class="opp-row">
+      <div class="opp-dot ${o.level === 'high' ? 'high' : o.level === 'mid' ? 'mid' : 'low'}"></div>
+      <div class="opp-text">
+        <div class="opp-text-title">${o.scene}</div>
+        <div class="opp-text-desc">${o.reason}<br>💡 ${o.action}</div>
+      </div>
+      <div class="opp-value">${o.value}</div>
+    </div>
+  `).join('');
+  document.getElementById('opp-board').innerHTML =
+    `<div class="opp-board-title">🎯 商机看板 · ${data.stats.high}个高优</div>` + oppHtml;
+
+  // Scene Cards
+  const sceneHtml = data.scenes.map((s, si) => {
+    const itemsHtml = s.items.map(item => {
+      const tagsHtml = (item.tags || []).map(t =>
+        `<span class="tag tag-${t.type}">${t.text}</span>`
+      ).join('');
+      const oppBoxHtml = item.oppBox ? `
+        <div class="opp-box ${item.oppBox.type === 'high' ? '' : item.oppBox.type}">
+          <div class="opp-title">${item.oppBox.title}</div>
+          <div class="opp-desc">${item.oppBox.desc}</div>
+        </div>
+      ` : '';
+      return `
+        <div class="scene-item">
+          <div class="scene-name">
+            ${item.name}
+            <span class="opp opp-${item.opp === 'high' ? 'high' : item.opp === 'mid' ? 'mid' : 'low'}">${item.oppLabel}</span>
+          </div>
+          <div class="scene-desc">${item.desc}</div>
+          <div class="scene-tags">${tagsHtml}</div>
+          ${oppBoxHtml}
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="card" id="card-${si}">
+        <div class="card-head" onclick="toggleCard('card-${si}')">
+          <div class="card-icon" style="background:${s.color}22">${s.icon}</div>
+          <div class="card-info">
+            <div class="card-title">${s.name}</div>
+            <div class="card-subtitle">${s.summary}</div>
+          </div>
+          <div class="card-arrow">▼</div>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            ${itemsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('scene-cards').innerHTML = sceneHtml;
+
+  // Competitors
+  const compHtml = data.competitors.map(c => `
+    <div class="comp-card">
+      <div class="comp-name">${c.icon} ${c.name}</div>
+      <div class="comp-desc">${c.desc}</div>
+    </div>
+  `).join('');
+  document.getElementById('comp-grid').innerHTML = compHtml;
+
+  // Suggestions
+  const sugHtml = data.suggestions.map(s =>
+    `<div class="suggest-item">${s}</div>`
+  ).join('');
+  document.getElementById('suggest-box').innerHTML =
+    `<div class="suggest-title">💡 今日建议</div>` + sugHtml;
+}
+
+function toggleCard(id) {
+  const card = document.getElementById(id);
+  card.classList.toggle('expanded');
+}
+
+// Init
+render(REPORT);
+</script>
+</body>
+</html>
