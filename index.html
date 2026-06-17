@@ -117,6 +117,65 @@
     font-weight: 500;
   }
 
+  /* Executive Summary */
+  .exec-summary {
+    margin: 16px 12px 0;
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .exec-summary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--jd-red), var(--accent-amber));
+  }
+  .exec-summary-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .exec-summary-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .exec-summary-text strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .exec-summary-text .highlight {
+    color: var(--jd-red);
+    font-weight: 700;
+  }
+  .exec-summary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .exec-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .exec-tag-red { background: var(--jd-red-light); color: var(--jd-red); }
+  .exec-tag-amber { background: var(--accent-amber-light); color: #D97706; }
+  .exec-tag-blue { background: var(--accent-blue-light); color: var(--accent-blue); }
+  .exec-tag-green { background: var(--accent-green-light); color: var(--accent-green); }
+
   /* Section */
   .section {
     padding: 0 12px;
@@ -571,6 +630,11 @@
   </div>
 </div>
 
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<div class="exec-summary" id="exec-summary">
+  <!-- JS fills -->
+</div>
+
 <!-- ===== TOP NEWS ===== -->
 <div class="section">
   <div class="section-header">
@@ -629,6 +693,16 @@ const REPORT = {
   date: "2026年6月16日 周一",
   week: 24,
   stats: { high: 3, scenes: 12, news: 8, compete: 4 },
+
+  summary: {
+    text: "本周AI支付赛道进入<strong>加速期</strong>：京东正式发布<span class='highlight'>智能体支付协议</span>，标志着AI Agent自主支付进入规范化阶段；蚂蚁开放平台内测商户突破500家，竞争窗口收窄。当前识别出<span class='highlight'>3个高优商机</span>——瑞幸咖啡、网易游戏、滴滴车载均处于AI支付空白期，且未被蚂蚁锁定，建议本周优先BD接触。",
+    tags: [
+      { text: "3个高优商机待跟进", type: "red" },
+      { text: "蚂蚁500+商户内测", type: "amber" },
+      { text: "智能体支付协议发布", type: "blue" },
+      { text: "车载SDK需加速", type: "green" }
+    ]
+  },
 
   news: [
     {
@@ -922,6 +996,18 @@ const REPORT = {
 function render(data) {
   // Date
   document.getElementById('report-date').textContent = data.date;
+
+  // Executive Summary
+  if (data.summary) {
+    const tagsHtml = data.summary.tags.map(t =>
+      `<span class="exec-tag exec-tag-${t.type}">${t.text}</span>`
+    ).join('');
+    document.getElementById('exec-summary').innerHTML = `
+      <div class="exec-summary-title">📋 今日摘要</div>
+      <div class="exec-summary-text">${data.summary.text}</div>
+      <div class="exec-summary-tags">${tagsHtml}</div>
+    `;
+  }
 
   // Stats
   document.getElementById('stat-high').textContent = data.stats.high;
