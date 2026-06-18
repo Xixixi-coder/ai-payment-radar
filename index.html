@@ -690,38 +690,38 @@
 // DATA — cron job replaces this block each day
 // ============================================================
 const REPORT = {
-  date: "2026年6月17日 周三",
-  week: 24,
-  stats: { high: 3, scenes: 12, news: 9, compete: 5 },
+  date: "2026年6月18日 周四",
+  week: 25,
+  stats: { high: 3, scenes: 12, news: 8, compete: 5 },
 
   summary: {
-    text: "今日AI支付赛道迎来<strong>标志性事件</strong>：微信支付正式发布<span class='highlight'>「AI专属卡」</span>，与支付宝「阿宝」形成正面对垒，标志着两大超级App的AI支付大战正式打响。同时瑞幸AI开放平台上线已引爆开发者圈，接入支付宝AI付实现语音全链路。京东A2P2协议发布一周，需加速<span class='highlight'>商户侧落地</span>——当前窗口期：蚂蚁已锁定瑞幸/KFC，微信切入办公场景，留给京东的差异化空间在<span class='highlight'>游戏、车载、线下零售</span>三大赛道。",
+    text: "今日AI支付赛道<strong>最大变量</strong>：华为小艺智能体<span class='highlight'>全面接入华为支付</span>，实现对话中直接下单+支付，手机终端AI支付玩家再添一极。叠加昨日微信支付AI专属卡正式发布（据新京报记者实测团购咖啡暂不支持支付），以及蚂蚁国际AMP协议推向<span class='highlight'>220个跨境市场</span>，AI支付战场从国内App层扩展至<strong>终端OS层+跨境层</strong>。京东方面，A2P2协议本周连获央广财经等权威媒体报道，京东AI Agent已落地华为/OPPO/荣耀终端语音购物——<span class='highlight'>终端侧是京东当前最大优势</span>，需加速将支付闭环从购物扩展至更多场景。",
     tags: [
-      { text: "微信AI专属卡发布", type: "red" },
-      { text: "瑞幸已接入支付宝", type: "amber" },
-      { text: "A2P2需加速落地", type: "blue" },
-      { text: "3个差异化赛道", type: "green" }
+      { text: "华为小艺接入支付", type: "red" },
+      { text: "微信AI专属卡实测受限", type: "amber" },
+      { text: "蚂蚁AMP出海220市场", type: "blue" },
+      { text: "京东终端侧优势需扩大", type: "green" }
     ]
   },
 
   news: [
     {
-      title: "微信支付正式发布「AI专属卡」",
-      summary: "微信支付今日发布AI专属卡，与主账户完全隔离，充值模式+每笔确认机制。已接入WorkBuddy办公智能体和美团服务，未来向更多智能体平台开放。",
-      source: "界面新闻",
+      title: "小艺智能体全面接入华为支付",
+      summary: "据IT之家报道，华为小艺智能体全面接入华为支付，用户在对话中即可完成下单与支付全链路，手机终端AI支付再添一极。",
+      source: "IT之家",
       time: "今天"
     },
     {
-      title: "AI版支付宝「阿宝」全端上线",
-      summary: "支付宝AI版正式推出，命名「阿宝」，成为全球首个全端AI化超级应用。用户往右一滑即可对话办理上万项生活服务，累计完成3亿笔AI智能体支付。",
-      source: "第一财经",
+      title: "微信支付AI专属卡正式发布",
+      summary: "据新京报报道，6月17日微信支付正式发布AI专属卡，内置于微信零钱，首批接入WorkBuddy智能体。记者实测团购咖啡下单暂不支持支付。",
+      source: "新京报/证券时报",
       time: "昨天"
     },
     {
-      title: "瑞幸AI开放平台上线，接入支付宝AI付",
-      summary: "瑞幸6月1日上线AI开放平台，提供MCP/CLI/Skill三种接入方式。AI Lucky智能体支持语音点单+自动匹配优惠券，已接入支付宝AI付实现说话即支付。",
-      source: "壹览商业",
-      time: "本周"
+      title: "京东科技携A2P2亮相国际金融展",
+      summary: "据央广财经报道，京东科技亮相2026国际金融展，展示A2P2智能体自主支付协议，以数字金融促进金融"五篇大文章"协同发展。",
+      source: "央广财经",
+      time: "昨天"
     }
   ],
 
@@ -729,43 +729,43 @@ const REPORT = {
     {
       level: "high",
       scene: "网易游戏虚拟商品支付",
-      reason: "网易游戏年收入超800亿，充值/道具购买仍为传统流程，确认无AI支付入口",
-      action: "联合网易游戏推出「语音购皮肤/充值」，利用A2P2协议L3能力切入游戏场景",
+      reason: "游戏行业AI支付仍为纯空白，网易年收入超800亿，支付环节无AI入口",
+      action: "联合网易游戏推出A2P2 L3「语音购皮肤/充值」，抢在腾讯AI专属卡接入游戏之前",
       value: "百万级/日"
     },
     {
       level: "high",
-      scene: "滴滴/车载语音支付闭环",
-      reason: "滴滴AI助手「小滴」已上线语音叫车，但支付环节已被支付宝AI付锁定，车载场景仍有空白",
-      action: "绕开滴滴App，直接与车企（蔚来/小鹏）合作A2P2车载SDK，抢占车内消费支付标准",
-      value: "十万级/日"
+      scene: "华为/OPPO终端AI支付扩展",
+      reason: "京东AI Agent已接入华为小艺/OPPO小布/荣耀终端，但目前仅限购物场景",
+      action: "将A2P2支付能力从京东购物扩展至终端内生活服务（外卖/出行/充值），抢占终端支付标准",
+      value: "百万级/日"
     },
     {
       level: "high",
-      scene: "线下零售AI收银终端",
-      reason: "银联商务已推出AI点餐等三大场景产品，但线下便利店/中小商户AI收银仍为空白",
-      action: "联合京东七鲜打造AI智能收银标杆，对外输出轻量AI收银终端+A2P2支付通道",
+      scene: "车载AI支付标准",
+      reason: "华为小艺已接入支付，鸿蒙车机是天然延伸；蔚来/小鹏车机支付链路仍未标准化",
+      action: "与蔚来/小鹏签A2P2车载SDK POC，抢在华为支付+鸿蒙车机闭环前占位",
       value: "十万级/日"
     },
     {
       level: "mid",
-      scene: "携程AI助手订票支付",
-      reason: "携程AI助手可对话查票但支付仍跳转传统收银台，千问APP已开放接入",
-      action: "抢在蚂蚁之前接入携程AI助手，A2P2实现「帮我订票」→语音确认→自动支付",
+      scene: "蜜雪冰城AI点单支付",
+      reason: "蜜雪日均2000万杯，已接入千问APP生态但支付通道尚未锁定",
+      action: "从蜜雪总部层面推A2P2 AI收银方案，窗口期有限",
       value: "万级/日"
     },
     {
       level: "mid",
-      scene: "蜜雪冰城AI点单",
-      reason: "蜜雪日均2000万杯，已接入千问APP生态但支付通道尚未确定",
-      action: "从蜜雪总部层面推A2P2 AI收银方案，抢在蚂蚁锁定之前签约",
+      scene: "便利店AI收银终端",
+      reason: "便利店高频低客单价，银联商务AI支付尚未覆盖便利店赛道",
+      action: "先用京东七鲜打标杆，再对外输出轻量A2P2 AI收银终端+京东支付通道",
       value: "万级/日"
     },
     {
       level: "low",
       scene: "微信AI专属卡生态跟踪",
-      reason: "微信支付今日发布AI专属卡，首批接入WorkBuddy+美团，扩张速度需密切关注",
-      action: "研究AI专属卡的充值隔离机制，A2P2的「资金载体」隔离层需形成差异化优势",
+      reason: "据新京报记者实测，团购咖啡下单暂不支持支付，产品成熟度有限",
+      action: "持续关注AI专属卡接入进度和实际支付打通情况，A2P2在体验上仍有差异化优势",
       value: "—"
     }
   ],
@@ -781,9 +781,8 @@ const REPORT = {
           name: "KFC 小K助手",
           opp: "low",
           oppLabel: "已锁定",
-          desc: "日均语音点单50万笔，AI占比18%。已深度接入支付宝AI支付+千问APP生态。覆盖全国9000+门店。",
+          desc: "已深度接入支付宝AI支付+千问APP生态。本期无新动态。",
           tags: [
-            { text: "50万单/日", type: "volume" },
             { text: "语音+NLU", type: "tech" },
             { text: "支付宝AI付", type: "pay" }
           ],
@@ -793,25 +792,24 @@ const REPORT = {
           name: "瑞幸咖啡",
           opp: "low",
           oppLabel: "已锁定",
-          desc: "6月1日上线AI开放平台（MCP/CLI/Skill），AI Lucky智能体支持语音点单。已接入支付宝AI付，实现说话即支付。接入千问APP首批生态。",
+          desc: "6月1日上线AI开放平台，AI Lucky智能体支持语音点单。已接入支付宝AI付。本期无新动态。",
           tags: [
-            { text: "680万杯/日", type: "volume" },
             { text: "AI Lucky+MCP", type: "tech" },
             { text: "支付宝AI付", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 窗口已关闭", desc: "⚠️ 情报更新：瑞幸已于6月1日上线AI开放平台并接入支付宝AI付，此前高优判断已失效。关注其MCP生态扩展情况。" }
+          oppBox: { type: "low", title: "🟢 窗口已关闭", desc: "瑞幸已于6月1日上线AI开放平台并接入支付宝AI付。关注其MCP生态扩展情况。" }
         },
         {
           name: "蜜雪冰城",
           opp: "mid",
           oppLabel: "窗口期",
-          desc: "日均2000万杯，已接入千问APP生态（首批企业）。加盟模式为主，支付数字化程度仍低，支付通道尚未锁定。",
+          desc: "据行业估算日均约2000万杯，已接入千问APP生态。加盟模式为主，支付通道尚未锁定。",
           tags: [
-            { text: "2000万杯/日", type: "volume" },
+            { text: "🔶 行业估算", type: "volume" },
             { text: "千问APP接入", type: "tech" },
             { text: "支付待定", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 窗口期商机", desc: "蜜雪已接入千问但支付通道未锁定。体量巨大（日均2000万杯），建议从总部层面尽快推A2P2 AI收银方案。" }
+          oppBox: { type: "mid", title: "🟡 窗口期商机", desc: "蜜雪已接入千问但支付通道未锁定。体量巨大，建议从总部层面尽快推A2P2 AI收银方案。" }
         }
       ]
     },
@@ -819,31 +817,31 @@ const REPORT = {
       icon: "🛒",
       color: "#E2231A",
       name: "电商平台",
-      summary: "京东A2P2发布，蚂蚁全端AI化",
+      summary: "京东A2P2获权威媒体背书，蚂蚁出海",
       items: [
         {
           name: "京东A2P2协议（自有）",
           opp: "low",
           oppLabel: "自有",
-          desc: "6月11日发布国内首个智能体自主支付协议A2P2，L0-L5六级自主化体系。首创ARI身份机制+资金载体隔离层+存证链。发布后股价涨超3%。",
+          desc: "6月11日发布国内首个智能体自主支付协议A2P2。据央广财经报道，京东科技携A2P2亮相2026国际金融展。京东AI Agent已接入华为/OPPO/荣耀终端，语音点外卖最快3秒完成支付。",
           tags: [
             { text: "A2P2协议", type: "tech" },
-            { text: "L0-L5分级", type: "tech" },
+            { text: "华为/OPPO/荣耀终端", type: "tech" },
             { text: "京东支付", type: "pay" }
           ],
           oppBox: null
         },
         {
-          name: "支付宝「阿宝」",
+          name: "支付宝「阿宝」+ AMP出海",
           opp: "low",
           oppLabel: "竞品",
-          desc: "6月16日AI版支付宝「阿宝」全端上线，成为全球首个全端AI化超级应用。累计3亿笔AI智能体支付，支持95%通用智能体框架。Token Pay+AI钱包全栈体系已成型。",
+          desc: "6月16日阿宝全端上线，累计3亿笔AI支付。据多家媒体报道，蚂蚁国际6月8日推出AMP协议（移动智能体支付协议），一次接入触达220个市场、20亿用户、1.5亿商户。",
           tags: [
-            { text: "3亿笔AI支付", type: "volume" },
-            { text: "全端AI化", type: "tech" },
+            { text: "3亿笔+220市场", type: "volume" },
+            { text: "AMP跨境协议", type: "tech" },
             { text: "支付宝", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 最大竞品", desc: "蚂蚁已形成AI付+AI收+Token Pay+AI钱包全栈体系，3亿笔交易量遥遥领先。A2P2需加速商户侧落地对抗。" }
+          oppBox: { type: "low", title: "🟢 最大竞品升级", desc: "蚂蚁不仅国内3亿笔领先，AMP协议已将AI支付推向跨境。A2P2需思考国际化路线图，否则蚂蚁将在全球范围内形成标准锁定。" }
         }
       ]
     },
@@ -851,31 +849,30 @@ const REPORT = {
       icon: "🚗",
       color: "#4CC9F0",
       name: "出行/车载",
-      summary: "滴滴已接入蚂蚁，车企仍有空白",
+      summary: "华为小艺+支付打通，车载窗口收窄",
       items: [
         {
-          name: "滴滴出行",
+          name: "华为小艺+华为支付",
           opp: "mid",
-          oppLabel: "已有竞品",
-          desc: "3月上线AI出行助手「小滴」，支持一句话叫车。千问APP已接入「一句话打车+支付宝AI付」全链路，支付环节基本被蚂蚁锁定。",
+          oppLabel: "新竞品",
+          desc: "据IT之家今日报道，小艺智能体全面接入华为支付，对话中即可完成下单与支付。鸿蒙车机搭载小艺，车载支付闭环已具雏形。",
           tags: [
-            { text: "3000万单/日", type: "volume" },
-            { text: "小滴AI助手", type: "tech" },
-            { text: "支付宝AI付", type: "pay" }
+            { text: "终端原生", type: "tech" },
+            { text: "华为支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 支付已被锁定", desc: "⚠️ 情报更新：滴滴App内支付已被支付宝AI付接入。差异化机会在于车机端——车企车载系统支付链路仍未打通，可直接与车企合作。" }
+          oppBox: { type: "mid", title: "🟡 新变量出现", desc: "⚠️ 华为小艺+华为支付打通，鸿蒙车机是天然延伸。如果华为率先在车机实现语音支付闭环，A2P2的车载差异化空间将大幅收窄。需加速车企合作。" }
         },
         {
           name: "蔚来/小鹏车机",
           opp: "high",
           oppLabel: "高优",
-          desc: "车载语音助手成熟，银联APOP已与智谱+极豆车载完成车载咖啡购买验证。但新势力自有车机支付链路尚未标准化，A2P2有差异化切入空间。",
+          desc: "非鸿蒙系车企车机支付链路仍未标准化。银联APOP虽已与智谱+极豆车载验证，但标准未锁定。华为支付打通增加了紧迫性。",
           tags: [
             { text: "新势力300万+保有量", type: "volume" },
             { text: "车载NLU", type: "tech" },
             { text: "标准待定", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "车载场景是A2P2的最佳差异化战场：驾驶中声纹免密是刚需，银联APOP虽已验证但标准未锁定。建议Q3前与蔚来/小鹏签POC，抢占车载AI支付标准。" }
+          oppBox: { type: "high", title: "🔴 高优商机（紧迫性升级）", desc: "华为小艺+支付已打通，鸿蒙车机闭环在即。非鸿蒙系车企（蔚来/小鹏）成为A2P2最后的差异化战场。建议本月内启动POC签约。" }
         }
       ]
     },
@@ -883,31 +880,31 @@ const REPORT = {
       icon: "🛍️",
       color: "#8B5CF6",
       name: "线下零售",
-      summary: "银联商务入场，京东七鲜可对标",
+      summary: "银联商务入场，便利店仍为空白",
       items: [
         {
           name: "银联商务AI支付",
           opp: "low",
           oppLabel: "竞品",
-          desc: "6月16日正式发布AI支付产品，基于银联APOP协议。已落地园区食品预定、云缴费、AI点餐三大场景。提供有/无智能体两种接入模式。",
+          desc: "6月16日正式发布AI支付产品，基于银联APOP协议。已落地园区食品预定、云缴费、AI点餐三大场景。本期无新动态。",
           tags: [
             { text: "三大场景", type: "volume" },
             { text: "APOP协议", type: "tech" },
             { text: "银联", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 新竞品关注", desc: "银联商务依托APOP协议入场，覆盖园区/缴费/点餐。需关注其商户拓展速度和排他条款。" }
+          oppBox: { type: "low", title: "🟢 新竞品关注", desc: "银联商务依托APOP协议入场，覆盖园区/缴费/点餐。需关注其商户拓展速度。" }
         },
         {
           name: "便利蜂/7-11",
-          opp: "high",
-          oppLabel: "高优",
-          desc: "便利店高频低客单价，自助收银已普及但无AI收银方案。银联商务尚未覆盖便利店赛道。",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "便利店高频低客单价，自助收银已普及但无AI收银方案。各家均未覆盖便利店赛道。",
           tags: [
             { text: "高频低客单", type: "volume" },
             { text: "自助POS", type: "tech" },
             { text: "微信/支付宝", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "便利店是银联商务尚未覆盖的空白。可推出轻量A2P2 AI收银终端，语音报菜+自动结算+京东支付通道。先用京东七鲜打标杆再对外输出。" }
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "便利店AI收银仍为空白。可推出轻量A2P2 AI收银终端。先用京东七鲜打标杆再对外输出。" }
         }
       ]
     },
@@ -915,31 +912,31 @@ const REPORT = {
       icon: "🎮",
       color: "#F59E0B",
       name: "游戏/虚拟商品",
-      summary: "确认全行业AI支付空白，体量巨大",
+      summary: "全行业AI支付空白，窗口期因AI专属卡收窄",
       items: [
         {
           name: "网易游戏",
           opp: "high",
           oppLabel: "高优",
-          desc: "网易游戏年收入超800亿，AI战略聚焦研发效率和NPC玩法，支付环节确认仍为传统微信/支付宝/Apple流程，无AI支付入口。",
+          desc: "暂无公开数据显示网易游戏有AI支付计划。AI战略仍聚焦研发效率和NPC玩法，支付环节为传统流程。",
           tags: [
-            { text: "800亿+/年", type: "volume" },
+            { text: "体量巨大", type: "volume" },
             { text: "AI用于研发非支付", type: "tech" },
-            { text: "微信/支付宝/Apple", type: "pay" }
+            { text: "传统支付", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "经验证，网易游戏AI投入全在研发侧，支付为纯空白。游戏内语音充值/道具购买是全新场景，A2P2 L3能力可完美适配。建议本周BD接触网易游戏商务团队。" }
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "游戏行业AI支付纯空白。A2P2 L3能力可实现游戏内语音充值/道具购买。需抢在微信AI专属卡接入腾讯游戏之前，先拿下网易。" }
         },
         {
           name: "腾讯游戏",
           opp: "mid",
           oppLabel: "关注",
-          desc: "腾讯今日发布微信AI专属卡，AI支付能力已在WorkBuddy落地。游戏侧接入只是时间问题。",
+          desc: "微信AI专属卡6月17日正式发布，但据新京报记者实测部分场景暂不支持支付。腾讯游戏接入自家AI支付只是时间问题。",
           tags: [
-            { text: "1500亿+/年", type: "volume" },
+            { text: "体量巨大", type: "volume" },
             { text: "AI专属卡已发布", type: "tech" },
             { text: "微信支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 威胁升级", desc: "微信支付AI专属卡已正式发布，腾讯游戏接入自家AI支付只差时间。这将进一步压缩京东在游戏支付赛道的窗口期。" }
+          oppBox: { type: "mid", title: "🟡 威胁升级但尚有缓冲", desc: "AI专属卡虽已发布，但记者实测部分场景支付未通。腾讯游戏完全接入尚需时日，但窗口期确实在收窄。" }
         }
       ]
     },
@@ -947,47 +944,47 @@ const REPORT = {
       icon: "✈️",
       color: "#10B981",
       name: "酒旅/生活服务",
-      summary: "千问APP已开放，支付通道争夺中",
+      summary: "终端AI支付成新战场",
       items: [
         {
           name: "携程/东方航空",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "携程AI助手支持对话查票。东方航空已接入千问APP首批生态。支付环节仍跳转传统收银台。",
+          desc: "携程AI助手支持对话查票，支付环节仍跳转传统收银台。本期无新动态。",
           tags: [
             { text: "千问APP接入", type: "tech" },
             { text: "支付跳转", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "酒旅场景已接入千问APP但支付未锁定。A2P2可提供「帮我订票」→L3自主支付→语音确认全流程。需抢在蚂蚁AI付接入之前。" }
+          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "酒旅场景支付未锁定。A2P2可提供「帮我订票」→L3自主支付→语音确认全流程。" }
         },
         {
           name: "美团外卖/闪购",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "美团已接入微信AI专属卡首批生态。日均超6000万单。微信已切入但深度有限。",
+          desc: "美团已接入微信AI专属卡首批生态，但据新京报实测部分场景支付未通。日均超6000万单（据行业估算）。",
           tags: [
-            { text: "6000万单/日", type: "volume" },
+            { text: "🔶 行业估算6000万单/日", type: "volume" },
             { text: "微信AI专属卡", type: "tech" },
             { text: "微信/美团支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 格局变化", desc: "⚠️ 情报更新：美团已接入微信AI专属卡。但微信AI专属卡采用充值隔离模式，体验较重。A2P2的L3模式可能体验更优，仍有差异化空间。" }
+          oppBox: { type: "mid", title: "🟡 格局变化但未锁死", desc: "美团已接入微信AI专属卡但实测支付打通有限。A2P2的L3模式可能体验更优，仍有差异化空间。" }
         }
       ]
     }
   ],
 
   competitors: [
-    { icon: "🐜", name: "支付宝「阿宝」", desc: "全端AI化上线，3亿笔AI支付，Token Pay+AI钱包全栈体系。已锁定瑞幸/KFC/滴滴/千问APP生态" },
-    { icon: "💚", name: "微信AI专属卡", desc: "今日正式发布！充值隔离+每笔确认机制，首批接入WorkBuddy+美团，未来开放更多智能体" },
-    { icon: "🏦", name: "银联APOP", desc: "银联商务昨日发布AI支付产品，落地园区/缴费/点餐三场景。APOP已与智谱完成车载验证" },
-    { icon: "💳", name: "万事达Agent Pay", desc: "推出Agent Pay for Machines协议，支持AI自主支付+稳定币结算。Visa联合OpenAI推进海外AI商业" },
-    { icon: "🇮🇳", name: "Pine Labs P3P", desc: "印度首个AI智能体UPI支付协议，无需人工认证即可完成支付。新兴市场AI支付标准争夺加速" }
+    { icon: "🐜", name: "支付宝「阿宝」+ AMP", desc: "阿宝全端AI化，3亿笔AI支付。蚂蚁国际6月8日推出AMP协议，一次接入触达220市场20亿用户（据多家媒体报道）" },
+    { icon: "💚", name: "微信AI专属卡", desc: "6月17日正式发布，充值隔离+每笔确认。首批接入WorkBuddy。据新京报记者实测团购咖啡暂不支持支付" },
+    { icon: "📱", name: "华为小艺+华为支付", desc: "据IT之家今日报道，小艺智能体全面接入华为支付，对话中即可下单+支付。鸿蒙车机/眼镜是天然延伸" },
+    { icon: "🏦", name: "银联APOP", desc: "银联商务6月16日发布AI支付产品，落地园区/缴费/点餐。APOP已与智谱完成车载验证" },
+    { icon: "💳", name: "万事达/Visa", desc: "万事达Agent Pay支持AI自主支付+稳定币结算。Visa联合OpenAI推进海外AI商业。本期无新动态" }
   ],
 
   suggestions: [
-    "<strong>【紧急BD】</strong>网易游戏是当前<strong>最大差异化机会</strong>——年收入800亿+，AI投入全在研发侧，支付纯空白，且蚂蚁/微信均未锁定。建议本周联系网易游戏商务，提出A2P2 L3「不离开游戏语音充值」方案。",
-    "<strong>【车载抢位】</strong>滴滴App端已被蚂蚁锁定，但<strong>车企车机端</strong>仍是蓝海。银联APOP虽已验证车载场景，但标准未锁定。建议Q3前与蔚来/小鹏签A2P2车载SDK POC协议，抢占车载AI支付标准制定权。",
-    "<strong>【协议差异化】</strong>微信AI专属卡采用「充值隔离」模式，体验较重；蚂蚁走「全端AI化」路线。A2P2的<strong>L3自主支付+ARI身份机制</strong>在安全性和灵活性上均有差异化优势，建议加速发布A2P2开发者文档和SDK，抢占开发者生态。"
+    "<strong>【终端扩场景】</strong>京东AI Agent已落地华为/OPPO/荣耀终端购物场景（据报道语音点外卖3秒完成支付），这是当前<strong>最大差异化优势</strong>。但华为小艺今日全面接入华为支付，意味着华为随时可能自建闭环。建议加速将A2P2从购物扩展至生活服务/出行/充值等场景，在华为自建闭环前锁定更多终端入口。",
+    "<strong>【车载加速】</strong>华为小艺+华为支付打通后，<strong>鸿蒙车机支付闭环在即</strong>。非鸿蒙系车企（蔚来/小鹏）是A2P2最后的差异化车载战场。建议6月内启动与蔚来/小鹏的A2P2车载SDK POC签约，抢在华为之前占位。",
+    "<strong>【游戏窗口】</strong>微信AI专属卡虽已发布但据记者实测部分场景暂不支持支付，腾讯游戏完全接入尚需时日。<strong>网易游戏</strong>AI支付仍为空白——这是「时间差」最大的赛道，建议本周BD接触网易游戏商务，先下一城。"
   ]
 };
 
