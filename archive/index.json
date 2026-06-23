@@ -1,5 +1,9 @@
 [
   {"date": "2026-06-23", "title": "何小鹏入蚂蚁独董，车载格局剧变+八部门AI消费政策", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
+  {"date": "2026-06-22", "title": "蚂蚁董事会换届完成，GPT-5预告支付代理能力", "stats": {"high": 1, "scenes": 7, "news": 3, "compete": 3}},
+  {"date": "2026-06-21", "title": "Anthropic发布Claude Pay支付垂直模型，京东金融AI灰度", "stats": {"high": 1, "scenes": 8, "news": 4, "compete": 3}},
+  {"date": "2026-06-20", "title": "工信部AI安全指引发布，微信618小程序支付+47%", "stats": {"high": 2, "scenes": 11, "news": 5, "compete": 4}},
+  {"date": "2026-06-19", "title": "银联×智谱词元结算落地，数字人民币智能合约2.0发布", "stats": {"high": 2, "scenes": 10, "news": 6, "compete": 4}},
   {"date": "2026-06-18", "title": "华为小艺全面接入华为支付，AI支付战扩至终端OS层", "stats": {"high": 4, "scenes": 10, "news": 6, "compete": 4}},
   {"date": "2026-06-17", "title": "微信AI专属卡发布、瑞幸/滴滴情报修正", "stats": {"high": 2, "scenes": 8, "news": 5, "compete": 3}}
 ]
