@@ -690,38 +690,38 @@
 // DATA — cron job replaces this block each day
 // ============================================================
 const REPORT = {
-  date: "2026年6月24日 周三",
+  date: "2026年6月25日 周四",
   week: 26,
   stats: { high: 3, scenes: 12, news: 8, compete: 5 },
 
   summary: {
-    text: "今日AI支付赛道<strong>三大爆发信号</strong>：<span class='highlight'>微信AI「小微」正式灰度测试</span>，腾讯午后股价拉升涨超5%，恒生科技指数涨3%——微信支付AI化进入实战阶段。同日<strong>银联宣布转型金融AI「操作系统」</strong>，建15万平米算力园区、已落地120余项AI应用，APOP基础设施全面升级。叠加<span class='highlight'>支付宝AI付累计服务1.1亿用户</span>（三线及以下占40%），83%内测用户对「手动确认」不满——<strong>免确认支付体验成为下一个差异化战场</strong>。京东方面，正乾金融今日与京东科技签署AI大模型合作框架协议，A2P2生态扩展持续推进。",
+    text: "今日AI支付赛道<strong>三线并进格局加速</strong>：<span class='highlight'>刘强东APEC宣布京东AI技术全球全量开放</span>，京东科技明确A2P2协议纳入开放生态落地，70万快递员启动「涅槃计划」转型——京东AI支付基础设施向行业级开放迈出关键一步。<strong>8部门联合发文推动「AI+消费」</strong>，重点提及AI眼镜+移动支付，政策风口确认。同时<span class='highlight'>MWC上海2026开幕</span>，中国移动推「词元超市」300+模型5元包月、华为亮出Token全链路方案，<strong>AI基础设施成本骤降将加速支付场景渗透</strong>。微信小微持续放量（iOS 8.0.76内测版已推送），蚂蚁国际推出AMP全球移动智能体协议并筹备10亿美元赴港融资。",
     tags: [
-      { text: "微信小微灰度测试", type: "red" },
-      { text: "银联转型AI操作系统", type: "amber" },
-      { text: "支付宝1.1亿用户", type: "blue" },
-      { text: "免确认体验成焦点", type: "green" }
+      { text: "京东AI全量开放+A2P2", type: "red" },
+      { text: "蚂蚁AMP+赴港上市", type: "amber" },
+      { text: "8部门AI+消费政策", type: "blue" },
+      { text: "MWC词元超市降本", type: "green" }
     ]
   },
 
   news: [
     {
-      title: "微信AI「小微」灰度测试，腾讯涨超5%",
-      summary: "6月24日午后，微信AI「小微」开启灰度测试。腾讯股价13:31涨2%，13:39飙升至3%，一度涨超5%。恒生科技指数同步拉升涨3%。",
-      source: "头条搜索/多家财经媒体",
-      time: "今天"
+      title: "刘强东APEC宣布京东AI技术全球全量开放",
+      summary: "6月21日APEC论坛，刘强东宣布京东全套自研AI技术向全球伙伴无门槛开放，包括物流超脑、供应链等。京东科技补充将在开放生态下落地A2P2协议。",
+      source: "头条搜索/多家科技财经媒体",
+      time: "4天前"
     },
     {
-      title: "银联转型金融AI「操作系统」",
-      summary: "银联宣布建设15万平米算力园区，已落地120余项AI应用。定位从支付网络升级为金融AI「操作系统」，APOP框架+智谱战略合作持续深化。",
-      source: "头条搜索/行业媒体",
-      time: "今天"
+      title: "8部门发文推「AI+消费」，AI眼镜+移动支付成突破口",
+      summary: "6月22日商务部等8部门联合发布《关于加快「人工智能+消费」发展的实施意见》，明确培育智能穿戴消费市场，重点提及AI眼镜实时翻译和移动支付。",
+      source: "人工智能科普站/头条搜索",
+      time: "3天前"
     },
     {
-      title: "微信支付宝AI内测：83%用户不满手动确认",
-      summary: "2026年6月微信AI「小微」和支付宝AI「阿宝」相继内测。两者都主打「一句话办事」，但83%用户对每笔需手动确认的体验表示不满。",
-      source: "头条搜索/科技媒体",
-      time: "今天"
+      title: "MWC上海2026开幕，中国移动推「词元超市」5元包月",
+      summary: "6月24日MWC上海开幕，中国移动董事长陈忠岳发布「词元超市」，汇聚300+模型5元起包月。华为同步亮出Token全链路方案，AI基础设施成本加速下降。",
+      source: "光明网/头条搜索",
+      time: "昨天"
     }
   ],
 
@@ -729,23 +729,23 @@ const REPORT = {
     {
       level: "high",
       scene: "网易游戏虚拟商品支付",
-      reason: "游戏行业AI支付仍为纯空白，ChinaJoy 7月31日开幕AI+游戏成焦点",
-      action: "7月ChinaJoy前锁定网易合作，用A2P2 L3「语音购皮肤/充值」抢先展示",
+      reason: "游戏AI支付仍为纯空白，ChinaJoy 7月31日「与AI同游」窗口收窄",
+      action: "7月前锁定网易合作，ChinaJoy联合发布A2P2游戏语音支付方案",
       value: "百万级/日"
     },
     {
       level: "high",
       scene: "蔚来车载AI支付",
-      reason: "小鹏已倒向蚂蚁阵营，华为自建闭环；蔚来是非鸿蒙非蚂蚁最大独立车企",
-      action: "本周内完成蔚来A2P2车载SDK POC签约，月底前锁定",
+      reason: "小鹏入蚂蚁+华为闭环落地后，蔚来是独立阵营最大标的，月底到期",
+      action: "本周内完成蔚来A2P2车载SDK POC签约，利用京东AI开放生态赋能",
       value: "十万级/日"
     },
     {
       level: "high",
-      scene: "免确认支付体验（A2P2差异化）",
-      reason: "据报道83%用户不满微信/支付宝AI支付的「手动确认」，A2P2 L3可免确认",
-      action: "将「免确认」定为A2P2核心卖点，对比微信AI专属卡充值隔离+每笔确认的不便",
-      value: "体验壁垒"
+      scene: "AI眼镜支付场景（政策加持）",
+      reason: "8部门文件明确提及AI眼镜+移动支付，1-5月智能眼镜销售额增2.8倍",
+      action: "结合政策利好，加速A2P2在AI眼镜终端的语音支付方案落地",
+      value: "新兴赛道"
     },
     {
       level: "mid",
@@ -757,22 +757,22 @@ const REPORT = {
     {
       level: "mid",
       scene: "便利店AI收银终端",
-      reason: "银联商务已落地园区/缴费/点餐但未覆盖便利店赛道",
-      action: "先用京东七鲜打标杆，再对外输出轻量A2P2 AI收银终端+京东支付通道",
+      reason: "银联商务已落地三场景但未覆盖便利店；MWC词元超市降本利好终端部署",
+      action: "先用京东七鲜打标杆，再输出轻量A2P2 AI收银终端+京东支付通道",
       value: "万级/日"
     },
     {
       level: "mid",
-      scene: "AI眼镜支付场景",
-      reason: "据商务部数据1-5月智能眼镜销售额增2.8倍。八部门文件要求加强AI眼镜推广",
-      action: "探索A2P2在AI眼镜终端的语音支付场景，抢占新硬件入口",
+      scene: "京东金融鸿蒙智能体市场",
+      reason: "京小贝以A2A模式接入鸿蒙智能体市场，触达6600万HarmonyOS终端",
+      action: "推动京小贝+A2P2在鸿蒙端侧AI支付场景联动，扩大AI支付覆盖",
       value: "估算中"
     },
     {
       level: "low",
       scene: "微信AI「小微」生态跟踪",
-      reason: "今日灰度测试，资本市场反应强烈（腾讯涨超5%），生态扩展将加速",
-      action: "密切关注小微支付能力打通进度，评估对A2P2的竞争压力",
+      reason: "6月20日起灰度放量中，iOS 8.0.76内测版6月23日已推送，持续扩展",
+      action: "关注小微支付能力打通进度（当前支付仍需跳转确认），评估竞争压力",
       value: "—"
     }
   ],
@@ -782,7 +782,7 @@ const REPORT = {
       icon: "🍔",
       color: "#FF6B6B",
       name: "快餐茶饮",
-      summary: "瑞幸华为小艺闭环验证，1.3亿人AI点餐",
+      summary: "瑞幸多生态闭环，千问1.3亿AI点餐",
       items: [
         {
           name: "瑞幸咖啡+华为小艺",
@@ -825,31 +825,31 @@ const REPORT = {
       icon: "🛒",
       color: "#E2231A",
       name: "电商平台",
-      summary: "京东科技签新合作，A2P2生态扩展",
+      summary: "京东AI全量开放，A2P2纳入开放生态",
       items: [
         {
           name: "京东A2P2协议（自有）",
           opp: "low",
           oppLabel: "自有",
-          desc: "6月24日正乾金融与京东科技签署AI大模型合作框架协议（36个月）。京东Gartner供应链排名跃升至第16位，AI落地3000+场景。",
+          desc: "据报道6月21日刘强东APEC宣布京东全套AI技术全球开放。京东科技补充A2P2协议将在开放生态下落地，AI研发投入同比增超200%，已落地3000+供应链场景。",
           tags: [
             { text: "A2P2协议", type: "tech" },
-            { text: "3000+AI场景", type: "tech" },
-            { text: "京东支付", type: "pay" }
+            { text: "AI投入+200%", type: "tech" },
+            { text: "全球开放", type: "pay" }
           ],
           oppBox: null
         },
         {
-          name: "支付宝「阿宝」1.1亿用户",
+          name: "支付宝「阿宝」3亿笔AI交易",
           opp: "low",
           oppLabel: "竞品",
-          desc: "据报道支付宝AI付累计服务1.1亿用户，三线及以下地区占40%，老年用户规模可观。6月16日「阿宝」正式发布，首页右滑进入AI对话。",
+          desc: "据报道截至5月末支付宝AI智能体支付累计突破3亿笔，支持95%通用智能体框架。1.1亿用户（三线以下40%）。阿宝覆盖超万项服务，但统计支出仍遗漏71%。",
           tags: [
-            { text: "1.1亿用户", type: "volume" },
-            { text: "下沉市场40%", type: "volume" },
+            { text: "3亿笔AI交易", type: "volume" },
+            { text: "覆盖万项服务", type: "tech" },
             { text: "支付宝", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 最大竞品规模领先", desc: "支付宝AI付1.1亿用户+下沉市场40%渗透率，已形成规模壁垒。但83%用户不满「手动确认」——A2P2免确认体验是差异化突破口。" }
+          oppBox: { type: "low", title: "🟢 规模领先但体验有短板", desc: "支付宝3亿笔+1.1亿用户规模领先。但阿宝统计支出遗漏71%、理财功能不准（据媒体测评）。A2P2可主打精准度+免确认体验差异化。" }
         }
       ]
     },
@@ -857,30 +857,31 @@ const REPORT = {
       icon: "🚗",
       color: "#4CC9F0",
       name: "出行/车载",
-      summary: "华为小艺交易闭环落地，蔚来仍为空白",
+      summary: "华为HDC强化闭环，京小贝接入鸿蒙市场",
       items: [
         {
-          name: "华为小艺支付闭环",
+          name: "华为小艺+鸿蒙智能体2.0",
           opp: "low",
           oppLabel: "竞品",
-          desc: "据报道6月18日华为小艺首次实现AI交易闭环，调用2100项系统能力打通支付。瑞幸咖啡率先验证对话式交易，10秒完成点单到支付。",
+          desc: "据报道HDC2026上华为发布智能体框架2.0，小艺成为「长在操作系统里的智能体」。HarmonyOS 6终端突破6600万台。京东金融京小贝已以A2A模式接入鸿蒙智能体市场。",
           tags: [
-            { text: "2100项系统能力", type: "tech" },
+            { text: "6600万终端", type: "volume" },
+            { text: "智能体框架2.0", type: "tech" },
             { text: "华为支付", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 鸿蒙闭环已落地", desc: "华为小艺+华为支付+鸿蒙系统三位一体闭环已验证可行。鸿蒙车机+AI眼镜是天然延伸，A2P2在华为生态内的空间有限。" }
+          oppBox: { type: "low", title: "🟢 鸿蒙生态深化", desc: "鸿蒙智能体2.0+6600万终端，华为支付闭环持续强化。京小贝已接入鸿蒙市场是积极信号，可探索A2P2在鸿蒙端侧支付联动。" }
         },
         {
           name: "蔚来车机",
           opp: "high",
           oppLabel: "高优",
-          desc: "小鹏已倒向蚂蚁（何小鹏任独董+Antom支付），华为自建闭环。蔚来是非鸿蒙非蚂蚁系最大独立车企，车机支付链路仍未标准化。",
+          desc: "小鹏已倒向蚂蚁（何小鹏任独董+Antom支付），华为自建闭环。蔚来是非鸿蒙非蚂蚁系最大独立车企，车机支付链路仍未标准化。本期无新动态。",
           tags: [
             { text: "独立阵营最大标的", type: "volume" },
             { text: "车载NLU", type: "tech" },
             { text: "标准待定", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "华为闭环落地+小鹏入蚂蚁后，蔚来是A2P2车载赛道「最后的独立大标的」。建议本周内完成POC签约。" }
+          oppBox: { type: "high", title: "🔴 高优商机（月底到期）", desc: "华为闭环+HDC2026持续强化后，蔚来选择窗口进一步收窄。建议本周内完成POC签约，结合京东AI全量开放政策赋能。" }
         }
       ]
     },
@@ -888,31 +889,31 @@ const REPORT = {
       icon: "🛍️",
       color: "#8B5CF6",
       name: "线下零售",
-      summary: "银联转型AI操作系统，商务三场景落地",
+      summary: "银联三场景落地，MWC降本利好终端",
       items: [
         {
           name: "银联商务智能体支付",
           opp: "low",
           oppLabel: "竞品",
-          desc: "据报道2026年6月银联商务基于APOP框架正式推出智能体支付产品，覆盖园区食品预定、云缴费、AI点餐三大高频场景。",
+          desc: "据报道2026年6月银联商务基于APOP框架推出智能体支付，覆盖园区食品预定、云缴费、AI点餐三大场景。银联定位「不争AI支付入口，做入口背后的规矩」。",
           tags: [
             { text: "三大场景落地", type: "tech" },
             { text: "APOP框架", type: "tech" },
             { text: "银联商务", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 银联线下加速", desc: "银联商务已率先落地三大高频场景。但尚未覆盖便利店/超市等零售场景——A2P2可以差异化切入。" }
+          oppBox: { type: "low", title: "🟢 银联走中立路线", desc: "银联明确不争入口、做标准赋能者。APOP框架+19家伙伴的中立定位，对A2P2既是竞争（标准之争）也是合作机会。" }
         },
         {
           name: "便利蜂/7-11",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "便利店高频低客单价，自助收银已普及但无AI收银方案。银联商务/A2P2均未覆盖。本期无新动态。",
+          desc: "便利店高频低客单价，自助收银已普及但无AI收银方案。MWC词元超市（5元/月AI模型）降低终端部署成本。本期无新动态。",
           tags: [
             { text: "高频低客单", type: "volume" },
-            { text: "自助POS", type: "tech" },
+            { text: "词元超市降本", type: "tech" },
             { text: "微信/支付宝", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 跟进商机", desc: "便利店AI收银仍为空白。银联商务已有园区点餐经验但未延伸至便利店。A2P2可先用京东七鲜打标杆。" }
+          oppBox: { type: "mid", title: "🟡 降本窗口打开", desc: "MWC词元超市5元包月大幅降低AI终端成本。便利店AI收银部署门槛下降，A2P2可先用京东七鲜验证后快速复制。" }
         }
       ]
     },
@@ -920,31 +921,31 @@ const REPORT = {
       icon: "🎮",
       color: "#F59E0B",
       name: "游戏/虚拟商品",
-      summary: "ChinaJoy 7月开幕，AI+游戏成主题",
+      summary: "ChinaJoy 7月开幕，窗口持续收窄",
       items: [
         {
           name: "网易游戏",
           opp: "high",
           oppLabel: "高优",
-          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，游戏AI支付仍为纯空白。",
+          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，游戏AI支付仍为纯空白。距ChinaJoy仅剩36天。",
           tags: [
             { text: "体量巨大", type: "volume" },
-            { text: "ChinaJoy 7/31", type: "tech" },
+            { text: "ChinaJoy倒计时36天", type: "tech" },
             { text: "传统支付", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "ChinaJoy「与AI同游」主题+游戏AI支付纯空白=绝佳展示窗口。建议7月前锁定网易合作，ChinaJoy期间联合发布A2P2游戏支付方案。" }
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "ChinaJoy「与AI同游」+游戏AI支付纯空白=绝佳窗口。距开幕仅36天，建议本周敲定网易合作框架，7月中旬前完成Demo。" }
         },
         {
           name: "腾讯游戏+小微",
           opp: "mid",
           oppLabel: "威胁升级",
-          desc: "微信AI「小微」今日灰度测试，腾讯股价涨超5%。微信AI专属卡6月17日已发布。小微+AI专属卡+腾讯游戏整合可能加速。",
+          desc: "微信小微6月20日起灰度放量，iOS 8.0.76内测版6月23日推送。被称为「微信6年来最大改版」。小微+AI专属卡+腾讯游戏整合威胁持续升级。",
           tags: [
-            { text: "小微今日灰度", type: "volume" },
+            { text: "小微持续放量", type: "volume" },
             { text: "AI专属卡+小微", type: "tech" },
             { text: "微信支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 威胁显著升级", desc: "小微灰度+AI专属卡双管齐下，腾讯AI支付整合进入快车道。游戏赛道窗口期进一步收窄，需加速网易合作。" }
+          oppBox: { type: "mid", title: "🟡 威胁持续升级", desc: "小微被定义为「6年来最大改版」，灰度持续扩大。小微支付当前仍需跳转确认，但整合速度可能很快——游戏赛道窗口期再收窄。" }
         }
       ]
     },
@@ -952,47 +953,47 @@ const REPORT = {
       icon: "✈️",
       color: "#10B981",
       name: "酒旅/生活服务",
-      summary: "银联APOP验证航旅购票，链博会聚焦AI",
+      summary: "银联APOP航旅验证，MWC推AI-eSIM",
       items: [
         {
           name: "航旅纵横AI出行助手",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "据报道银联APOP框架已完成航旅纵横AI出行助手购票验证交易、科大讯飞智能体出境酒店预订等5笔验证交易。",
+          desc: "据报道银联APOP已完成航旅纵横AI出行助手购票验证交易、科大讯飞智能体出境酒店预订等5笔验证交易。本期无新动态。",
           tags: [
             { text: "APOP验证通过", type: "tech" },
             { text: "银联通道", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 银联抢先验证", desc: "银联APOP已在航旅场景完成验证交易。A2P2需在酒旅场景找到差异化——如携程AI助手支付环节仍跳转，可推无跳转体验。" }
+          oppBox: { type: "mid", title: "🟡 银联抢先验证", desc: "银联APOP已在航旅场景完成验证。A2P2需在酒旅场景找差异化——如携程AI助手支付仍需跳转，可推无跳转体验。" }
         },
         {
           name: "美团外卖/闪购",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "美团已接入微信AI专属卡首批生态。今日小微灰度测试后，微信AI生态扩展可能加速。日均超6000万单（据行业估算）。",
+          desc: "美团已接入微信AI专属卡首批生态。小微持续放量后，微信AI生态整合加速中。日均超6000万单（据行业估算）。本期无新动态。",
           tags: [
             { text: "🔶 行业估算6000万单/日", type: "volume" },
-            { text: "微信AI专属卡+小微", type: "tech" },
+            { text: "微信AI生态", type: "tech" },
             { text: "微信/美团支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 微信生态加速", desc: "小微灰度后微信AI生态整合加速，美团可能更深度绑定微信支付AI体系。A2P2需关注美团是否开放第三方支付AI接入。" }
+          oppBox: { type: "mid", title: "🟡 微信生态加速", desc: "小微放量后微信AI生态整合加速，美团可能更深度绑定微信支付AI体系。A2P2需关注美团是否开放第三方支付AI接入。" }
         }
       ]
     }
   ],
 
   competitors: [
-    { icon: "🐜", name: "支付宝「阿宝」", desc: "累计1.1亿用户（三线以下占40%）。6月16日正式发布，首页右滑进入AI对话。83%内测用户不满手动确认体验（据媒体报道）" },
-    { icon: "💚", name: "微信AI「小微」", desc: "6月24日正式灰度测试，腾讯股价午后涨超5%。与6月17日发布的AI专属卡形成双入口。用户在微信左上角小绿点进入" },
-    { icon: "📱", name: "华为小艺+华为支付", desc: "6月18日首次实现AI交易闭环，调用2100项系统能力。瑞幸率先验证语音点单6秒出码。鸿蒙车机/眼镜天然延伸" },
-    { icon: "🏦", name: "银联APOP", desc: "转型金融AI「操作系统」，建15万平米算力园区、120余项AI应用。APOP联合19家伙伴，已完成航旅纵横等5笔验证交易" },
-    { icon: "💳", name: "全球AI支付协议潮", desc: "据报道半年内12份AI支付协议密集发布（Google/OpenAI/Stripe等）。苹果WWDC2026 Siri升级为AI Agent，但中国大陆暂不提供" }
+    { icon: "🐜", name: "支付宝「阿宝」", desc: "据报道累计3亿笔AI智能体交易、1.1亿用户（三线以下占40%）。覆盖超万项服务，但测评显示统计支出遗漏71%。蚂蚁国际推出AMP全球移动智能体协议，筹备10亿美元赴港融资" },
+    { icon: "💚", name: "微信AI「小微」", desc: "6月20日起灰度放量，iOS 8.0.76内测版6月23日推送，被称「微信6年来最大改版」。基于自研WeLM大模型，支付功能当前仍需跳转确认" },
+    { icon: "📱", name: "华为小艺+鸿蒙", desc: "HDC2026发布智能体框架2.0，HarmonyOS 6终端突破6600万台。6月18日首次实现AI交易闭环。华为MWC亮出Token全链路方案" },
+    { icon: "🏦", name: "银联APOP", desc: "定位「不争AI支付入口，做入口背后的规矩」。APOP联合19家伙伴，已完成5笔验证交易。银联商务落地园区/缴费/点餐三大场景" },
+    { icon: "💳", name: "全球AI支付协议潮", desc: "据报道半年内12份AI支付协议密集发布（Google/OpenAI/Stripe等）。蚂蚁国际AMP瞄准跨境智能体支付标准。中国移动MWC推AI-eSIM+MobileClaw智能体框架" }
   ],
 
   suggestions: [
-    "<strong>【免确认体验差异化】</strong>据报道83%用户对微信/支付宝AI支付的「手动确认」不满。A2P2 L3的<strong>免确认自主支付</strong>正是核心差异点。建议将此定为A2P2最核心卖点，对比竞品「充值隔离+每笔确认」的不便，在BD和PR中强调<strong>「AI时代不该有确认按钮」</strong>。",
-    "<strong>【ChinaJoy窗口】</strong>2026 ChinaJoy定档7月31日，主题「与AI同游」。游戏AI支付仍为纯空白，<strong>微信小微今日灰度后窗口进一步收窄</strong>。建议7月前锁定网易游戏合作，ChinaJoy期间联合发布A2P2游戏内语音支付方案，抢占行业首发。",
-    "<strong>【蔚来本周签约】</strong>华为小艺交易闭环已落地验证（6月18日瑞幸场景），小鹏已入蚂蚁阵营。<strong>蔚来</strong>是A2P2车载赛道「最后的独立大标的」。蚂蚁可能通过何小鹏影响力向蔚来渗透。建议<strong>本周内</strong>完成蔚来A2P2车载SDK POC签约。"
+    "<strong>【京东AI开放生态+A2P2联动】</strong>刘强东APEC宣布京东AI技术全球开放，京东科技明确<strong>A2P2协议纳入开放生态落地</strong>。建议借此战略东风，将A2P2定位为「京东AI开放生态的支付基础设施」，在BD中强调<strong>与京东3000+AI场景的协同优势</strong>，对外传递「开放+免确认」双重差异化价值。",
+    "<strong>【AI眼镜政策窗口】</strong>8部门联合发文明确推动AI眼镜+移动支付，<strong>1-5月智能眼镜销售额增2.8倍</strong>。这是A2P2在新硬件终端抢占先机的最佳政策窗口。建议立即启动A2P2语音支付在AI眼镜终端的POC，结合京东AI开放生态快速落地。",
+    "<strong>【ChinaJoy倒计时36天】</strong>距ChinaJoy开幕仅剩36天，游戏AI支付仍为纯空白。<strong>微信小微持续放量</strong>（6年来最大改版），腾讯游戏整合威胁加剧。建议<strong>本周敲定网易合作框架</strong>，7月中旬前完成A2P2游戏内语音支付Demo，ChinaJoy首日联合亮相。"
   ]
 };
 
