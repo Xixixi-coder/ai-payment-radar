@@ -606,7 +606,7 @@
   </div>
   <div class="header-date">
     <span class="live-dot"></span>
-    <span id="report-date">2026年6月16日 周二</span> · 第24周
+    <span id="report-date">2026年6月16日 周二</span> · 第<span id="report-week">24</span>周
   </div>
 </div>
 
@@ -1004,6 +1004,7 @@ const REPORT = {
 function render(data) {
   // Date
   document.getElementById('report-date').textContent = data.date;
+  document.getElementById('report-week').textContent = data.week;
 
   // Executive Summary
   if (data.summary) {
