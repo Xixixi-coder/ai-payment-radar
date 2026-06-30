@@ -690,38 +690,38 @@
 // DATA — cron job replaces this block each day
 // ============================================================
 const REPORT = {
-  date: "2026年6月26日 周五",
-  week: 26,
+  date: "2026年6月30日 周一",
+  week: 27,
   stats: { high: 3, scenes: 12, news: 8, compete: 5 },
 
   summary: {
-    text: "今日AI支付赛道<strong>监管信号升温+京东Agent交付能力兑现</strong>：<span class='highlight'>周鸿祎公开发声称AI支付需守住授权底线</span>，指出智能体支付涉及身份认证与责任边界——监管舆论压力上升，安全合规将成竞争关键。<strong>京东快递Agent全托管服务正式上线</strong>，微信对话式寄件全程约30秒，A2P2协议能力首次在物流场景交付验证。同时<span class='highlight'>成都暑期消费季试点「碰一下」AI支付</span>联动20万商户，政策从文件走向实操。苹果iOS27 Beta2新增<strong>钱包自动记账+消费洞察面板</strong>，Apple在支付AI化方向加速布局。",
+    text: "今日AI支付赛道<strong>国际标准+跨境支付双重加速</strong>：<span class='highlight'>万事达卡智能体支付再下一城</span>，EMVCo同步发布数字支付凭证框架草案——全球卡组织加速抢占AI支付标准话语权。<strong>腾讯TenPayGo独立App上架</strong>瞄准来华外籍游客，微信支付与PayPal互通首期向美国开放，跨境AI支付从「互联」跃迁至「互用」。<span class='highlight'>618报告确认AI已成电商大促核心引擎</span>，京东AI技术全球开放战略持续落地。蔚来窗口今日到期，<strong>ChinaJoy倒计时31天</strong>窗口加速收窄。",
     tags: [
-      { text: "京东快递Agent上线", type: "red" },
-      { text: "周鸿祎:守住授权底线", type: "amber" },
-      { text: "成都20万商户AI支付试点", type: "blue" },
-      { text: "苹果钱包AI记账上线", type: "green" }
+      { text: "蔚来窗口今日到期", type: "red" },
+      { text: "万事达卡智能体支付扩张", type: "amber" },
+      { text: "EMVCo凭证框架草案", type: "blue" },
+      { text: "TenPayGo跨境卡位", type: "green" }
     ]
   },
 
   news: [
     {
-      title: "周鸿祎:AI支付需守住授权底线",
-      summary: "微信支付宝AI支付产品上线一周后，周鸿祎公开表示智能体支付涉及身份认证与责任边界，呼吁行业守住授权底线，监管舆论信号升温。",
-      source: "头条搜索/多家科技媒体",
-      time: "19小时前"
+      title: "万事达卡智能体支付再下一城，EMVCo发凭证框架草案",
+      summary: "支付早报6.30：万事达卡智能体支付持续扩张，EMVCo同日发布数字支付凭证框架草案征求意见，全球AI支付标准竞争升温。",
+      source: "移动支付网",
+      time: "1小时前"
     },
     {
-      title: "京东快递Agent全托管上线，对话式寄件30秒完成",
-      summary: "京东快递正式上线Agent全托管服务，嵌入微信对话场景，记者实测从发出指令到确认下单全程约30秒。A2P2协议物流场景首次兑现。",
-      source: "头条搜索/京东官方",
+      title: "618报告：AI深度融入网络零售成大促核心引擎",
+      summary: "中新经纬等联合发布《618消费洞察报告(2026)》，认为AI加速普惠，已升级为电商大促核心驱动力，京东AI技术全球开放战略加速兑现。",
+      source: "金台资讯",
+      time: "1小时前"
+    },
+    {
+      title: "腾讯TenPayGo上架App Store，瞄准来华外籍游客支付",
+      summary: "腾讯上架独立支付App TenPayGo面向来华外籍人士，结合微信支付与PayPal互通（首期向美国开放），大连达沃斯接入超40个境外钱包。",
+      source: "多家科技媒体",
       time: "近日"
-    },
-    {
-      title: "成都暑期消费季试点「碰一下」AI支付联动20万商户",
-      summary: "8部门AI+消费政策落地首城，成都2026暑期消费季试点「碰一下」AI支付与核销体系，联动20万商户实现数字化消费。",
-      source: "头条搜索/1小时前",
-      time: "今天"
     }
   ],
 
@@ -729,22 +729,22 @@ const REPORT = {
     {
       level: "high",
       scene: "网易游戏虚拟商品支付",
-      reason: "游戏AI支付仍为纯空白，ChinaJoy 7月31日「与AI同游」窗口收窄",
-      action: "本周锁定网易合作框架，ChinaJoy联合发布A2P2游戏语音支付方案",
+      reason: "游戏AI支付仍为纯空白，ChinaJoy 7月31日「与AI同游」窗口仅剩31天",
+      action: "本周必须锁定网易合作框架，7月中旬前完成A2P2游戏语音支付Demo",
       value: "百万级/日"
     },
     {
       level: "high",
       scene: "蔚来车载AI支付",
-      reason: "小鹏入蚂蚁+华为闭环落地后，蔚来是独立阵营最大标的，本月最后窗口",
-      action: "今明两天完成蔚来A2P2车载SDK POC签约，结合京东AI开放生态赋能",
+      reason: "小鹏+蚂蚁绑定加深，华为闭环强化。蔚来独立阵营窗口今日到期",
+      action: "今日最后冲刺蔚来A2P2车载SDK POC签约，错过则被迫选边",
       value: "十万级/日"
     },
     {
       level: "high",
       scene: "成都AI支付试点（政策首城）",
-      reason: "8部门政策落地首城，20万商户体量+政府背书，AI支付场景从文件走向实操",
-      action: "紧急对接成都商务局，将A2P2纳入暑期消费季AI支付技术方案供应商",
+      reason: "8部门政策落地首城，20万商户+政府背书，暑期消费季已启动",
+      action: "本周完成成都商务局对接，以京东快递Agent为案例争取A2P2技术供应商资格",
       value: "城市级试点"
     },
     {
@@ -756,23 +756,23 @@ const REPORT = {
     },
     {
       level: "mid",
-      scene: "京东快递Agent支付扩展",
-      reason: "Agent全托管已上线微信对话寄件，30秒完成——证明A2P2物流场景可行",
-      action: "将快递Agent支付闭环能力复制到京东到家、京东健康等自有场景",
-      value: "万级/日"
+      scene: "跨境AI支付标准卡位",
+      reason: "EMVCo凭证框架+万事达卡智能体支付扩张，全球AI支付标准窗口打开",
+      action: "研究EMVCo草案与A2P2协议兼容性，争取参与国内标准组织意见反馈",
+      value: "战略级"
     },
     {
       level: "mid",
-      scene: "便利店AI收银终端",
-      reason: "银联商务已落地三场景但未覆盖便利店；MWC词元超市降本利好终端部署",
-      action: "先用京东七鲜打标杆，再输出轻量A2P2 AI收银终端+京东支付通道",
+      scene: "京东快递Agent支付扩展",
+      reason: "Agent全托管已上线微信对话寄件30秒——618报告确认AI成电商核心引擎",
+      action: "将快递Agent能力复制到京东到家、京东健康，618后加速AI支付渗透",
       value: "万级/日"
     },
     {
       level: "low",
-      scene: "微信AI「小微」生态跟踪",
-      reason: "上线一周后周鸿祎等公众人物发声安全问题，监管压力或延缓小微放量节奏",
-      action: "关注小微支付安全合规进展，利用A2P2「六大等级管控」差异化定位",
+      scene: "微信小微+TenPayGo跨境生态",
+      reason: "小微灰度扩大中+TenPayGo面向外籍游客上线，腾讯AI支付内外双线布局",
+      action: "关注TenPayGo对京东跨境支付影响，利用A2P2「六大等级」安全差异化",
       value: "—"
     }
   ],
@@ -788,7 +788,7 @@ const REPORT = {
           name: "瑞幸咖啡+华为小艺",
           opp: "low",
           oppLabel: "已锁定",
-          desc: "据报道华为小艺打通支付闭环，瑞幸率先接入验证，语音点单6秒出码。瑞幸AI开放平台提供3种接口，1个月免登录嵌入企业系统。鸿蒙已接入四大场景。",
+          desc: "据报道华为小艺打通支付闭环，瑞幸率先接入验证，语音点单6秒出码。瑞幸AI开放平台提供3种接口，1个月免登录嵌入企业系统。鸿蒙已接入四大场景。本期无新动态。",
           tags: [
             { text: "6秒出码", type: "tech" },
             { text: "华为支付闭环", type: "pay" }
@@ -799,7 +799,7 @@ const REPORT = {
           name: "千问APP AI点餐生态",
           opp: "low",
           oppLabel: "竞品生态",
-          desc: "据报道超过1.3亿人通过AI点咖啡订餐，通义千问开放第三方接入，企业ROI可达3:1至5:1。春节期间「1分钱点奶茶」单日触发超3000万次用户指令。",
+          desc: "据报道超过1.3亿人通过AI点咖啡订餐，通义千问开放第三方接入，企业ROI可达3:1至5:1。春节期间「1分钱点奶茶」单日触发超3000万次用户指令。本期无新动态。",
           tags: [
             { text: "1.3亿用户", type: "volume" },
             { text: "ROI 3:1~5:1", type: "tech" },
@@ -825,16 +825,16 @@ const REPORT = {
       icon: "🛒",
       color: "#E2231A",
       name: "电商平台",
-      summary: "京东快递Agent上线，A2P2物流场景兑现",
+      summary: "618报告确认AI为电商核心引擎",
       items: [
         {
           name: "京东A2P2协议（自有）",
           opp: "low",
           oppLabel: "自有",
-          desc: "京东快递Agent全托管服务正式上线，微信对话式寄件全程约30秒。结合6月21日刘强东APEC宣布京东AI技术全球开放，A2P2协议从协议层走向场景交付。",
+          desc: "618消费洞察报告(2026)确认AI已成电商大促核心引擎。京东快递Agent全托管上线+6月21日刘强东APEC宣布AI技术全球开放，A2P2协议进入规模化交付阶段。",
           tags: [
             { text: "A2P2协议", type: "tech" },
-            { text: "快递Agent已上线", type: "tech" },
+            { text: "618 AI核心引擎", type: "tech" },
             { text: "全球开放", type: "pay" }
           ],
           oppBox: null
@@ -843,7 +843,7 @@ const REPORT = {
           name: "支付宝「阿宝」3亿笔AI交易",
           opp: "low",
           oppLabel: "竞品",
-          desc: "据报道截至5月末支付宝AI智能体支付累计突破3亿笔，支持95%通用智能体框架（含千问、Claude code等）。春节前后用户数突破1亿。蚂蚁CEO韩歆毅称将颠覆「流量为王」逻辑。",
+          desc: "据报道截至5月末支付宝AI智能体支付累计突破3亿笔，支持95%通用智能体框架。春节前后用户数突破1亿。蚂蚁CEO韩歆毅称将颠覆「流量为王」逻辑。本期无新动态。",
           tags: [
             { text: "3亿笔AI交易", type: "volume" },
             { text: "兼容95%框架", type: "tech" },
@@ -857,13 +857,13 @@ const REPORT = {
       icon: "🚗",
       color: "#4CC9F0",
       name: "出行/车载",
-      summary: "华为闭环强化，蔚来窗口最后两天",
+      summary: "蔚来窗口今日到期，华为闭环持续强化",
       items: [
         {
           name: "华为小艺+鸿蒙智能体2.0",
           opp: "low",
           oppLabel: "竞品",
-          desc: "据报道HDC2026上华为发布智能体框架2.0，小艺调用2100项系统能力打通支付。HarmonyOS 6终端突破6600万台。京东金融京小贝已以A2A模式接入鸿蒙智能体市场。",
+          desc: "据报道HDC2026上华为发布智能体框架2.0，小艺调用2100项系统能力打通支付。HarmonyOS 6终端突破6600万台。京东金融京小贝已以A2A模式接入鸿蒙智能体市场。本期无新动态。",
           tags: [
             { text: "6600万终端", type: "volume" },
             { text: "2100项能力调用", type: "tech" },
@@ -875,13 +875,13 @@ const REPORT = {
           name: "蔚来车机",
           opp: "high",
           oppLabel: "高优",
-          desc: "小鹏已倒向蚂蚁（何小鹏任蚂蚁独董+Antom香港支付支持），华为自建闭环。蔚来是非鸿蒙非蚂蚁系最大独立车企，车机支付链路仍未标准化。本期无新动态。",
+          desc: "小鹏已倒向蚂蚁（何小鹏任蚂蚁独董+Antom香港支付支持），华为自建闭环。蔚来是非鸿蒙非蚂蚁系最大独立车企，车机支付链路仍未标准化。6月底窗口今日到期。",
           tags: [
             { text: "独立阵营最大标的", type: "volume" },
             { text: "车载NLU", type: "tech" },
             { text: "标准待定", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机（月底最后窗口）", desc: "小鹏+蚂蚁绑定加深（何小鹏任独董），华为闭环持续强化。蔚来6月底前不签约则可能被迫选边。今明两天冲刺POC签约。" }
+          oppBox: { type: "high", title: "🔴 高优商机（今日最后窗口）", desc: "小鹏+蚂蚁绑定加深（何小鹏任独董），华为闭环持续强化。蔚来6月底窗口今日到期，不签约则7月或被迫选边。最后冲刺。" }
         }
       ]
     },
@@ -889,19 +889,19 @@ const REPORT = {
       icon: "🛍️",
       color: "#8B5CF6",
       name: "线下零售",
-      summary: "成都20万商户试点，政策进入实操阶段",
+      summary: "成都试点推进中，银联APOP持续落地",
       items: [
         {
           name: "成都AI支付试点",
           opp: "high",
           oppLabel: "高优",
-          desc: "据报道成都2026暑期消费季试点「碰一下」AI支付与核销体系，联动20万商户落地数字化消费。这是8部门AI+消费政策落地的首个城市级实践。",
+          desc: "据报道成都2026暑期消费季试点「碰一下」AI支付与核销体系，联动20万商户落地数字化消费。8部门AI+消费政策首城，暑期消费季已启动。本期无新动态。",
           tags: [
             { text: "20万商户", type: "volume" },
             { text: "碰一下+AI核销", type: "tech" },
             { text: "政策试点", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机（政策首城）", desc: "政策从文件走向实操，成都20万商户+政府背书=天然背书。A2P2应立即对接成都商务局，争取成为暑期消费季AI支付技术供应商。" }
+          oppBox: { type: "high", title: "🔴 高优商机（政策首城）", desc: "暑期消费季已启动，窗口紧迫。A2P2应本周完成成都商务局对接，以京东快递Agent全托管为案例争取技术供应商资格。" }
         },
         {
           name: "银联商务智能体支付",
@@ -921,31 +921,31 @@ const REPORT = {
       icon: "🎮",
       color: "#F59E0B",
       name: "游戏/虚拟商品",
-      summary: "ChinaJoy倒计时35天，窗口持续收窄",
+      summary: "ChinaJoy倒计时31天，窗口加速收窄",
       items: [
         {
           name: "网易游戏",
           opp: "high",
           oppLabel: "高优",
-          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，游戏AI支付仍为纯空白。距ChinaJoy仅剩35天。",
+          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，游戏AI支付仍为纯空白。距ChinaJoy仅剩31天。",
           tags: [
             { text: "体量巨大", type: "volume" },
-            { text: "ChinaJoy倒计时35天", type: "tech" },
+            { text: "ChinaJoy倒计时31天", type: "tech" },
             { text: "传统支付", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "ChinaJoy「与AI同游」+游戏AI支付纯空白=绝佳窗口。距开幕仅35天，建议本周敲定网易合作框架，7月中旬前完成Demo。" }
+          oppBox: { type: "high", title: "🔴 高优商机", desc: "ChinaJoy「与AI同游」+游戏AI支付纯空白=绝佳窗口。距开幕仅31天，本周必须敲定网易合作框架，7月中旬前完成Demo。" }
         },
         {
           name: "腾讯游戏+小微",
           opp: "mid",
           oppLabel: "威胁升级",
-          desc: "微信小微持续放量中。周鸿祎指出智能体支付涉及身份边界问题，或对小微放量节奏产生压力。AI专属卡仅落地WorkBuddy「美团生活助手」模块（仅Mac端）。",
+          desc: "据报道微信小微已开启灰度内测，支持自动发消息和转账功能（有限制）。腾讯同时上架TenPayGo独立支付App面向海外，内外双线布局AI支付生态。",
           tags: [
-            { text: "小微持续放量", type: "volume" },
-            { text: "AI专属卡仅Mac端", type: "tech" },
+            { text: "小微灰度扩大", type: "volume" },
+            { text: "TenPayGo上架", type: "tech" },
             { text: "微信支付", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 监管舆论或延缓节奏", desc: "周鸿祎公开发声+无专项监管规则=不确定性。微信AI专属卡当前仅限Mac端+美团场景，扩展受限——但腾讯整合速度不可低估。" }
+          oppBox: { type: "mid", title: "🟡 腾讯内外双线布局", desc: "小微灰度内测扩大（据报道支持转账）+TenPayGo面向海外=腾讯AI支付能力加速输出。但监管不确定性仍在，A2P2安全合规优势持续。" }
         }
       ]
     },
@@ -953,48 +953,48 @@ const REPORT = {
       icon: "✈️",
       color: "#10B981",
       name: "酒旅/生活服务",
-      summary: "携程Q1收入162亿，银联航旅验证通过",
+      summary: "微信PayPal互通，跨境AI支付升温",
       items: [
         {
-          name: "航旅纵横AI出行助手",
+          name: "跨境AI支付生态",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "据报道银联APOP已完成航旅纵横AI出行助手购票、科大讯飞智能体出境酒店预订等5笔验证交易。携程2026Q1净收入162亿（同比+17%），AI出行市场持续增长。",
+          desc: "据报道微信支付与PayPal正式互联互通（首期向美国开放），TenPayGo面向来华游客，大连达沃斯接入超40个境外钱包。前5月入境外籍1909.7万人次，跨境支付卡位战打响。",
+          tags: [
+            { text: "1909.7万人次入境", type: "volume" },
+            { text: "PayPal互通", type: "tech" },
+            { text: "40+境外钱包", type: "pay" }
+          ],
+          oppBox: { type: "mid", title: "🟡 跨境AI支付窗口", desc: "微信PayPal互通+TenPayGo+达沃斯40+钱包=腾讯跨境加速。A2P2需关注EMVCo凭证框架对跨境AI支付标准的影响。" }
+        },
+        {
+          name: "航旅纵横+银联APOP",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "据报道银联APOP已完成航旅纵横AI出行助手购票、科大讯飞智能体出境酒店预订等5笔验证交易。携程2026Q1净收入162亿（同比+17%），AI出行市场持续增长。本期无新动态。",
           tags: [
             { text: "APOP验证通过", type: "tech" },
             { text: "携程Q1 162亿", type: "volume" },
             { text: "银联通道", type: "pay" }
           ],
           oppBox: { type: "mid", title: "🟡 银联抢先验证", desc: "银联APOP已在航旅场景完成验证。携程Q1 162亿规模印证AI出行支付大盘。A2P2需在酒旅场景推无跳转体验差异化。" }
-        },
-        {
-          name: "美团外卖/闪购",
-          opp: "mid",
-          oppLabel: "跟进",
-          desc: "美团已接入微信AI专属卡首批生态（WorkBuddy「美团生活助手」模块，据报道仅支持Mac端）。小微持续放量后，微信AI生态整合加速中。本期无新动态。",
-          tags: [
-            { text: "🔶 行业估算6000万单/日", type: "volume" },
-            { text: "仅Mac端落地", type: "tech" },
-            { text: "微信/美团支付", type: "pay" }
-          ],
-          oppBox: { type: "mid", title: "🟡 微信生态加速但受限", desc: "AI专属卡当前仅Mac端+美团模块，实际覆盖有限。媒体实测存在响应慢等问题。移动端扩展前是A2P2差异化窗口。" }
         }
       ]
     }
   ],
 
   competitors: [
-    { icon: "🐜", name: "支付宝「阿宝」", desc: "据报道累计3亿笔AI交易、用户破1亿（春节前后）。兼容95%智能体框架。CEO韩歆毅称将颠覆「流量为王」逻辑，转向「智能体生态」。蚂蚁参展2026互联网之光，瞄准全行业基建" },
-    { icon: "💚", name: "微信AI「小微」", desc: "上线一周后周鸿祎发声「需守住授权底线」。AI专属卡仅落地WorkBuddy美团模块（Mac端），媒体实测响应慢。小微持续放量中，但监管舆论或施加压力" },
-    { icon: "📱", name: "华为小艺+鸿蒙", desc: "小艺调用2100项系统能力打通支付闭环，瑞幸率先验证语音点单6秒出码。HarmonyOS 6终端突破6600万台。京小贝A2A模式已接入鸿蒙智能体市场" },
-    { icon: "🏦", name: "银联APOP", desc: "APOP联合19家伙伴已完成5笔验证交易（航旅纵横购票+科大讯飞酒店预订等）。中国和印尼跨境二维码互联互通6月11日全面投产。境外商户超4600万" },
-    { icon: "🍎", name: "苹果Siri+Apple Pay", desc: "WWDC 2026重构Siri为智能体（6月9日），覆盖25亿台设备但国行版缺席。iOS27 Beta2新增钱包自动记账+消费洞察面板。美银上调目标价至380美元" }
+    { icon: "🐜", name: "支付宝「阿宝」", desc: "据报道累计3亿笔AI交易、用户破1亿。兼容95%智能体框架。CEO韩歆毅称将颠覆「流量为王」逻辑。本期无新动态" },
+    { icon: "💚", name: "微信AI「小微」+TenPayGo", desc: "小微灰度内测扩大（据报道支持转账功能）。腾讯上架TenPayGo独立支付App面向来华外籍游客。微信支付与PayPal互通首期开放美国。大连达沃斯接入40+境外钱包" },
+    { icon: "📱", name: "华为小艺+鸿蒙", desc: "小艺调用2100项系统能力打通支付闭环，瑞幸率先验证语音点单6秒出码。HarmonyOS 6终端突破6600万台。京小贝A2A模式已接入鸿蒙智能体市场。本期无新动态" },
+    { icon: "🏦", name: "银联APOP+万事达卡", desc: "万事达卡智能体支付再下一城（据移动支付网6.30早报）。EMVCo同日发布数字支付凭证框架草案征求意见。银联APOP联合19家伙伴已完成5笔验证交易。全球卡组织抢占AI支付标准" },
+    { icon: "🍎", name: "苹果Siri+Apple Pay", desc: "WWDC 2026重构Siri为智能体（6月9日），覆盖25亿台设备但国行版缺席。iOS27 Beta2新增钱包自动记账+消费洞察面板。本期无新动态" }
   ],
 
   suggestions: [
-    "<strong>【成都试点紧急对接】</strong>8部门政策落地首城，成都暑期消费季联动<strong>20万商户试点「碰一下」AI支付</strong>。这是A2P2进入政府级试点的最佳窗口。建议<strong>立即对接成都商务局</strong>，以京东快递Agent全托管（30秒闭环）为案例背书，争取纳入技术供应商名单。",
-    "<strong>【安全合规差异化定位】</strong>周鸿祎公开发声+行业无专项监管规则=安全合规成为赛道关键议题。A2P2「<strong>六大等级管控风险</strong>」是目前唯一公开的分级授权方案。建议将安全能力包装为对外BD核心卖点，对标小微/阿宝「笔笔确认」的体验痛点。",
-    "<strong>【ChinaJoy倒计时35天+蔚来最后窗口】</strong>两个高优商机进入最后冲刺：①网易游戏ChinaJoy联合亮相需本周敲定框架；②<strong>蔚来6月底前不签约或被迫选边</strong>（小鹏+蚂蚁绑定加深）。建议今明两天完成蔚来POC签约，同步锁定网易合作意向书。"
+    "<strong>【蔚来最后冲刺+ChinaJoy 31天】</strong>蔚来6月底窗口今日到期，不签约7月或被迫选边（小鹏+蚂蚁绑定加深）。ChinaJoy仅剩31天。建议<strong>今日完成蔚来POC签约最后沟通</strong>，同步确认网易游戏合作框架，两个高优商机不可再拖。",
+    "<strong>【关注EMVCo凭证框架草案】</strong>万事达卡智能体支付再扩张+EMVCo发布数字支付凭证框架草案=<strong>全球AI支付标准窗口打开</strong>。建议研究草案与A2P2协议的兼容对接点，争取通过国内标准组织（银联/清算协会）参与意见反馈，抢占标准话语权。",
+    "<strong>【618验证+成都试点双线推进】</strong>618报告正式确认<strong>AI已成电商大促核心引擎</strong>，京东快递Agent是最佳验证案例。本周对接成都商务局时以此为背书，同步将Agent能力扩展到京东到家/健康场景，形成AI支付矩阵。"
   ]
 };
 
