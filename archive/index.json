@@ -1,11 +1,92 @@
 [
-  {"date": "2026-07-12", "title": "碰一下Agent全量升级+智能体国标发布+IMF智能体重塑支付", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-07-03", "title": "阿宝公测全量开放+阿里AI三线出击+微信手机AI仅通信", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-30", "title": "万事达卡智能体支付扩张+EMVCo凭证框架+腾讯TenPayGo跨境布局", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-26", "title": "监管信号升温+京东快递Agent上线+成都20万商户AI支付试点", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-25", "title": "京东AI全量开放+8部门AI消费政策+MWC词元超市", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-24", "title": "微信小微灰度测试+银联转型AI操作系统+支付宝1.1亿用户", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-23", "title": "何小鹏入蚂蚁独董，车载格局剧变+八部门AI消费政策", "stats": {"high": 3, "scenes": 12, "news": 8, "compete": 5}},
-  {"date": "2026-06-18", "title": "华为小艺全面接入华为支付，AI支付战扩至终端OS层", "stats": {"high": 4, "scenes": 10, "news": 6, "compete": 4}},
-  {"date": "2026-06-17", "title": "微信AI专属卡发布、瑞幸/滴滴情报修正", "stats": {"high": 2, "scenes": 8, "news": 5, "compete": 3}}
+  {
+    "date": "2026-07-13",
+    "title": "WAIC本周开幕+支付宝AI开放平台上线+ChinaJoy倒计时18天",
+    "stats": {
+      "high": 4,
+      "scenes": 12,
+      "news": 8,
+      "compete": 6
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "title": "阿宝公测全量开放+阿里AI三线出击+微信手机AI仅通信",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "title": "万事达卡智能体支付扩张+EMVCo凭证框架+腾讯TenPayGo跨境布局",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-26",
+    "title": "监管信号升温+京东快递Agent上线+成都20万商户AI支付试点",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-25",
+    "title": "京东AI全量开放+8部门AI消费政策+MWC词元超市",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-24",
+    "title": "微信小微灰度测试+银联转型AI操作系统+支付宝1.1亿用户",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-23",
+    "title": "何小鹏入蚂蚁独董，车载格局剧变+八部门AI消费政策",
+    "stats": {
+      "high": 3,
+      "scenes": 12,
+      "news": 8,
+      "compete": 5
+    }
+  },
+  {
+    "date": "2026-06-18",
+    "title": "华为小艺全面接入华为支付，AI支付战扩至终端OS层",
+    "stats": {
+      "high": 4,
+      "scenes": 10,
+      "news": 6,
+      "compete": 4
+    }
+  },
+  {
+    "date": "2026-06-17",
+    "title": "微信AI专属卡发布、瑞幸/滴滴情报修正",
+    "stats": {
+      "high": 2,
+      "scenes": 8,
+      "news": 5,
+      "compete": 3
+    }
+  }
 ]

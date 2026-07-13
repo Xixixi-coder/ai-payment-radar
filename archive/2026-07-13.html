@@ -692,94 +692,87 @@
 const REPORT = {
   date: "2026年7月13日 周一",
   week: 29,
-  stats: { high: 4, scenes: 12, news: 8, compete: 6 },
+  stats: { high: 3, scenes: 12, news: 8, compete: 5 },
 
   summary: {
-    text: "今日AI支付赛道进入<strong>协议与入口双线竞争</strong>：<span class='highlight'>支付宝「阿宝」公测后继续向商家开放AI工具化能力</span>，微信AI生态保持小范围测试与小程序接入节奏，京东A2P2需要从协议发布转向可验证场景落地。海外侧Visa、Mastercard、Stripe、PayPal等持续推进Agentic Payments，竞争焦点从“能不能付”转向<strong>授权、风控、责任链与生态接入规模</strong>。<strong>ChinaJoy倒计时18天</strong>，游戏虚拟商品支付与车载/本地生活AI支付仍是本周最高优窗口。",
+    text: "本周AI支付赛道<strong>两大顶级大会接踵而至</strong>：<span class='highlight'>WAIC 2026（7月17-20日）将在上海开幕</span>，努比亚将首秀全球首款量产AI智能体手机（一句指令自动订票付钱），支付宝「碰一碰」将在WAIC City Walk兑换限定周边。<strong>支付宝AI开放平台正式上线</strong>，30多家头部品牌首批接入，「阿宝+碰一下Agent+AI开放平台」三件套闭环成型。<span class='highlight'>京东零售组织架构大调整</span>（取消C4/C5管理层），ChinaJoy仅剩18天。",
     tags: [
-      { text: "协议竞争升级", type: "red" },
-      { text: "阿宝商家工具化", type: "amber" },
-      { text: "微信AI生态观望", type: "blue" },
+      { text: "WAIC本周开幕+智能体手机", type: "red" },
+      { text: "支付宝AI开放平台上线", type: "amber" },
+      { text: "京东零售取消两级管理层", type: "blue" },
       { text: "ChinaJoy倒计时18天", type: "green" }
     ]
   },
 
   news: [
     {
-      title: "Agentic Payments进入规模化卡位，授权与责任链成为核心命题",
-      summary: "海外支付网络与钱包厂商持续推进智能体支付协议，企业侧关注点从交易演示转向可控授权、限额、商户白名单、凭证化与事后可追溯。",
-      source: "行业公开报道",
-      time: "本周"
+      title: "WAIC 2026本周开幕，努比亚将首秀AI智能体手机",
+      summary: "7月17-20日世界人工智能大会在上海举办，努比亚将展示全球首款量产级AI智能体手机，一句指令自动订票付钱，手机变「打工人」。",
+      source: "中新网/多家科技媒体",
+      time: "今天"
     },
     {
-      title: "支付宝「阿宝」公测后进入商家工具化阶段",
-      summary: "阿宝公测降低用户体验门槛后，商家侧小程序/服务被AI调用的能力成为下一阶段重点，支付、服务编排与风控需要一体化承接。",
-      source: "公开报道汇总",
-      time: "近一周"
+      title: "支付宝AI开放平台上线，30多家头部品牌首批接入",
+      summary: "支付宝上线AI开放平台，解决「商家从哪接、怎么被调用」问题。阿宝(入口)+碰一下(线下)+AI开放平台(商家)三块拼图一季度内全部就位。",
+      source: "多家科技媒体",
+      time: "近日"
     },
     {
-      title: "微信AI生态继续小范围推进，支付能力开放节奏仍需观察",
-      summary: "微信小程序接入AI生态与微信支付AI能力测试形成组合，但面向手机AI/通用智能体的支付闭环尚未大规模释放。",
-      source: "公开报道汇总",
-      time: "持续跟踪"
+      title: "智能体支付三巨头落子：支付宝、微信、京东半月内相继出手",
+      summary: "据报道支付宝、微信支付、京东半个月内相继落子智能体支付，万事达卡、Visa同步推出全球智能体支付服务，国标发布，基础设施成型。",
+      source: "多家科技媒体",
+      time: "前天"
     }
   ],
 
   opportunities: [
     {
       level: "high",
-      scene: "网易/游戏虚拟商品AI支付",
-      reason: "ChinaJoy 7月31日开幕，主题与AI强相关，游戏内道具、会员、礼包是低客单高频授权支付最佳试验田",
-      action: "本周完成游戏语音购道具Demo与风控限额方案，争取展前联合演示窗口",
+      scene: "WAIC 2026参展卡位（7月17日开幕）",
+      reason: "全球首款AI智能体手机首秀+1100家企业参展+300余首发产品，AI支付展示窗口4天后开启",
+      action: "紧急确认A2P2是否有WAIC展示机会，联合京东金融/京东科技争取现场Demo展位",
+      value: "战略级"
+    },
+    {
+      level: "high",
+      scene: "网易游戏虚拟商品支付",
+      reason: "游戏AI支付仍为纯空白，ChinaJoy 7月31日「与AI同游」窗口仅剩18天，近900家企业参展",
+      action: "Demo必须本周完成，ChinaJoy前锁定网易展台联合展示方案",
       value: "百万级/日"
     },
     {
       level: "high",
-      scene: "蔚来车载AI支付",
-      reason: "车载场景天然适合语音委托+低额授权，竞品已在智能座舱与钱包闭环持续卡位",
-      action: "推进A2P2车载SDK POC，以停车、充电、洗车、咖啡到车四类场景打包验证",
-      value: "十万级/日"
-    },
-    {
-      level: "high",
-      scene: "京东生态内A2P2首批样板",
-      reason: "协议发布后需要真实交易闭环证明，京东零售、到家、健康、快递具备自有场景优势",
-      action: "优先选低风险高频场景：快递改址/加急、到家补货、健康复购、差旅单项预订",
+      scene: "对抗支付宝AI开放平台（商家生态闭环）",
+      reason: "支付宝「阿宝+碰一下Agent+AI开放平台」三件套闭环成型，30+头部品牌接入",
+      action: "评估A2P2开放平台策略，联合京东到家/京东快递柜构建差异化商家接入方案",
       value: "战略级"
-    },
-    {
-      level: "high",
-      scene: "商家AI工具调用与支付收单",
-      reason: "阿宝公测后商家服务AI化会加速，谁能让商家低成本接入智能体支付，谁掌握生态扩张速度",
-      action: "输出商家接入包：意图Schema、支付授权模板、退款/售后责任链、交易看板",
-      value: "平台级"
     },
     {
       level: "mid",
-      scene: "对抗阿宝高频生活技能扩张",
-      reason: "阿宝把生活服务入口前移到对话，支付推荐不再只发生在收银台末端",
-      action: "A2P2需要把支付能力前置到办事流中，重点覆盖京东高频服务而非单纯收银台排序",
-      value: "战略级"
+      scene: "蔚来车载AI支付",
+      reason: "小鹏+蚂蚁绑定，华为闭环。WAIC期间车企AI布局将密集发布",
+      action: "蔚来7月中旬决策窗口已到，本周推进A2P2车载SDK POC签约",
+      value: "十万级/日"
     },
     {
       level: "mid",
       scene: "蜜雪冰城AI点单支付",
-      reason: "茶饮点单具备高频、低客单、可模板化授权特征，是AI点单支付的标准样板",
-      action: "用“常购饮品+门店定位+限额免确认+异常二次确认”打包轻量方案",
+      reason: "据行业估算日均约2000万杯，碰一下Agent升级+AI开放平台加速商家接入",
+      action: "抢在支付宝AI开放平台铺设蜜雪门店前推A2P2 AI收银方案",
       value: "万级/日"
     },
     {
       level: "mid",
-      scene: "手机AI助手支付卡位",
-      reason: "端侧AI将成为服务调用入口，但支付、小程序、权限与隐私边界仍未完全打开",
-      action: "评估A2P2端侧授权协议，优先支持一次性授权、场景白名单和设备可信证明",
-      value: "十亿级终端"
+      scene: "京东工品汇AI智采管家",
+      reason: "据报道京东工品汇AI智采管家选品时间缩短近60%，覆盖百万中小企业，B2B AI支付场景",
+      action: "协调内部资源，将A2P2支付能力嵌入AI智采管家采购结算环节",
+      value: "B2B场景"
     },
     {
       level: "low",
-      scene: "跨境AI支付与钱包互联",
-      reason: "跨境钱包互联持续推进，但智能体跨境支付仍受KYC、汇率、争议处理和商户责任链约束",
-      action: "保持标准跟踪，暂不作为本周主攻，把能力沉淀到凭证化与可追溯模块",
+      scene: "腾讯混元3+微信AI生态",
+      reason: "微信支付AI专属卡已发布，混元3正式版就位，但AI开放平台节奏慢于蚂蚁",
+      action: "持续监测微信支付AI专属卡与智能体结合节奏",
       value: "—"
     }
   ],
@@ -789,42 +782,42 @@ const REPORT = {
       icon: "🍔",
       color: "#FF6B6B",
       name: "快餐茶饮",
-      summary: "AI点单进入商家接入与支付闭环阶段",
+      summary: "支付宝AI开放平台加速商家接入",
       items: [
         {
           name: "瑞幸咖啡+华为小艺",
           opp: "low",
           oppLabel: "已锁定",
-          desc: "华为小艺打通点单支付闭环后，瑞幸语音点单仍是端侧AI支付最清晰样板。后续竞争点从单点演示转向商家批量接入与异常兜底。",
+          desc: "据报道华为小艺打通支付闭环，瑞幸率先接入验证，语音点单6秒出码。支付宝AI开放平台上线后，瑞幸或成首批AI开放平台商家。本期无新动态。",
           tags: [
             { text: "6秒出码", type: "tech" },
             { text: "华为支付闭环", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 多生态锁定", desc: "瑞幸已被多生态验证，A2P2茶饮机会应转向未锁定商户和可复制的商家接入工具包。" }
+          oppBox: { type: "low", title: "🟢 多生态锁定", desc: "瑞幸已同时接入支付宝AI付+华为小艺支付。支付宝AI开放平台上线将进一步加固蚂蚁在快餐场景的商家生态壁垒。" }
         },
         {
-          name: "千问APP AI点餐+阿宝公测",
+          name: "支付宝AI开放平台（30+品牌接入）",
           opp: "low",
           oppLabel: "竞品生态",
-          desc: "据报道超过1.3亿人通过AI点咖啡订餐。阿宝7月2日正式公测，72项技能含外卖点餐，阿里AI支付+生活服务生态全面向C端开放。",
+          desc: "据报道支付宝AI开放平台正式上线，30多家头部品牌首批接入，解决商家「从哪接、怎么被调用」问题。阿宝(入口)+碰一下(线下)+AI开放平台(商家)=完整闭环。",
           tags: [
-            { text: "1.3亿用户", type: "volume" },
-            { text: "商家工具化", type: "tech" },
-            { text: "全量公测", type: "pay" }
+            { text: "30+头部品牌", type: "volume" },
+            { text: "AI开放平台", type: "tech" },
+            { text: "三件套闭环", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 阿里生态全面开放", desc: "阿宝公测=AI版支付宝全量向C端开放。72项技能覆盖缴费/出行/外卖，用户获取门槛归零。A2P2需加速差异化场景落地。" }
+          oppBox: { type: "low", title: "🟢 蚂蚁商家生态闭环成型", desc: "AI开放平台=蚂蚁解决了「谁来接入」的最后一块拼图。快餐茶饮品牌接入门槛大幅降低，A2P2需加速开放平台策略。" }
         },
         {
           name: "蜜雪冰城",
           opp: "mid",
           oppLabel: "窗口收窄",
-          desc: "蜜雪冰城门店规模大、客单低、常购明显，适合做“常购饮品+附近门店+小额授权”的AI点单支付样板。当前支付通道未公开锁定。",
+          desc: "据行业估算日均约2000万杯。支付宝AI开放平台上线后，蜜雪等连锁品牌接入AI支付的技术门槛大幅降低。",
           tags: [
             { text: "🔶 行业估算", type: "volume" },
-            { text: "千问APP接入", type: "tech" },
+            { text: "AI开放平台", type: "tech" },
             { text: "支付待定", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 适合做标准样板", desc: "茶饮低客单高频，非常适合验证小额授权、异常二次确认和退款兜底。建议7月内推出A2P2蜜雪语音点单Demo。" }
+          oppBox: { type: "mid", title: "🟡 AI开放平台加速渗透", desc: "支付宝AI开放平台=商家接入从定制开发变为标准化接入。需在蚂蚁铺设前推A2P2方案。" }
         }
       ]
     },
@@ -832,31 +825,31 @@ const REPORT = {
       icon: "🛒",
       color: "#E2231A",
       name: "电商平台",
-      summary: "阿宝入口前置，A2P2需绑定真实服务",
+      summary: "京东组织架构调整，AI智采管家上线",
       items: [
         {
           name: "京东A2P2协议（自有）",
           opp: "low",
           oppLabel: "自有",
-          desc: "618消费洞察报告确认AI已成电商核心引擎。京东快递Agent全托管上线+AI技术全球开放战略持续落地。阿宝公测加剧竞争，A2P2需突出安全合规优势。",
+          desc: "据报道京东零售取消所有C4/C5管理层级，组织扁平化加速AI决策落地。京东工品汇AI智采管家上线，选品时间缩短近60%，覆盖百万中小企业。",
           tags: [
             { text: "A2P2协议", type: "tech" },
-            { text: "618 AI核心引擎", type: "tech" },
-            { text: "全球开放", type: "pay" }
+            { text: "组织架构调整", type: "tech" },
+            { text: "AI智采管家", type: "pay" }
           ],
           oppBox: null
         },
         {
-          name: "支付宝「阿宝」公测全量开放",
+          name: "支付宝「阿宝」+AI开放平台",
           opp: "low",
           oppLabel: "竞品",
-          desc: "阿宝公测后继续强化生活服务和商家工具化能力，核心威胁是把支付入口前置到AI办事流，用户不再等到收银台才做支付选择。",
+          desc: "据报道支付宝AI开放平台上线，与阿宝(线上入口)+碰一下Agent(线下)形成完整三件套。蚂蚁Ring-2.6万亿参数模型+AI安全护栏双双发布，AI基础能力持续加码。",
           tags: [
-            { text: "72项技能全量开放", type: "volume" },
-            { text: "六大场景覆盖", type: "tech" },
+            { text: "三件套闭环", type: "volume" },
+            { text: "AI安全护栏开源", type: "tech" },
             { text: "支付宝", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 蚂蚁入口前置", desc: "阿宝优势是用户入口和商家服务聚合。A2P2反击点应是京东确定性场景、风控数据和企业级合规。" }
+          oppBox: { type: "low", title: "🟢 蚂蚁AI全栈闭环完成", desc: "阿宝(线上)+碰一下Agent(线下)+AI开放平台(商家)+AI安全护栏(合规)=蚂蚁AI支付全栈能力完备。A2P2需突出国标合规+企业级安全差异化。" }
         }
       ]
     },
@@ -864,31 +857,31 @@ const REPORT = {
       icon: "🚗",
       color: "#4CC9F0",
       name: "出行/车载",
-      summary: "车载AI支付进入SDK与场景包竞争",
+      summary: "WAIC期间车企AI布局将密集发布",
       items: [
         {
-          name: "华为小艺+鸿蒙智能体2.0",
-          opp: "low",
-          oppLabel: "竞品",
-          desc: "华为小艺与鸿蒙智能体生态已验证端侧AI支付闭环，优势在设备可信、系统能力调用和语音入口。京东金融京小贝接入鸿蒙智能体市场后，可继续沉淀端侧对接经验。",
+          name: "努比亚AI智能体手机（WAIC首秀）",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "据报道7月8日中兴确认努比亚将在WAIC首秀全球首款量产AI智能体手机，「一句指令自动订票付钱」。手机Agent自主支付=新入口形态。",
           tags: [
-            { text: "6600万终端", type: "volume" },
-            { text: "2100项能力调用", type: "tech" },
-            { text: "华为支付", type: "pay" }
+            { text: "全球首款量产", type: "volume" },
+            { text: "一句指令付钱", type: "tech" },
+            { text: "Agent自主支付", type: "pay" }
           ],
-          oppBox: { type: "low", title: "🟢 鸿蒙生态深化", desc: "小艺调用2100项系统能力打通支付闭环。微信已向小米荣耀AI开放通信但支付未放行，端侧AI支付格局仍在演变中。" }
+          oppBox: { type: "mid", title: "🟡 手机Agent支付新入口", desc: "努比亚AI智能体手机=手机从工具变为自主经济主体。A2P2需评估手机Agent场景的协议适配方案。" }
         },
         {
           name: "蔚来车机",
-          opp: "high",
-          oppLabel: "高优",
-          desc: "蔚来适合以停车、充电、洗车、咖啡到车四类场景验证语音委托支付。当前关键不是单笔支付，而是车机可信设备、限额授权与行程上下文。",
+          opp: "mid",
+          oppLabel: "跟进",
+          desc: "小鹏+蚂蚁绑定加深，华为自建闭环。WAIC期间车企AI方案将密集发布，蔚来7月中旬决策窗口已到。",
           tags: [
             { text: "独立阵营最大标的", type: "volume" },
             { text: "车载NLU", type: "tech" },
             { text: "标准待定", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 POC必须场景化", desc: "车载支付POC建议打包四类高频场景，避免只做SDK能力展示；用可控授权与异常兜底形成差异化。" }
+          oppBox: { type: "mid", title: "🟡 决策窗口本周到期", desc: "WAIC期间车企AI布局密集曝光，蔚来选边压力加大。A2P2需在WAIC前完成蔚来车载方案提案。" }
         }
       ]
     },
@@ -896,31 +889,31 @@ const REPORT = {
       icon: "🛍️",
       color: "#8B5CF6",
       name: "线下零售",
-      summary: "成都试点推进中，银联APOP持续落地",
+      summary: "WAIC City Walk+碰一碰兑换，线下AI体验升级",
       items: [
+        {
+          name: "WAIC City Walk（支付宝碰一碰）",
+          opp: "low",
+          oppLabel: "竞品",
+          desc: "据报道7月15-20日WAIC「City Walk AI伴游记」启动，支付宝碰一碰兑换限定周边，8个免费打卡点覆盖上海主要商圈。碰一下Agent线下体验场景再扩展。",
+          tags: [
+            { text: "8个打卡点", type: "volume" },
+            { text: "碰一碰兑换", type: "tech" },
+            { text: "支付宝", type: "pay" }
+          ],
+          oppBox: { type: "low", title: "🟢 碰一下Agent线下场景持续扩张", desc: "WAIC City Walk=支付宝碰一下从支付工具扩展为线下互动入口。蚂蚁正将大型活动作为Agent触点推广场景。" }
+        },
         {
           name: "成都AI支付试点",
           opp: "high",
           oppLabel: "高优",
-          desc: "城市级AI消费试点具备商户规模与政策背书，但落地周期较长。短期应把京东生态内可控场景做成样板，再带方案参与城市试点。",
+          desc: "据报道成都2026暑期消费季试点AI支付与核销体系，联动20万商户。碰一下Agent升级后成都或成首批Agent触点城市。8部门政策首城。",
           tags: [
             { text: "20万商户", type: "volume" },
-            { text: "碰一下+AI核销", type: "tech" },
+            { text: "碰一下Agent", type: "tech" },
             { text: "政策试点", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 先样板后城市", desc: "建议先用京东快递/到家/健康完成真实交易闭环，再以样板能力进入城市级AI消费试点。" }
-        },
-        {
-          name: "银联商务智能体支付",
-          opp: "low",
-          oppLabel: "竞品",
-          desc: "银联APOP的价值在于把智能体支付从入口竞争拉回底层规矩：凭证、授权、商户责任、交易可追溯。A2P2需要明确自身在规则层的差异。",
-          tags: [
-            { text: "三大场景落地", type: "tech" },
-            { text: "APOP框架", type: "tech" },
-            { text: "银联商务", type: "pay" }
-          ],
-          oppBox: { type: "mid", title: "🟡 标准层竞争", desc: "建议A2P2对外材料强化四件事：用户授权边界、商户责任链、异常兜底、审计追溯。" }
+          oppBox: { type: "high", title: "🔴 高优商机（Agent触点首城）", desc: "碰一下Agent全量升级+成都政策首城=蚂蚁或率先在成都铺设Agent触点。A2P2必须抢在蚂蚁前进入试点方案。" }
         }
       ]
     },
@@ -928,31 +921,31 @@ const REPORT = {
       icon: "🎮",
       color: "#F59E0B",
       name: "游戏/虚拟商品",
-      summary: "ChinaJoy倒计时18天，游戏支付进入冲刺",
+      summary: "ChinaJoy倒计时18天，AI世界模型热潮",
       items: [
         {
           name: "网易游戏",
           opp: "high",
           oppLabel: "高优",
-          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，游戏虚拟商品AI支付仍是空白。距ChinaJoy仅剩18天。",
+          desc: "暂无公开数据显示网易游戏有AI支付计划。ChinaJoy 2026定档7月31日，主题「与AI同游」，近900家企业参展。游戏AI支付仍为纯空白。距ChinaJoy仅剩18天。",
           tags: [
-            { text: "体量巨大", type: "volume" },
+            { text: "900家企业参展", type: "volume" },
             { text: "ChinaJoy倒计时18天", type: "tech" },
             { text: "传统支付", type: "pay" }
           ],
-          oppBox: { type: "high", title: "🔴 高优商机", desc: "ChinaJoy「与AI同游」+游戏AI支付空白=绝佳窗口。本周必须完成游戏语音购道具Demo与风控限额方案。" }
+          oppBox: { type: "high", title: "🔴 高优商机（最后冲刺）", desc: "ChinaJoy仅剩18天+AI世界模型融资热潮（4399/贪玩/巨人投资VAST），游戏AI生态正在爆发。Demo必须本周完成。" }
         },
         {
-          name: "腾讯游戏+小微",
+          name: "AI世界模型+游戏引擎颠覆",
           opp: "mid",
-          oppLabel: "威胁升级",
-          desc: "据报道微信小微已开启灰度内测。微信已向小米荣耀手机AI开放通信功能，但支付小程序暂未放行（据IT之家）。腾讯AI支付能力释放节奏或慢于阿里。",
+          oppLabel: "趋势",
+          desc: "据报道4399、贪玩、巨人排队投资AI世界模型公司VAST，一个月融三轮。AI世界模型被认为将颠覆传统游戏引擎，游戏AI支付场景想象空间打开。",
           tags: [
-            { text: "小微灰度中", type: "volume" },
-            { text: "手机AI仅通信", type: "tech" },
-            { text: "微信支付", type: "pay" }
+            { text: "一月三轮融资", type: "volume" },
+            { text: "AI世界模型", type: "tech" },
+            { text: "游戏AI新范式", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 腾讯节奏慢于阿里", desc: "微信向手机AI开放通信但支付未放行，对比阿宝全量公测72项技能，腾讯AI支付释放节奏明显滞后。但微信支付用户基数决定一旦放开冲击巨大。" }
+          oppBox: { type: "mid", title: "🟡 游戏AI生态爆发", desc: "游戏厂商疯狂投入AI=游戏内经济系统将迎来AI化变革。A2P2需前瞻布局AI游戏内购支付协议。" }
         }
       ]
     },
@@ -960,50 +953,48 @@ const REPORT = {
       icon: "✈️",
       color: "#10B981",
       name: "酒旅/生活服务",
-      summary: "出行与跨境仍需关注但不是本周主攻",
+      summary: "x402协议交易量突破，跨境AI支付加速",
       items: [
         {
-          name: "跨境AI支付生态",
+          name: "x402协议+机器经济",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "跨境钱包互联持续推进，但AI委托支付在跨境场景还面临KYC、汇率、退款争议和责任链复杂度，短期更适合作为标准储备。",
+          desc: "据报道x402协议将支付逻辑直接嵌入HTTP请求-响应周期，无需账户/信用卡/人工确认。2026年Q1在Base网络上交易量已突破（具体数据未披露）。机器经济崛起。",
           tags: [
-            { text: "1909.7万人次入境", type: "volume" },
-            { text: "PayPal互通", type: "tech" },
-            { text: "40+境外钱包", type: "pay" }
+            { text: "HTTP原生支付", type: "tech" },
+            { text: "x402协议", type: "tech" },
+            { text: "机器经济", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 标准储备优先", desc: "跨境AI支付先沉淀凭证化、授权与争议处理能力，待国内样板跑通后再扩展。" }
+          oppBox: { type: "mid", title: "🟡 协议层颠覆风险", desc: "x402=支付从应用层下沉到协议层，AI智能体可无摩擦完成交易。A2P2需评估与x402的互操作性或竞争关系。" }
         },
         {
-          name: "阿宝出行+航旅场景",
+          name: "WAIC展会商业化（168元门票+300首发产品）",
           opp: "mid",
           oppLabel: "跟进",
-          desc: "出行场景具备明确行程上下文和可预测需求，但价格波动、退改签和保险搭售会增加AI代付解释成本。适合做强确认而非完全免确认。",
+          desc: "据报道WAIC首次实现「一票通」三片区，168元起现场试用300余款首发AI产品。1100余家企业、超10万平方米展区。AI产品体验+支付场景融合。",
           tags: [
-            { text: "阿宝出行技能", type: "tech" },
-            { text: "携程Q1 162亿", type: "volume" },
-            { text: "APOP+阿宝双线", type: "pay" }
+            { text: "1100家企业", type: "volume" },
+            { text: "300首发产品", type: "tech" },
+            { text: "168元一票通", type: "pay" }
           ],
-          oppBox: { type: "mid", title: "🟡 强确认场景", desc: "京东旅行可先做酒店续住、接送机、行李寄送等低争议服务，降低退改签复杂度。" }
+          oppBox: { type: "mid", title: "🟡 WAIC=AI支付最大展示窗口", desc: "1100家企业+10万㎡展区+300首发产品=WAIC是展示A2P2协议最具影响力的场合。需确认参展/合作方案。" }
         }
       ]
     }
   ],
 
   competitors: [
-    { icon: "🐜", name: "支付宝「阿宝」", desc: "公测后继续强化生活服务和商家工具化能力，核心威胁是把支付入口前置到AI办事流，用户不再等到收银台才做支付选择" },
-    { icon: "💚", name: "微信AI「小微」", desc: "仍处于渐进开放与灰度测试阶段，短期节奏慢于阿里，但小程序和微信支付生态一旦打开会带来最大规模冲击" },
-    { icon: "📱", name: "华为小艺+鸿蒙", desc: "端侧AI支付闭环样板清晰，优势在设备可信、系统能力调用和语音入口；适合作为A2P2端侧接入对标对象" },
-    { icon: "🏦", name: "银联APOP/卡组织", desc: "竞争焦点在底层规则：凭证化、授权、商户责任、争议处理和审计追溯。A2P2需避免成为单一生态协议" },
-    { icon: "🌐", name: "Stripe/PayPal等PSP", desc: "海外支付服务商围绕智能体交易、商户接入和风控工具持续扩张，说明商家侧开发者体验会决定协议扩散速度" },
-    { icon: "🍎", name: "苹果Siri+Apple Pay", desc: "苹果具备终端、钱包与隐私优势，国行节奏仍需观察；若Siri智能体能力成熟，将成为端侧AI支付强变量" }
+    { icon: "🐜", name: "支付宝AI开放平台+阿宝+碰一下", desc: "AI开放平台正式上线，30+头部品牌首批接入。阿宝(入口)+碰一下Agent(线下)+AI开放平台(商家)三件套完成。蚂蚁开源两款AI安全护栏模型（智能体行为+多模态安全）" },
+    { icon: "💚", name: "微信支付AI专属卡+混元3", desc: "据报道微信支付AI专属卡（6月17日发布）专为AI智能体支付场景设计，内置微信零钱。7月微信仅优化红包提醒，AI开放平台节奏慢于蚂蚁" },
+    { icon: "📱", name: "努比亚AI智能体手机（WAIC首秀）", desc: "7月8日中兴确认努比亚将在WAIC 2026首秀全球首款量产AI智能体手机，一句指令自动订票付钱。手机Agent自主支付=新入口形态" },
+    { icon: "🏦", name: "万事达+Visa智能体支付", desc: "据报道万事达卡、Visa同步推出全球智能体支付服务。国际卡组织入场=智能体支付从中国本土竞争升级为全球标准之争" },
+    { icon: "🌐", name: "x402协议+Base网络", desc: "据报道x402协议将支付逻辑嵌入HTTP协议层，无需账户和人工确认，Q1交易量已突破。代表协议层对应用层支付的降维打击" }
   ],
 
   suggestions: [
-    "<strong>【先补发布链路】</strong>本次未更新的直接原因是仓库最后推送停在7月3日，页面依赖静态GitHub Pages，没有新的commit就不会刷新。建议补上每日生成+提交+推送的GitHub Actions或外部Cron告警。",
-    "<strong>【本周只打两个样板】</strong>ChinaJoy倒计时18天，游戏虚拟商品支付必须冲刺；车载AI支付同步推进停车/充电/洗车/咖啡到车四场景包。不要分散到过多城市级和跨境议题。",
-    "<strong>【A2P2从协议走向商家接入】</strong>对抗阿宝不能只讲支付协议，应尽快输出商家接入包：意图Schema、授权模板、退款/售后责任链和交易看板，让商家能低成本被AI调用。",
-    "<strong>【把风控做成卖点】</strong>海外Agentic Payments竞争说明授权、限额、凭证化、审计追溯是核心。A2P2建议用“可控委托支付”而非“AI自动支付”对外表达，降低安全疑虑。"
+    "<strong>【紧急：WAIC 2026本周开幕（7月17日）】</strong>全球AI顶级大会4天后开幕，努比亚AI智能体手机将首秀「一句指令自动付钱」，1100家企业参展。建议<strong>本周确认A2P2是否有WAIC展示/合作机会</strong>，即使无法正式参展也要安排团队到场调研竞品AI支付方案。",
+    "<strong>【ChinaJoy倒计时18天——Demo本周必须完成】</strong>游戏AI生态正在爆发（4399/贪玩/巨人投资AI世界模型），ChinaJoy近900家企业参展。<strong>Demo本周完成是底线</strong>，联合网易展台展示A2P2游戏语音支付。AI世界模型+游戏内购=未来万亿级场景。",
+    "<strong>【应对支付宝AI开放平台上线】</strong>蚂蚁「阿宝+碰一下+AI开放平台」三件套闭环成型，30+品牌接入。建议<strong>加速A2P2开放平台策略制定</strong>，差异化方向：国标合规（GB/Z 185）、企业级安全、B2B场景（京东工品汇AI智采管家已验证路径）。"
   ]
 };
 
