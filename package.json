@@ -1,0 +1,15 @@
+{
+  "name": "ai-payment-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "daily:update": "node scripts/update-daily-report.mjs",
+    "verify": "node scripts/verify-site.mjs",
+    "e2e": "node scripts/e2e-site.mjs",
+    "test": "npm run verify && npm run e2e"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.1"
+  }
+}
