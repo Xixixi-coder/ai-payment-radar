@@ -2,16 +2,26 @@
 import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { extractReport, getReportIsoDate, toShanghaiIsoDate } from './report-utils.mjs';
+import { daysBetween, extractReport, getReportIsoDate, toShanghaiIsoDate } from './report-utils.mjs';
 
 const root = process.cwd();
 
 function parseArgs(argv) {
-  const args = { today: process.env.E2E_TODAY || toShanghaiIsoDate() };
+  const args = {
+    today: process.env.E2E_TODAY || toShanghaiIsoDate(),
+    maxAgeDays: Number(process.env.MAX_REPORT_AGE_DAYS || 0)
+  };
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
     if (arg === '--today') args.today = argv[++index];
+    else if (arg === '--max-age-days') args.maxAgeDays = Number(argv[++index]);
     else throw new Error(`Unknown argument: ${arg}`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(args.today)) {
+    throw new Error(`--today must be YYYY-MM-DD, got ${args.today}`);
+  }
+  if (!Number.isFinite(args.maxAgeDays) || args.maxAgeDays < 0) {
+    throw new Error(`--max-age-days must be a non-negative number, got ${args.maxAgeDays}`);
   }
   return args;
 }
@@ -84,7 +94,9 @@ async function main() {
   const html = await fs.readFile(path.join(root, 'index.html'), 'utf8');
   const { report } = extractReport(html);
   const reportDate = getReportIsoDate(report);
-  assert(reportDate <= args.today, `Report date ${reportDate} should not be after ${args.today}`);
+  const age = daysBetween(reportDate, args.today);
+  assert(age >= 0, `Report date ${reportDate} should not be after ${args.today}`);
+  assert(age <= args.maxAgeDays, `Report is stale: ${reportDate}, today ${args.today}, age ${age} days`);
 
   const server = await startServer();
   const port = server.address().port;

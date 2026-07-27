@@ -2,7 +2,8 @@ name: Daily Radar Update
 
 on:
   schedule:
-    - cron: '5 10 * * *'
+    # Runs at 09:05 Asia/Shanghai every morning.
+    - cron: '5 1 * * *'
   workflow_dispatch:
     inputs:
       report_json:
@@ -39,21 +40,34 @@ jobs:
       - name: Install browser
         run: npx playwright install --with-deps chromium
 
+      - name: Resolve report date
+        run: |
+          REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"
+          if [ -z "$REPORT_DATE" ]; then
+            echo "REPORT_DATE is empty" >&2
+            exit 1
+          fi
+          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          echo "Daily radar report date: $REPORT_DATE"
+
       - name: Generate daily report
         env:
           REPORT_JSON: ${{ inputs.report_json }}
         run: |
-          REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          : "${REPORT_DATE:?REPORT_DATE is required}"
           node scripts/update-daily-report.mjs --date "$REPORT_DATE"
 
       - name: Verify static site
-        run: node scripts/verify-site.mjs --today "$REPORT_DATE" --max-age-days 0
+        run: |
+          : "${REPORT_DATE:?REPORT_DATE is required}"
+          node scripts/verify-site.mjs --today "$REPORT_DATE" --max-age-days 0
 
       - name: Run end-to-end smoke test
         env:
           E2E_REQUIRE_BROWSER: '1'
-        run: node scripts/e2e-site.mjs --today "$REPORT_DATE"
+        run: |
+          : "${REPORT_DATE:?REPORT_DATE is required}"
+          node scripts/e2e-site.mjs --today "$REPORT_DATE" --max-age-days 0
 
       - name: Commit and push changes
         run: |
