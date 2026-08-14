@@ -163,46 +163,32 @@ function buildReportFromRss(isoDate, previousReport, rssItems, allowFallback) {
     opportunities: [
       {
         level: 'high',
-        scene: '日报素材复核与快速发布',
-        reason: `今日公开源首要线索为「${topTitles[0]}」，需要确认其与AI支付/智能体支付的直接关联。`,
-        action: '建立“RSS初筛→人工复核→A2P2影响判断→当日发布”的半自动闭环，避免静默断更。',
-        value: '链路级'
+        scene: 'AI专属卡/授权账户入口',
+        reason: `围绕「${topTitles.find(title => /微信支付|专属卡|支付巨头/.test(title)) || topTitles[0]}」，支付巨头正在把AI支付能力前置到用户账户与授权入口。`,
+        action: '在京东支付内设计“AI付授权卡”：用户可设置限额、品类、商户白名单与权益包，优先绑定白条、小金库和银行卡。',
+        value: '账户级'
       },
       {
         level: 'high',
-        scene: 'A2P2协议样板卡位',
-        reason: 'Agentic Payments竞争继续从交易演示转向可控授权、限额、商户白名单与追溯责任链。',
-        action: '补齐京东AI付授权页、风控策略、商户回调与异常兜底样板，形成可展示Demo。',
+        scene: 'A2P2电商订单托管支付',
+        reason: 'Agentic Payments竞争正在从“会聊天”转向“可授权、可追溯、可结算”的交易基础设施。',
+        action: '优先做家电/3C/商超补货三类托管下单样板，覆盖预算授权、比价、下单、支付、售后追踪全链路。',
         value: '战略级'
       },
       {
         level: 'high',
-        scene: '线下/车载支付入口',
-        reason: '线下设备、车载座舱与本地生活是AI助手从“推荐”走向“代办并支付”的高频入口。',
-        action: '优先选择京东到家、七鲜、汽车/加油等可闭环场景做PoC。',
+        scene: '线下/车载即时消费入口',
+        reason: `围绕「${topTitles.find(title => /车载|座舱|碰一下|线下/.test(title)) || '线下/车载AI支付'}」，线下设备、车载座舱与本地生活是AI助手从推荐走向代办并支付的高频入口。`,
+        action: '联合京东到家、七鲜、京东养车/加油做PoC，把“到店/车内唤起AI助手→推荐→确认→支付”跑通。',
         value: '千万级/日'
-      },
-      {
-        level: 'mid',
-        scene: '竞品动态监测',
-        reason: topTitles[1] || '支付宝、微信支付、银联、国际卡组织均在抢占智能体支付基础设施。',
-        action: '把竞品新闻按“协议、入口、商户、风控、交易量”五类入库，沉淀周报。',
-        value: '情报级'
-      },
-      {
-        level: 'low',
-        scene: '自动化质量门禁',
-        reason: '页面此前依赖外部Bot提交，失败后缺少仓库内可见告警。',
-        action: '保留本次新增的stale校验与E2E测试，任何断更先让CI失败再处理内容。',
-        value: '运维级'
       }
     ],
     scenes: reusedScenes,
     competitors,
     suggestions: [
-      `<strong>【先保链路】</strong>今日更新由仓库内生成器完成。建议保留“自动草稿+人工复核”机制，内容弱时宁可CI失败，也不要静默展示旧日报。`,
-      `<strong>【聚焦样板】</strong>围绕「${topTitles[0]}」做A2P2影响判断：是否新增支付入口、是否改变商户接入方式、是否暴露授权/风控机会。`,
-      '<strong>【端到端验收】</strong>每日发布后检查首页日期、历史索引、当天归档页和关键卡片渲染，确保GitHub Pages可回溯。'
+      '<strong>【账户入口】</strong>把AI付做成用户可理解、可控的授权账户，而不是后台策略：限额、品类、商户白名单必须前台可见。',
+      `<strong>【订单托管】</strong>围绕「${topTitles[0]}」拆一个电商代办交易样板，优先证明AI能安全完成“推荐到支付”。`,
+      '<strong>【场景闭环】</strong>线下/车载PoC不要只做唤起演示，必须跑通履约、退款、风控和客服兜底。'
     ]
   };
 }
