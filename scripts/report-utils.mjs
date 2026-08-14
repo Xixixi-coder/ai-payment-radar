@@ -13,9 +13,10 @@ export function toShanghaiIsoDate(date = new Date()) {
 }
 
 export function formatChineseDate(isoDate) {
-  const date = new Date(`${isoDate}T00:00:00+08:00`);
+  const [year, month, day] = isoDate.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
   const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
-  return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 周${weekdays[date.getDay()]}`;
+  return `${year}年${month}月${day}日 周${weekdays[date.getUTCDay()]}`;
 }
 
 export function getIsoWeek(isoDate) {
