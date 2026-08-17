@@ -606,7 +606,7 @@
   </div>
   <div class="header-date">
     <span class="live-dot"></span>
-    <span id="report-date">2026年8月17日 周一</span> · 第<span id="report-week">34</span>周
+    <span id="report-date">2026年8月15日 周六</span> · 第<span id="report-week">33</span>周
   </div>
 </div>
 
@@ -621,7 +621,7 @@
     <div class="stat-label">📍 追踪场景</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num green" id="stat-news">8</div>
+    <div class="stat-num green" id="stat-news">3</div>
     <div class="stat-label">📰 今日动态</div>
   </div>
   <div class="stat-item">
@@ -682,7 +682,7 @@
 <!-- ===== FOOTER ===== -->
 <div class="footer">
   POWERED BY 京东AI付 · HERMES AGENT<br>
-  每日 18:05 自动更新 · <a href="../history.html" style="color:var(--jd-red);text-decoration:none;font-weight:600;">查看历史日报 →</a>
+  每日 18:05 自动更新 · <a href="history.html" style="color:var(--jd-red);text-decoration:none;font-weight:600;">查看历史日报 →</a>
 </div>
 
 <script>
@@ -690,107 +690,86 @@
 // DATA — cron job replaces this block each day
 // ============================================================
 const REPORT = {
-  "title": "支付巨头纷纷押注AI支付，进入“开口即付”时代+独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速",
+  "title": "Stripe 70亿美元收购OpenRouter+豆包抽佣延期至20日+阿宝鸿蒙版开测",
   "date": "2026年8月17日 周一",
   "week": 34,
   "stats": {
     "high": 3,
     "scenes": 12,
-    "news": 8,
+    "news": 3,
     "compete": 4
   },
   "summary": {
-    "text": "今日自动扫描公开新闻源，AI支付与智能体支付仍围绕<strong>授权、风控、商户接入与场景入口</strong>展开。重点线索包括：<span class='highlight'>支付巨头纷纷押注AI支付，进入“开口即付”时代</span>；独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；AI版支付宝上线，拉开了超级App的AI化竞速序幕。京东AI付应把素材复核、A2P2协议样板和场景落地节奏合并推进。",
+    "text": "AI支付基础设施并购震动全球：<span class='highlight'>Stripe以超70亿美元收购AI模型聚合平台OpenRouter</span>，支付巨头正式跨界布局AI底层路由能力，标志着「支付+AI」融合进入资本整合阶段；国内方面，<strong>豆包12%抽佣遭商家强烈反弹后宣布延期至8月20日执行</strong>，AI交易定价权博弈进入白热化；<strong>支付宝阿宝鸿蒙版正式开放测试</strong>，全端AI化战略加速推进。京东AI付需紧盯Stripe「支付+AI路由」新范式，同步关注豆包抽佣政策调整后对商户生态的影响。",
     "tags": [
-      {
-        "text": "公开RSS自动扫描",
-        "type": "red"
-      },
-      {
-        "text": "授权与风控责任链",
-        "type": "amber"
-      },
-      {
-        "text": "商户/场景接入",
-        "type": "blue"
-      },
-      {
-        "text": "A2P2样板复核",
-        "type": "green"
-      }
+      { "text": "Stripe收购OpenRouter", "type": "red" },
+      { "text": "豆包抽佣延期8.20", "type": "amber" },
+      { "text": "阿宝鸿蒙版开测", "type": "blue" },
+      { "text": "关注支付+AI路由范式", "type": "green" }
     ]
   },
   "news": [
     {
-      "title": "支付巨头纷纷押注AI支付，进入“开口即付”时代",
-      "summary": "公开新闻源捕捉到「支付巨头纷纷押注AI支付，进入“开口即付”时代」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "21财经",
-      "time": "近24小时"
+      "title": "Stripe敲定超70亿美元收购AI初创公司OpenRouter",
+      "summary": "据彭博社8月17日报道，支付巨头Stripe已达成最终协议收购AI模型聚合平台OpenRouter，布局AI底层基础设施。",
+      "source": "IT之家/彭博社",
+      "time": "8月17日"
     },
     {
-      "title": "独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速",
-      "summary": "公开新闻源捕捉到「独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "财联社",
-      "time": "近24小时"
+      "title": "豆包12%抽佣延期至20日，商家担忧存量订单被二次收割",
+      "summary": "豆包8月10日落地的渠道服务费遭商家强烈反弹，8月12日宣布延期至20日执行，AI平台商业化争议持续发酵。",
+      "source": "抖音生活服务/多家媒体",
+      "time": "8月12-14日"
     },
     {
-      "title": "AI版支付宝上线，拉开了超级App的AI化竞速序幕",
-      "summary": "公开新闻源捕捉到「AI版支付宝上线，拉开了超级App的AI化竞速序幕」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "36 Kr",
-      "time": "近24小时"
-    },
-    {
-      "title": "AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链",
-      "summary": "公开新闻源捕捉到「AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "PANews",
-      "time": "近24小时"
-    },
-    {
-      "title": "Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与",
-      "summary": "公开新闻源捕捉到「Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "mpaypass.com.cn",
-      "time": "近24小时"
-    },
-    {
-      "title": "谁在为 AI 付钱？从 X402 到 AP2，智能体商业的支付秩序正在重构",
-      "summary": "公开新闻源捕捉到「谁在为 AI 付钱？从 X402 到 AP2，智能体商业的支付秩序正在重构」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "Binance",
-      "time": "近24小时"
-    },
-    {
-      "title": "Google、Circle、Stripe扎堆让AI花钱，2026Q1支付巨头们的喜与忧",
-      "summary": "公开新闻源捕捉到「Google、Circle、Stripe扎堆让AI花钱，2026Q1支付巨头们的喜与忧」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "WEEX",
-      "time": "近24小时"
-    },
-    {
-      "title": "连支付宝“碰一下”都被Agent了",
-      "summary": "公开新闻源捕捉到「连支付宝“碰一下”都被Agent了」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "智东西",
-      "time": "近24小时"
+      "title": "支付宝官宣阿宝鸿蒙版逐步开放测试",
+      "summary": "8月13日支付宝官微宣布AI版支付宝「阿宝」鸿蒙版开放测试，华为应用市场搜索即可升级体验。",
+      "source": "智通财经/和讯网",
+      "time": "8月13日"
     }
   ],
   "opportunities": [
     {
       "level": "high",
-      "scene": "AI专属卡/授权账户入口",
-      "reason": "围绕「支付巨头纷纷押注AI支付，进入“开口即付”时代」，支付巨头正在把AI支付能力前置到用户账户与授权入口。",
-      "action": "在京东支付内设计“AI付授权卡”：用户可设置限额、品类、商户白名单与权益包，优先绑定白条、小金库和银行卡。",
-      "value": "账户级"
-    },
-    {
-      "level": "high",
-      "scene": "A2P2电商订单托管支付",
-      "reason": "Agentic Payments竞争正在从“会聊天”转向“可授权、可追溯、可结算”的交易基础设施。",
-      "action": "优先做家电/3C/商超补货三类托管下单样板，覆盖预算授权、比价、下单、支付、售后追踪全链路。",
+      "scene": "支付+AI路由融合范式",
+      "reason": "Stripe 70亿收购OpenRouter，支付巨头正式布局AI模型路由能力，开创「支付+AI基础设施」新赛道",
+      "action": "京东AI付应研究Stripe模式，评估在AI调用链中嵌入支付结算能力的技术路径",
       "value": "战略级"
     },
     {
       "level": "high",
-      "scene": "线下/车载即时消费入口",
-      "reason": "围绕「线下/车载AI支付」，线下设备、车载座舱与本地生活是AI助手从推荐走向代办并支付的高频入口。",
-      "action": "联合京东到家、七鲜、京东养车/加油做PoC，把“到店/车内唤起AI助手→推荐→确认→支付”跑通。",
-      "value": "千万级/日"
+      "scene": "豆包抽佣窗口期商户争夺",
+      "reason": "豆包12%抽佣延期引发商家不满，部分商户观望甚至寻求替代渠道，窗口期可争夺",
+      "action": "京东到家/旅行可趁豆包政策不确定期，以低佣策略定向拉拢犹豫商户",
+      "value": "千万级/月"
+    },
+    {
+      "level": "high",
+      "scene": "阿宝全端AI化对标压力",
+      "reason": "阿宝鸿蒙版开测意味着支付宝已覆盖iOS/Android/鸿蒙三端AI化，服务覆盖近200项",
+      "action": "京东App AI助手需加速鸿蒙适配和服务接入密度，避免全端AI体验差距扩大",
+      "value": "战略级"
+    },
+    {
+      "level": "mid",
+      "scene": "AI交易定价权行业标准",
+      "reason": "豆包抽佣争议暴露AI推荐中立性问题，行业呼吁建立AI交易透明定价规则",
+      "action": "京东可联合行业协会推动AI交易服务费透明化标准，占据话语权高地",
+      "value": "情报级"
+    },
+    {
+      "level": "mid",
+      "scene": "腾讯528亿AI资本开支跟踪",
+      "reason": "腾讯Q2财报显示528亿资本开支重押AI，微信支付AI能力或将迎来重大升级",
+      "action": "密切关注腾讯AI投入方向是否涉及支付场景，评估微信AI专属卡后续迭代节奏",
+      "value": "情报级"
+    },
+    {
+      "level": "low",
+      "scene": "GEO优化AI搜索适配",
+      "reason": "豆包抽佣落地推动商户关注AI搜索GEO优化，信源引用策略成新流量入口",
+      "action": "京东商品信息需适配豆包/千问信源抓取逻辑，提升AI推荐权重",
+      "value": "长期级"
     }
   ],
   "scenes": [
@@ -798,27 +777,21 @@ const REPORT = {
       "icon": "🍔",
       "color": "#FF6B6B",
       "name": "快餐茶饮",
-      "summary": "豆包代付全量+碰一下Agent扩展",
+      "summary": "豆包抽佣延期+碰一下Agent持续扩展",
       "items": [
         {
           "name": "豆包任务模式·代下单瑞幸",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "豆包全量上线任务模式代下单瑞幸，本周焦点转向抽佣机制落地，快餐场景暂无新增动态",
+          "desc": "豆包12%抽佣原定8月10日落地后遭商家反弹，已延期至20日执行，快餐场景商户观望情绪浓厚",
           "tags": [
-            {
-              "text": "全量上线",
-              "type": "volume"
-            },
-            {
-              "text": "抽佣12%",
-              "type": "pay"
-            }
+            { "text": "抽佣延期至8.20", "type": "pay" },
+            { "text": "商家观望", "type": "volume" }
           ],
           "oppBox": {
             "type": "mid",
             "title": "🟡 跟进商机",
-            "desc": "京东到家/七鲜应评估接入豆包生态的佣金成本与流量收益"
+            "desc": "豆包抽佣争议期间，京东到家/七鲜可定向接触犹豫商户，提供低佣替代方案"
           }
         },
         {
@@ -827,14 +800,8 @@ const REPORT = {
           "oppLabel": "跟进",
           "desc": "支付宝碰一下用户破4亿、线下点位超3000万，Agent服务网络持续扩展（据此前公开报道）",
           "tags": [
-            {
-              "text": "4亿用户/3000万点位",
-              "type": "volume"
-            },
-            {
-              "text": "Agent服务网络",
-              "type": "tech"
-            }
+            { "text": "4亿用户/3000万点位", "type": "volume" },
+            { "text": "Agent服务网络", "type": "tech" }
           ],
           "oppBox": {
             "type": "mid",
@@ -848,43 +815,31 @@ const REPORT = {
       "icon": "🛒",
       "color": "#E2231A",
       "name": "电商平台",
-      "summary": "千问招商+豆包抽佣双线竞速",
+      "summary": "Stripe收购OpenRouter重塑全球格局",
       "items": [
         {
-          "name": "千问App·生态招商+付费探索",
+          "name": "Stripe·收购OpenRouter布局AI路由",
           "opp": "high",
           "oppLabel": "高优",
-          "desc": "千问App启动商业化测试，开放Qwen3.8-MAX旗舰模型调用，全面开启生态招商（据8月报道）",
+          "desc": "Stripe以超70亿美元收购AI模型聚合平台OpenRouter，从支付跨界布局AI底层基础设施（据彭博社8月17日）",
           "tags": [
-            {
-              "text": "Qwen3.8-MAX",
-              "type": "tech"
-            },
-            {
-              "text": "生态招商",
-              "type": "pay"
-            }
+            { "text": "70亿美元", "type": "volume" },
+            { "text": "支付+AI路由", "type": "tech" }
           ],
           "oppBox": {
             "type": "high",
             "title": "🔴 高优商机",
-            "desc": "京东商城应第一时间接入千问生态招商，抢占AI流量早期红利窗口"
+            "desc": "京东AI付应研究Stripe模式，在AI Agent调用链中嵌入支付结算+路由能力"
           }
         },
         {
           "name": "京东AI对话购物",
           "opp": "low",
           "oppLabel": "自有",
-          "desc": "京东A2P2协议持续迭代，需加速产品化应对豆包抽佣+千问招商的双重竞争压力",
+          "desc": "京东A2P2协议持续迭代，Stripe收购案验证「支付+AI基础设施」融合趋势，需加速产品化",
           "tags": [
-            {
-              "text": "A2P2协议",
-              "type": "tech"
-            },
-            {
-              "text": "闭环竞争",
-              "type": "pay"
-            }
+            { "text": "A2P2协议", "type": "tech" },
+            { "text": "支付+AI融合", "type": "pay" }
           ],
           "oppBox": null
         }
@@ -900,16 +855,10 @@ const REPORT = {
           "name": "银联APOP车载智能体支付",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "银联APOP联合极豆/智谱/岚图首发车载智能体支付，已完成5笔验证交易+19家伙伴（据公开报道）",
+          "desc": "银联APOP联合极豆/智谱/岚图首发车载智能体支付，已完成5笔验证交易+19家伙伴（据公开报道），本期无新增动态",
           "tags": [
-            {
-              "text": "APOP协议",
-              "type": "tech"
-            },
-            {
-              "text": "19家伙伴",
-              "type": "volume"
-            }
+            { "text": "APOP协议", "type": "tech" },
+            { "text": "19家伙伴", "type": "volume" }
           ],
           "oppBox": {
             "type": "mid",
@@ -921,16 +870,10 @@ const REPORT = {
           "name": "数联科技·AgentPay预研究",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "数联科技联合银联完成AgentPay预研究，基于APOP框架为AI智能体赋予独立钱包能力（据行业媒体）",
+          "desc": "数联科技联合银联完成AgentPay预研究，基于APOP框架为AI智能体赋予独立钱包能力（据行业媒体），本期无新增动态",
           "tags": [
-            {
-              "text": "AgentPay协议",
-              "type": "tech"
-            },
-            {
-              "text": "智能体钱包",
-              "type": "pay"
-            }
+            { "text": "AgentPay协议", "type": "tech" },
+            { "text": "智能体钱包", "type": "pay" }
           ],
           "oppBox": {
             "type": "mid",
@@ -944,27 +887,21 @@ const REPORT = {
       "icon": "🏪",
       "color": "#7B61FF",
       "name": "线下零售",
-      "summary": "豆包抽佣扩品类+银联Agent收单",
+      "summary": "豆包抽佣争议+商户流动窗口",
       "items": [
         {
-          "name": "豆包·生活服务/家居抽佣",
+          "name": "豆包·生活服务/家居抽佣延期",
           "opp": "high",
           "oppLabel": "高优",
-          "desc": "豆包12%抽佣已扩展至生活服务、家居家装、教育等品类，AI渠道费模式向全品类渗透（据经济观察报8月13日）",
+          "desc": "豆包12%渠道费延期至8月20日，商家担忧「存量订单被二次收割」，部分商户寻求替代渠道（据多家媒体8月12-14日）",
           "tags": [
-            {
-              "text": "12%渠道费",
-              "type": "pay"
-            },
-            {
-              "text": "多品类覆盖",
-              "type": "volume"
-            }
+            { "text": "延期至8.20", "type": "pay" },
+            { "text": "商户流动窗口", "type": "volume" }
           ],
           "oppBox": {
             "type": "high",
             "title": "🔴 高优商机",
-            "desc": "京东家居/教育等垂直品类需评估被豆包截流风险，建立自有AI导购闭环"
+            "desc": "京东家居/生活服务品类可趁豆包政策动荡期，定向接触流失商户提供AI导购替代方案"
           }
         },
         {
@@ -973,14 +910,8 @@ const REPORT = {
           "oppLabel": "跟进",
           "desc": "银联商务智能体支付40站口验证完成，本期无新增动态",
           "tags": [
-            {
-              "text": "40站口验证",
-              "type": "volume"
-            },
-            {
-              "text": "收单模式重构",
-              "type": "pay"
-            }
+            { "text": "40站口验证", "type": "volume" },
+            { "text": "收单模式重构", "type": "pay" }
           ],
           "oppBox": {
             "type": "mid",
@@ -1002,14 +933,8 @@ const REPORT = {
           "oppLabel": "跟进",
           "desc": "巨头争相布局支付Skill，3月支付宝首发+4月微信跟进，本期无新增动态",
           "tags": [
-            {
-              "text": "支付Skill",
-              "type": "tech"
-            },
-            {
-              "text": "卡位战",
-              "type": "pay"
-            }
+            { "text": "支付Skill", "type": "tech" },
+            { "text": "卡位战", "type": "pay" }
           ],
           "oppBox": {
             "type": "mid",
@@ -1023,14 +948,8 @@ const REPORT = {
           "oppLabel": "防守",
           "desc": "Agent类AI支付存三重可信风险，3亿笔交易背后需多机构协作筑防线（据行业媒体报道）",
           "tags": [
-            {
-              "text": "3亿笔交易",
-              "type": "volume"
-            },
-            {
-              "text": "可信风险",
-              "type": "tech"
-            }
+            { "text": "3亿笔交易", "type": "volume" },
+            { "text": "可信风险", "type": "tech" }
           ],
           "oppBox": null
         }
@@ -1040,79 +959,51 @@ const REPORT = {
       "icon": "🏨",
       "color": "#00C9A7",
       "name": "酒旅生活服务",
-      "summary": "豆包酒旅抽佣冲击OTA格局",
+      "summary": "豆包酒旅抽佣争议+阿宝鸿蒙开测",
       "items": [
         {
-          "name": "豆包·酒旅交易抽佣",
+          "name": "豆包·酒旅交易抽佣争议",
           "opp": "high",
           "oppLabel": "高优",
-          "desc": "豆包8月10日起对酒店交易订单执行独立12%抽佣，直接冲击携程等OTA平台（据多家媒体8月13-14日报道）",
+          "desc": "豆包酒旅12%抽佣引发行业热议，与OTA的15-25%相比费率虽低但商家质疑AI推荐中立性（据多家媒体8月10-14日）",
           "tags": [
-            {
-              "text": "12%佣金",
-              "type": "pay"
-            },
-            {
-              "text": "冲击OTA",
-              "type": "volume"
-            }
+            { "text": "12%vs OTA 15-25%", "type": "pay" },
+            { "text": "中立性争议", "type": "volume" }
           ],
           "oppBox": {
             "type": "high",
             "title": "🔴 高优商机",
-            "desc": "京东旅行可借豆包冲击OTA之机，以低佣策略吸引酒旅商户接入京东AI导购"
+            "desc": "京东旅行可打「AI推荐透明化」差异牌，以公开推荐逻辑+低佣吸引酒旅商户"
           }
         },
         {
-          "name": "支付宝阿宝·200项服务覆盖",
+          "name": "支付宝阿宝·鸿蒙版开测",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "阿宝上线一个月已跨端覆盖近200项服务，对话式交互重构生活服务入口（据头条搜索）",
+          "desc": "8月13日支付宝官宣阿宝鸿蒙版开放测试，华为应用市场可直接升级体验AI版支付宝（据智通财经）",
           "tags": [
-            {
-              "text": "200项服务",
-              "type": "volume"
-            },
-            {
-              "text": "跨端覆盖",
-              "type": "tech"
-            }
+            { "text": "鸿蒙三端覆盖", "type": "tech" },
+            { "text": "全端AI化", "type": "volume" }
           ],
           "oppBox": {
             "type": "mid",
             "title": "🟡 跟进商机",
-            "desc": "京东在酒旅场景可通过京东旅行+AI助手打通预订→支付闭环"
+            "desc": "京东在酒旅+生活服务场景可通过AI助手打通鸿蒙生态触点"
           }
         }
       ]
     }
   ],
   "competitors": [
-    {
-      "icon": "🐜",
-      "name": "蚂蚁集团",
-      "desc": "阿宝鸿蒙版开测+跨端覆盖近200项服务，全球首个全端AI化国民级支付产品持续领跑；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代"
-    },
-    {
-      "icon": "🐧",
-      "name": "腾讯",
-      "desc": "微信AI专属卡上线一月仍在早期阶段，账户隔离+限额机制优先安全；小微AI助手持续灰度；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速"
-    },
-    {
-      "icon": "🔵",
-      "name": "字节跳动",
-      "desc": "豆包8月10日正式开启12%渠道抽佣，覆盖住宿/生活服务/家居/教育，国内AI交易闭环首个规模化落地；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕"
-    },
-    {
-      "icon": "💳",
-      "name": "银联",
-      "desc": "APOP车载智能体支付19家伙伴生态推进中，数联科技AgentPay预研究完成，本期无新增动态"
-    }
+    { "icon": "🐜", "name": "蚂蚁集团", "desc": "8月13日官宣阿宝鸿蒙版开放测试，实现iOS/Android/鸿蒙三端AI化，全端覆盖近200项服务持续领跑" },
+    { "icon": "🐧", "name": "腾讯", "desc": "Q2营收2047.85亿同比增11%，528亿资本开支重押AI；微信AI专属卡仍处早期，小微AI助手持续灰度" },
+    { "icon": "🔵", "name": "字节跳动", "desc": "豆包12%抽佣8月10日落地后遭商家反弹，8月12日急刹延期至20日执行，AI商业化定价权博弈白热化" },
+    { "icon": "💳", "name": "Stripe", "desc": "8月17日敲定超70亿美元收购OpenRouter，从支付跨界布局AI模型路由基础设施，另传530亿洽购PayPal" }
   ],
   "suggestions": [
-    "<strong>【账户入口】</strong>把AI付做成用户可理解、可控的授权账户，而不是后台策略：限额、品类、商户白名单必须前台可见。",
-    "<strong>【订单托管】</strong>围绕「支付巨头纷纷押注AI支付，进入“开口即付”时代」拆一个电商代办交易样板，优先证明AI能安全完成“推荐到支付”。",
-    "<strong>【场景闭环】</strong>线下/车载PoC不要只做唤起演示，必须跑通履约、退款、风控和客服兜底。"
+    "<strong>【战略】</strong>Stripe 70亿收购OpenRouter开创「支付+AI路由」范式——京东AI付应<strong>立即组建研究小组</strong>，评估在AI Agent调用链中嵌入支付结算+模型路由双重能力的可行性",
+    "<strong>【窗口】</strong>豆包抽佣延期至20日引发商户动摇——京东到家/旅行应<strong>趁政策不确定窗口期定向接触犹豫商户</strong>，以透明定价+低佣策略争夺被豆包「吓跑」的优质商户资源",
+    "<strong>【竞争】</strong>阿宝鸿蒙版开测实现全端AI化覆盖——京东App AI助手需<strong>加速鸿蒙端适配和服务接入</strong>，Q3内完成鸿蒙版AI对话购物+支付能力上线"
   ]
 };
 
