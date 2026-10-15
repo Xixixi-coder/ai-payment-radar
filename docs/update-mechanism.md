@@ -1,28 +1,54 @@
 # 每日更新机制
 
-## 现状结论
+## 2026-10-15 修复
 
-- 线上页面最后一条日报停在 `2026-07-17`，当前日期为 `2026-07-23`，说明日报链路已经断更。
-- 仓库历史提交显示此前由 `AI Radar Bot <radar@jd.com>` 在每天 18 点左右直接提交日报，但仓库内没有 `.github/workflows` 或可复现脚本，外部 Bot 失败后不会在仓库内产生告警。
-- 首页静态占位日期曾停留在旧日期，虽然 JavaScript 会渲染 `REPORT.date`，但无 JS 抓取或预览容易看到过期信息。
+旧链路未筛选 RSS 日期，错误标注“近24小时”；中文去重删除了汉字，场景直接复用，竞品描述逐日追加。新链路不把检查成功等同于内容更新。
 
-## 改造方案
+## 采集与内容
 
-- `.github/workflows/daily-update.yml`：每天北京时间 `18:05` 运行，也支持手动 `workflow_dispatch` 传入完整 `REPORT_JSON`。
-- `scripts/update-daily-report.mjs`：生成或接收当日 `REPORT`，同步首页静态占位，写入 `archive/YYYY-MM-DD.html`，维护 `archive/index.json` 和 `archive/last-updated.json`。
-- `scripts/verify-site.mjs`：检查日报是否过期、归档索引是否倒序、最新归档文件是否存在、首页占位是否与 `REPORT` 同步。
-- `scripts/e2e-site.mjs`：启动本地静态服务，用 Playwright 验证首页 → 历史列表 → 最新归档页的完整链路。
+- `scripts/feed-report.mjs` 运行四个 Google News RSS 查询，覆盖中文、国际、终端场景和支付厂商；这些是同一聚合源，不是四个独立提供商。
+- 按实际 `pubDate` 校验最近七天，拒绝无效、未来、过期日期及无来源或链接的记录，按日期排序。
+- 标题去重保留 Unicode 字母和数字，并对链接去重。每个来源最多四条；最多十二条时先为中文、国际各预留六条，不足再填充，避免英文结果挤掉中文消息。
+- 过滤已发现的成人推广、币价预测、代币预售、SEO 和地产噪声；加密支付相关最多四条，防止单一主题淹没其他场景。过滤并不能证明来源内容真实；自动结果均标为待核验线索。
+- 新闻保留来源、链接及真实发布日期，不编造相对时间。按标题中的实体词匹配竞品和场景，不按数组顺序分配，不无限追加。
+- 历史场景底稿明确标识“未重新核验”，新的来源线索单独展示。自动流程不伪造“已核验高优”商机，不冒充模型深度研究。
 
-## 本地命令
+## 状态与归档
+
+- `contentUpdatedAt`：最后实质发布内容的时间；首页报告日期与其一致。
+- `lastCheckedAt` / `checkedDate`：最近尝试检查的时间／上海日期。
+- `status`：`updated`、`unchanged`、`no-new-items`、`error`。
+- `fingerprint`：来源标题、链接、日期、来源的内容指纹；顺序变化不算新内容。
+- `seenArticleKeys`：最多保留一千条已见标题，用于区分首次收录与回流内容。
+- 相同内容或没有有效新条目，只更新检查状态，不改报告日期，不生成新的空归档。
+- 全部查询失败：保留上次内容、记录 `error`、任务失败；部分失败继续处理有效来源并显示覆盖不完整。
+- 当前窗口发生真实变化（包括旧条目退出窗口）可更新内容；首次收录数与内容变化分别统计。
+- 上线迁移会清除失实的时间标签和重复描述；旧历史 HTML 保持原样，不倒改历史记录。
+
+## 自动化与部署
+
+- `daily-update.yml` 的 cron 为 `5 1 * * *`，计划北京时间 09:05，GitHub 实际执行可能延迟。
+- 沿用现有工作流，顺序为安装 → 采集生成 → 内容／状态校验 → 回归测试与浏览器端到端 → 提交。
+- 回归测试由现有端到端步骤调用；生成或校验失败阻止提交，保留线上有效内容，GitHub Actions 显示任务失败。失败状态保存在运行环境中，不会被原工作流发布到线上。
+- 沿用仓库已有 Pages 从 `main` 根目录部署的设置。本次不要求增加 GitHub OAuth 的 `workflow` 权限，不修改工作流文件。
+- 页面检查状态超过 36 小时显示超时提示；状态读取失败显示不可用，不宣称更新成功。
+
+## 本地及上线验证
 
 ```bash
-npm run daily:update -- --date 2026-07-23
-npm run verify -- --today 2026-07-23 --max-age-days 0
-npm run e2e -- --today 2026-07-23
+npm ci
+npx playwright install chromium
+npm run unit
+npm run daily:update
+npm run verify
+E2E_REQUIRE_BROWSER=1 npm run e2e
+E2E_REQUIRE_BROWSER=1 E2E_BASE_URL=https://xixixi-coder.github.io/ai-payment-radar npm run e2e
 ```
 
-## 内容策略
+`--date` 仅接受上海当天，不允许把当前 RSS 伪造为历史或未来日报。`--force` 兼容旧调用但不会绕过指纹与新鲜度检查。
 
-- 推荐生产方式：通过手动调度传入业务复核后的完整 `REPORT_JSON`。
-- 自动兜底方式：未传 `REPORT_JSON` 时，脚本会从公开 Google News RSS 抓取 AI 支付/智能体支付相关线索生成日报草稿。
-- 质量门禁：RSS 素材不足时脚本默认失败，避免用弱内容静默覆盖旧日报。
+浏览器测试覆盖来源链接、真实日期、更新状态、手机布局、场景展开、首页→历史→归档及控制台错误。`E2E_EXECUTABLE_PATH` 可指定已有 Chrome；`E2E_SCREENSHOT_DIR` 可保存桌面与手机截图。
+
+## 人工报告
+
+可通过 `REPORT_JSON` 或 `--report-json` 提交经过审核的完整报告。字段沿用页面结构，新增 `news[].publishedAt`（ISO 时间）、`news[].link`（HTTP/HTTPS），`news[].time` 必须为上海日期 `YYYY-MM-DD`。统计必须与条目数一致，来源日期必须在最近七天。脚本维护版本、内容时间和指纹，相同人工报告也不会刷新内容日期。

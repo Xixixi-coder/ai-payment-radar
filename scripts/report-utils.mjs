@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { articlesFingerprint } from './feed-report.mjs';
 
 export function toShanghaiIsoDate(date = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -45,7 +46,7 @@ export function extractReport(html) {
 
 export function replaceReport(html, report) {
   const { start, end, renderMarker } = extractReport(html);
-  const serialized = JSON.stringify(report, null, 2);
+  const serialized = JSON.stringify(report, null, 2).replaceAll('<', '\\u003c');
   const replaced = `${html.slice(0, start)}const REPORT = ${serialized};${html.slice(end)}`;
   return syncStaticPlaceholders(replaced, report).replace(renderMarker, renderMarker);
 }
@@ -98,12 +99,30 @@ export function validateReport(report) {
   if (!report || typeof report !== 'object') throw new Error('REPORT must be an object');
   if (!report.date || !report.week || !report.stats || !report.summary) throw new Error('REPORT missing date/week/stats/summary');
   for (const key of requiredArrays) {
-    if (!Array.isArray(report[key]) || report[key].length === 0) {
+    if (!Array.isArray(report[key]) || (report[key].length === 0 && !(report.schemaVersion === 2 && ['news', 'opportunities'].includes(key)))) {
       throw new Error(`REPORT.${key} must be a non-empty array`);
     }
   }
   for (const key of ['high', 'scenes', 'news', 'compete']) {
     if (!Number.isFinite(report.stats[key])) throw new Error(`REPORT.stats.${key} must be a number`);
+  }
+  if (report.schemaVersion === 2) {
+    const updatedAt = Date.parse(report.contentUpdatedAt);
+    if (!Number.isFinite(updatedAt) || updatedAt > Date.now()) throw new Error('Invalid contentUpdatedAt');
+    if (report.windowDays !== 7) throw new Error('Report must use the seven-day source window');
+    if (report.fingerprint !== articlesFingerprint(report.news)) throw new Error('Report fingerprint does not match source content');
+    if (getReportIsoDate(report) !== toShanghaiIsoDate(new Date(updatedAt))) throw new Error('Report date must match contentUpdatedAt');
+    const titles = new Set();
+    for (const item of report.news) {
+      const publishedAt = Date.parse(item.publishedAt);
+      if (!item.title || !item.source || !/^https?:\/\//i.test(item.link || '')) throw new Error('News must have a title, source and HTTP source link');
+      if (!Number.isFinite(publishedAt) || publishedAt > updatedAt || publishedAt < updatedAt - 7 * 86400000) throw new Error('News publication date is outside the report window');
+      if (item.time !== toShanghaiIsoDate(new Date(publishedAt))) throw new Error('News time label must show its actual publication date');
+      const title = item.title.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+      if (titles.has(title)) throw new Error('Duplicate news headline');
+      titles.add(title);
+    }
+    if (report.stats.news !== report.news.length || report.stats.compete !== report.competitors.length || report.stats.scenes !== report.scenes.reduce((count, group) => count + group.items.length, 0) || report.stats.high !== report.opportunities.filter(item => item.level === 'high').length) throw new Error('Report statistics must match its content');
   }
 }
 

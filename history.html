@@ -269,7 +269,7 @@ async function loadHistory() {
             <div class="day-date">${dateStr}</div>
             ${badge}
           </div>
-          <div class="day-title">${item.title}</div>
+          <div class="day-title">${String(item.title).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character])}</div>
           <div class="day-stats">${statsHtml}</div>
         </a>
       `;

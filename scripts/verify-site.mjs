@@ -40,9 +40,18 @@ function main() {
   validateReport(report);
 
   const reportDate = getReportIsoDate(report);
-  const age = daysBetween(reportDate, args.today);
+  const state = loadJson(path.join(archiveDir, 'last-updated.json'), {});
+  const freshnessDate = report.schemaVersion === 2 ? state.checkedDate : reportDate;
+  if (report.schemaVersion === 2) {
+    assert(state.schemaVersion === 2 && ['updated', 'unchanged', 'no-new-items'].includes(state.status), 'Latest source check must succeed');
+    assert(state.contentUpdatedAt === report.contentUpdatedAt, 'Content timestamp must match REPORT');
+    assert(state.fingerprint === report.fingerprint, 'Content fingerprint must match REPORT');
+    assert(Number.isFinite(Date.parse(state.lastCheckedAt)) && toShanghaiIsoDate(new Date(state.lastCheckedAt)) === freshnessDate, 'Check timestamp must match checkedDate');
+    assert(state.lastCheckedAt >= state.contentUpdatedAt, 'Check cannot predate content');
+  }
+  const age = daysBetween(freshnessDate, args.today);
   assert(age >= 0, `Report date ${reportDate} is after verify date ${args.today}`);
-  assert(age <= args.maxAgeDays, `Report is stale: ${reportDate}, today ${args.today}, age ${age} days`);
+  assert(age <= args.maxAgeDays, `Source check is stale: ${freshnessDate}, today ${args.today}, age ${age} days`);
 
   assert(html.includes(`<span id="report-date">${report.date}</span>`), 'Static report date placeholder is not synchronized');
   assert(html.includes(`<span id="report-week">${report.week}</span>`), 'Static report week placeholder is not synchronized');

@@ -606,26 +606,27 @@
   </div>
   <div class="header-date">
     <span class="live-dot"></span>
-    <span id="report-date">2026年10月14日 周三</span> · 第<span id="report-week">42</span>周
+    内容更新：<span id="report-date">2026年10月15日 周四</span> · 第<span id="report-week">42</span>周
   </div>
+  <div id="update-status" role="status" style="margin-top:10px;font-size:12px;line-height:1.7">正在读取检查状态…</div>
 </div>
 
 <!-- ===== STATS BAR ===== -->
 <div class="stats-bar">
   <div class="stat-item">
-    <div class="stat-num red" id="stat-high">3</div>
-    <div class="stat-label">🔴 高优商机</div>
+    <div class="stat-num red" id="stat-high">0</div>
+    <div class="stat-label">🔴 已核验高优</div>
   </div>
   <div class="stat-item">
     <div class="stat-num" id="stat-scenes">13</div>
     <div class="stat-label">📍 追踪场景</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num green" id="stat-news">6</div>
-    <div class="stat-label">📰 今日动态</div>
+    <div class="stat-num green" id="stat-news">12</div>
+    <div class="stat-label">📰 本期线索</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num blue" id="stat-compete">4</div>
+    <div class="stat-num blue" id="stat-compete">7</div>
     <div class="stat-label">⚔️ 竞品动态</div>
   </div>
 </div>
@@ -638,7 +639,7 @@
 <!-- ===== TOP NEWS ===== -->
 <div class="section">
   <div class="section-header">
-    🔥 今日要闻 <span class="badge badge-hot">TOP 3</span>
+    🔥 本期来源线索 <span class="badge badge-hot">实际发布日期</span>
   </div>
   <div class="news-scroll" id="news-scroll">
     <!-- JS fills -->
@@ -656,7 +657,7 @@
 <!-- ===== SCENE TRACKING ===== -->
 <div class="section">
   <div class="section-header">
-    📍 场景追踪 <span class="badge badge-new">点击展开</span>
+    📍 场景追踪 <span class="badge badge-new">历史底稿＋来源线索</span>
   </div>
   <div id="scene-cards">
     <!-- JS fills -->
@@ -665,7 +666,7 @@
 
 <!-- ===== COMPETITORS ===== -->
 <div class="section">
-  <div class="section-header">⚔️ 竞品动态</div>
+  <div class="section-header">⚔️ 竞品来源线索</div>
   <div class="comp-grid" id="comp-grid">
     <!-- JS fills -->
   </div>
@@ -682,7 +683,7 @@
 <!-- ===== FOOTER ===== -->
 <div class="footer">
   POWERED BY 京东AI付 · HERMES AGENT<br>
-  每日 18:05 自动更新 · <a href="history.html" style="color:var(--jd-red);text-decoration:none;font-weight:600;">查看历史日报 →</a>
+  计划每日北京时间 09:05 检查（任务可能延迟），仅有内容变化时更新 · <a href="history.html" style="color:var(--jd-red);text-decoration:none;font-weight:600;">查看历史日报 →</a>
 </div>
 
 <script>
@@ -690,95 +691,134 @@
 // DATA — cron job replaces this block each day
 // ============================================================
 const REPORT = {
-  "title": "支付巨头纷纷押注AI支付，进入“开口即付”时代+独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速",
-  "date": "2026年10月14日 周三",
+  "schemaVersion": 2,
+  "source": "google-news-rss",
+  "fingerprint": "ce71dfbb82abcb8279b71b730fcc1a4b9a938e934bd06140ba62d9c87fd0d8a3",
+  "contentUpdatedAt": "2026-10-15T03:13:51.721Z",
+  "windowDays": 7,
+  "date": "2026年10月15日 周四",
   "week": 42,
+  "title": "XRP Ledger Wallets Join Privy in Ripple Push for AI Payments + AI Agent Crypto Payments Su",
+  "baselineNotice": "场景库是历史底稿，不代表今日进展；自动摘要仅整理来源标题，需进一步核验。",
   "stats": {
-    "high": 3,
+    "high": 0,
     "scenes": 13,
-    "news": 6,
-    "compete": 4
+    "news": 12,
+    "compete": 7
   },
   "summary": {
-    "text": "今日自动扫描公开新闻源，AI支付与智能体支付仍围绕<strong>授权、风控、商户接入与场景入口</strong>展开。重点线索包括：<span class='highlight'>支付巨头纷纷押注AI支付，进入“开口即付”时代</span>；独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口。京东AI付应把素材复核、A2P2协议样板和场景落地节奏合并推进。",
+    "text": "按来源实际发布日期筛选近 7 天的 12 条线索，本次首次收录 4 条。最新线索：XRP Ledger Wallets Join Privy in Ripple Push for AI Payments。以下为自动归类，不是已核实的商业结论。",
     "tags": [
       {
-        "text": "公开RSS自动扫描",
-        "type": "red"
+        "text": "真实发布日期",
+        "type": "green"
       },
       {
-        "text": "授权与风控责任链",
-        "type": "amber"
-      },
-      {
-        "text": "商户/场景接入",
+        "text": "来源可追溯",
         "type": "blue"
       },
       {
-        "text": "A2P2样板复核",
-        "type": "green"
+        "text": "自动整理·待核验",
+        "type": "amber"
       }
     ]
   },
   "news": [
     {
-      "title": "支付巨头纷纷押注AI支付，进入“开口即付”时代",
-      "summary": "公开新闻源捕捉到「支付巨头纷纷押注AI支付，进入“开口即付”时代」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "21财经",
-      "time": "近24小时"
+      "title": "XRP Ledger Wallets Join Privy in Ripple Push for AI Payments",
+      "source": "Bitget",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VNGpNd3o0eWt6eGJzTjBLZzV4S0FwWDIzRTN4QzVwblIwaERDVXVPVlhnWXZ5c0dwbE9xQUxkWDI1dDd6QWV6aG5LZGVFYU4tbVpoOTJVN0ZSNTljeVU2WTA0c9IBY0FVX3lxTE1VNGpNd3o0eWt6eGJzTjBLZzV4S0FwWDIzRTN4QzVwblIwaERDVXVPVlhnWXZ5c0dwbE9xQUxkWDI1dDd6QWV6aG5LZGVFYU4tbVpoOTJVN0ZSNTljeVU2WTA0cw?oc=5",
+      "publishedAt": "2026-10-14T23:11:02.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "title": "独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速",
-      "summary": "公开新闻源捕捉到「独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "财联社",
-      "time": "近24小时"
+      "title": "AI Agent Crypto Payments Surpass 138 Million Transactions, US Dominates Inference Service Spending",
+      "source": "BigGo Finance",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1UVjdqdDU4dm91b3VNSHdJek9td2pibVpnbEswNm1sMjk3LVI2OHM1eVRRZHhRZHBOenFrb3FMN2NDRHc4b0hRSGR1OWUwWXNSZTg1bHFJd2pOVG1vNTItUVVfZ1lEMGYtdWdWQUVYdEsxQkQ1VkE?oc=5",
+      "publishedAt": "2026-10-14T23:05:00.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "title": "微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口",
-      "summary": "公开新闻源捕捉到「微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "虎嗅网",
-      "time": "近24小时"
+      "title": "Chainalysis Reports Massive Growth in Agentic Commerce Transactions",
+      "source": "Crypto Economy",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOYWYwSjgzWjlaY2Q2ZllRdnpfN2pyWXVFdFhGRUZEd09KLTMxaHg3UWpfZVlBTHl2V0tyM0xoclZjejgxN05HZ2JyYVQxVzlsV09CNThNMjBxQnVxWlY0RzFnbjlxZi1uN1Nxd2VKaTFzRV9qa243QXdFSjdIanhGUlpBRXFyNGsxeHRlbHd0YzJqVUliMHBoRldqWQ?oc=5",
+      "publishedAt": "2026-10-14T20:07:35.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "title": "Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与",
-      "summary": "公开新闻源捕捉到「Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "移动支付网",
-      "time": "近24小时"
+      "title": "Stablecoins Drive Growth in Agentic Commerce, Says Chainalysis",
+      "source": "Coinfomania",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONzJ3WlpBRUFQS3otWG0tTWNJa1htcFRRWVdUdm1ycDRMaHFaMVItNS04VnNtV2Y3NmVnS0V0amIzTmF3NkFIWXc3MTlQOC1PcE9ScGdDUjBCM2k2Z3p5VmlERVRjNVlxcU8zdEtGcFRlNUdGN1BELUFMQ3pKaGpjTUhxMGc1aVVDYXJVZThHWQ?oc=5",
+      "publishedAt": "2026-10-14T18:22:49.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "title": "从协议栈到支付生态的Agent投资图谱",
-      "summary": "公开新闻源捕捉到「从协议栈到支付生态的Agent投资图谱」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "view.inews.qq.com",
-      "time": "近24小时"
+      "title": "Wall Street Is Ready to Package Agentic Commerce as an Asset Class. The Rails Are Not in the Filing.",
+      "source": "Forkast News",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWUFXLV9zZTFQb1ZPVmM5RUpmTFprcGpLTnFqaWRadF9hdng3d1hBSW9QQVBEbkxxc253RkstRW9pZDFfZWVUOFAweUtIUEFyVGJGaDA1NHlaZ3VsMmtILVhWMmlNTXNKcDg3eTB0QjJZb2NIUWJPRXNMTE5NcHlVTHUteThxTnkyb0JybU5TUXFHOXU0SmdfcFN1SldXam5DRUVJb0RlWWZCc0hFVUJIR2l1NjhlQlZNRXA2Ug?oc=5",
+      "publishedAt": "2026-10-14T18:07:39.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "title": "APOP智能体支付开放协议框架发布，极豆科技联合银联、智谱、 岚图汽车首发",
-      "summary": "公开新闻源捕捉到「APOP智能体支付开放协议框架发布，极豆科技联合银联、智谱、 岚图汽车首发」。请重点核验其是否涉及智能体授权、商户接入、风控责任链或线下/车载支付触点。",
-      "source": "盖世汽车",
-      "time": "近24小时"
-    }
-  ],
-  "opportunities": [
-    {
-      "level": "high",
-      "scene": "AI专属卡/授权账户入口",
-      "reason": "围绕「支付巨头纷纷押注AI支付，进入“开口即付”时代」，支付巨头正在把AI支付能力前置到用户账户与授权入口。",
-      "action": "在京东支付内设计“AI付授权卡”：用户可设置限额、品类、商户白名单与权益包，优先绑定白条、小金库和银行卡。",
-      "value": "账户级"
+      "title": "Agentic Commerce Transactions on x402 Protocol Are Picking Up",
+      "source": "PaymentsJournal",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPX3M2WHRqaGRkQkUzcTR5dlBWeW1DUldQT1YxRHlnNHN5NzFZTU1lWEZmNjlna1d5UlJaaUJQbmUtY05SdklmTnhla0tHWmJVV1RjZjRSWWdiU015SWJvMkJfYlpuZEVrMW1aWXVna09lOEtzZC0ySE9wMFdPcFN4V2NHTjZlaWJZZ0toZmhxYVBIOEJzNU9PbVRn0gGfAUFVX3lxTE9RMVJvTG1rYlN5XzIxRGJRVktmcmwtZ0ozMXdkZWFvNk9MbDBCUFhLWVh0OVRqNGhQWHVLV0JSRTM3bXd5dWU0RG9JT2xuRHlSU0pOa0IxM0tkakZ5VnhvVHV5eUVZMHpZUFF2T1Vaa2RMc2NHSjBuVDJzLVdTWUt4VDl4c19VNENlQ1VmOWlqa2xuVGV4SkRIbzJGVlJKYw?oc=5",
+      "publishedAt": "2026-10-14T16:58:39.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-15"
     },
     {
-      "level": "high",
-      "scene": "A2P2电商订单托管支付",
-      "reason": "Agentic Payments竞争正在从“会聊天”转向“可授权、可追溯、可结算”的交易基础设施。",
-      "action": "优先做家电/3C/商超补货三类托管下单样板，覆盖预算授权、比价、下单、支付、售后追踪全链路。",
-      "value": "战略级"
+      "title": "AI智能体掀起支付行业新战局！伯恩斯坦：Visa(V.US)、万事达(MA.US)等迎新机遇提供者智通财经",
+      "source": "英为财情 Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3TDNMZlZibUl0SlNmdFdDM19Ndmtja01JMTE2SGpiZHA0Um1fdFlRREhUSTdhZFZ1Q282YklIZUREVU5uZEhuS3ZQSlUyWUY1dVM5c2oxb1N5S2g5cXdZZ3NDRjdSQ3hpZGl1LVE2WlU?oc=5",
+      "publishedAt": "2026-10-14T06:52:00.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-14"
     },
     {
-      "level": "high",
-      "scene": "线下/车载即时消费入口",
-      "reason": "围绕「线下/车载AI支付」，线下设备、车载座舱与本地生活是AI助手从推荐走向代办并支付的高频入口。",
-      "action": "联合京东到家、七鲜、京东养车/加油做PoC，把“到店/车内唤起AI助手→推荐→确认→支付”跑通。",
-      "value": "千万级/日"
+      "title": "Stripe 的下一张牌：为 AI 支付搭建底座",
+      "source": "ChainCatcher",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1BQlpjamdJZ1ZBdWtsUWJyZGRMaTNpTTI4S0RmNlNSMDk2X1F4ZVJSWVJTc1JUYTlWMFFPS1k1cEpwNGxqMmxVSE9nVl8yRFl1UklOeTZpTQ?oc=5",
+      "publishedAt": "2026-10-13T18:22:52.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-14"
+    },
+    {
+      "title": "阶跃AI手机STEPX Neo正式发布，接入支付宝阿宝300余项服务",
+      "source": "新京报",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9qNVFqRWNrZmF0X2ZucTVNR3Q3YmJkZ3JKeXJXTUJTa3I5c2VWSS1SYTRoMVBCb09uT3owU21uYUo1QUYtbkNaZFdiTFRyQjVHMll3ZVoyXzBuLWRkMWczSmd5U3k?oc=5",
+      "publishedAt": "2026-10-13T14:11:00.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-13"
+    },
+    {
+      "title": "STEPX与支付宝达成深度合作，将打造定制化AI支付方案",
+      "source": "新浪网",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQVM4SHMzd2lkM01vTHZubDNEYk5IMGZjZWZndXMzT0o4ZVNoQzNCVnNLVm5KSkw4U0ppQm8wZkg4NTF3TmJKT3hzSld4YURnMDB6YlhzWGlHOTgxU0JLa3VPTXJfcFh6dG1RNl9WN09hTGxxTTUwMnlpRUU3bDdtVDN3?oc=5",
+      "publishedAt": "2026-10-13T12:11:34.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-13"
+    },
+    {
+      "title": "AI代理人进入支付环节，退款与责任认定仍待解",
+      "source": "디지털투데이",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNVNCOFlIX2JOSkVRZGVmT2J0RDMzSFk0TUp4VHNDM1BfMEdWdlZfRzJ2djY1ZWoyM2s5M0xNMnJ6YkVqUWlkbHJONWFpbmY2cTRjQzRELUdDV081bkZhMzhoTHZkb0VPRVctd1JNbnBlcVdta3g0cVp1cG5nbXZaN0hDeHU5MDA5TWtKcl9OMXRBNDg?oc=5",
+      "publishedAt": "2026-10-12T07:05:00.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-12"
+    },
+    {
+      "title": "豆包打通对话缴费 巨头角力AI交易入口",
+      "source": "中华网财经",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0wR3BPUXRRc0gyTTFtdzdEMW41VzA0NzY3LWtQbHg0dWlhVEZ6aEF5U1l5UXZBeUF6d3lVU1JDdDBTcDQ1U25UaTJMZjRHUkFucWtEaTZMRExvTThKc3V4ZkxGa2pwcVFIRkJUcnBn?oc=5",
+      "publishedAt": "2026-10-12T06:59:43.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-12"
     }
   ],
   "scenes": [
@@ -838,7 +878,7 @@ const REPORT = {
           "name": "喜茶/奈雪",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "新茶饮头部品牌，小程序体系成熟但尚未见AI点单动作。本期无新动态",
+          "desc": "新茶饮头部品牌，小程序体系成熟但尚未见AI点单动作。",
           "tags": [
             {
               "text": "高客单价",
@@ -847,7 +887,9 @@ const REPORT = {
           ],
           "oppBox": null
         }
-      ]
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
     },
     {
       "icon": "🛒",
@@ -876,7 +918,7 @@ const REPORT = {
           "name": "淘宝天猫 AI导购",
           "opp": "low",
           "oppLabel": "竞品",
-          "desc": "阿里系支付宝AI Pay已率先落地，电商场景卡位较早。本期无新动态",
+          "desc": "阿里系支付宝AI Pay已率先落地，电商场景卡位较早。",
           "tags": [
             {
               "text": "竞品占位",
@@ -884,6 +926,33 @@ const REPORT = {
             }
           ],
           "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": [
+        {
+          "title": "Chainalysis Reports Massive Growth in Agentic Commerce Transactions",
+          "source": "Crypto Economy",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOYWYwSjgzWjlaY2Q2ZllRdnpfN2pyWXVFdFhGRUZEd09KLTMxaHg3UWpfZVlBTHl2V0tyM0xoclZjejgxN05HZ2JyYVQxVzlsV09CNThNMjBxQnVxWlY0RzFnbjlxZi1uN1Nxd2VKaTFzRV9qa243QXdFSjdIanhGUlpBRXFyNGsxeHRlbHd0YzJqVUliMHBoRldqWQ?oc=5",
+          "publishedAt": "2026-10-14T20:07:35.000Z"
+        },
+        {
+          "title": "Stablecoins Drive Growth in Agentic Commerce, Says Chainalysis",
+          "source": "Coinfomania",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONzJ3WlpBRUFQS3otWG0tTWNJa1htcFRRWVdUdm1ycDRMaHFaMVItNS04VnNtV2Y3NmVnS0V0amIzTmF3NkFIWXc3MTlQOC1PcE9ScGdDUjBCM2k2Z3p5VmlERVRjNVlxcU8zdEtGcFRlNUdGN1BELUFMQ3pKaGpjTUhxMGc1aVVDYXJVZThHWQ?oc=5",
+          "publishedAt": "2026-10-14T18:22:49.000Z"
+        },
+        {
+          "title": "Wall Street Is Ready to Package Agentic Commerce as an Asset Class. The Rails Are Not in the Filing.",
+          "source": "Forkast News",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWUFXLV9zZTFQb1ZPVmM5RUpmTFprcGpLTnFqaWRadF9hdng3d1hBSW9QQVBEbkxxc253RkstRW9pZDFfZWVUOFAweUtIUEFyVGJGaDA1NHlaZ3VsMmtILVhWMmlNTXNKcDg3eTB0QjJZb2NIUWJPRXNMTE5NcHlVTHUteThxTnkyb0JybU5TUXFHOXU0SmdfcFN1SldXam5DRUVJb0RlWWZCc0hFVUJIR2l1NjhlQlZNRXA2Ug?oc=5",
+          "publishedAt": "2026-10-14T18:07:39.000Z"
+        },
+        {
+          "title": "Agentic Commerce Transactions on x402 Protocol Are Picking Up",
+          "source": "PaymentsJournal",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPX3M2WHRqaGRkQkUzcTR5dlBWeW1DUldQT1YxRHlnNHN5NzFZTU1lWEZmNjlna1d5UlJaaUJQbmUtY05SdklmTnhla0tHWmJVV1RjZjRSWWdiU015SWJvMkJfYlpuZEVrMW1aWXVna09lOEtzZC0ySE9wMFdPcFN4V2NHTjZlaWJZZ0toZmhxYVBIOEJzNU9PbVRn0gGfAUFVX3lxTE9RMVJvTG1rYlN5XzIxRGJRVktmcmwtZ0ozMXdkZWFvNk9MbDBCUFhLWVh0OVRqNGhQWHVLV0JSRTM3bXd5dWU0RG9JT2xuRHlSU0pOa0IxM0tkakZ5VnhvVHV5eUVZMHpZUFF2T1Vaa2RMc2NHSjBuVDJzLVdTWUt4VDl4c19VNENlQ1VmOWlqa2xuVGV4SkRIbzJGVlJKYw?oc=5",
+          "publishedAt": "2026-10-14T16:58:39.000Z"
         }
       ]
     },
@@ -918,7 +987,7 @@ const REPORT = {
           "name": "车企车载支付",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "理想/蔚来等车企车机已有AI助手，ETC/停车/充电等高频支付场景可结合。本期无新动态",
+          "desc": "理想/蔚来等车企车机已有AI助手，ETC/停车/充电等高频支付场景可结合。",
           "tags": [
             {
               "text": "高频刚需",
@@ -927,7 +996,9 @@ const REPORT = {
           ],
           "oppBox": null
         }
-      ]
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
     },
     {
       "icon": "🏪",
@@ -952,7 +1023,7 @@ const REPORT = {
           "name": "无人货架/智能售货机",
           "opp": "low",
           "oppLabel": "防守",
-          "desc": "技术已成熟但未大规模推广，AI支付可作为增值能力。本期无新动态",
+          "desc": "技术已成熟但未大规模推广，AI支付可作为增值能力。",
           "tags": [
             {
               "text": "小额高频",
@@ -961,7 +1032,9 @@ const REPORT = {
           ],
           "oppBox": null
         }
-      ]
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
     },
     {
       "icon": "🎮",
@@ -973,7 +1046,7 @@ const REPORT = {
           "name": "手游/网游充值",
           "opp": "low",
           "oppLabel": "防守",
-          "desc": "网易、米哈游等已有AI客服，支付环节尚未深度结合。本期无新动态",
+          "desc": "网易、米哈游等已有AI客服，支付环节尚未深度结合。",
           "tags": [
             {
               "text": "高客单价",
@@ -986,7 +1059,7 @@ const REPORT = {
           "name": "直播打赏",
           "opp": "low",
           "oppLabel": "防守",
-          "desc": "抖音/快手打赏已高度简化，AI支付提升空间有限。本期无新动态",
+          "desc": "抖音/快手打赏已高度简化，AI支付提升空间有限。",
           "tags": [
             {
               "text": "冲动消费",
@@ -995,7 +1068,9 @@ const REPORT = {
           ],
           "oppBox": null
         }
-      ]
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
     },
     {
       "icon": "🏨",
@@ -1007,7 +1082,7 @@ const REPORT = {
           "name": "酒店/机票预订",
           "opp": "mid",
           "oppLabel": "跟进",
-          "desc": "携程/飞猪等OTA已有AI客服，「查询→预订→支付」链路可简化。本期无新动态",
+          "desc": "携程/飞猪等OTA已有AI客服，「查询→预订→支付」链路可简化。",
           "tags": [
             {
               "text": "高客单价",
@@ -1020,7 +1095,7 @@ const REPORT = {
           "name": "外卖点餐",
           "opp": "low",
           "oppLabel": "防守",
-          "desc": "美团/饿了么场景理论可行，但尚未见竞品动作。本期无新动态",
+          "desc": "美团/饿了么场景理论可行，但尚未见竞品动作。",
           "tags": [
             {
               "text": "日均千万单",
@@ -1029,35 +1104,108 @@ const REPORT = {
           ],
           "oppBox": null
         }
-      ]
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
     }
   ],
   "competitors": [
     {
+      "name": "支付宝",
       "icon": "🐜",
-      "name": "支付宝 AI Pay",
-      "desc": "5月官宣3亿交易、支持95%框架、AI Wallet上线，全栈基础设施领跑；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：AI支付登场，说句话就能付款；本期继续跟踪：端午实测AI支付新功能：支付宝、微信卡位“第一支付入口”；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代；本期继续跟踪：支付巨头纷纷押注AI支付，进入“开口即付”时代"
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "阶跃AI手机STEPX Neo正式发布，接入支付宝阿宝300余项服务",
+          "source": "新京报",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9qNVFqRWNrZmF0X2ZucTVNR3Q3YmJkZ3JKeXJXTUJTa3I5c2VWSS1SYTRoMVBCb09uT3owU21uYUo1QUYtbkNaZFdiTFRyQjVHMll3ZVoyXzBuLWRkMWczSmd5U3k?oc=5",
+          "publishedAt": "2026-10-13T14:11:00.000Z"
+        },
+        {
+          "title": "STEPX与支付宝达成深度合作，将打造定制化AI支付方案",
+          "source": "新浪网",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQVM4SHMzd2lkM01vTHZubDNEYk5IMGZjZWZndXMzT0o4ZVNoQzNCVnNLVm5KSkw4U0ppQm8wZkg4NTF3TmJKT3hzSld4YURnMDB6YlhzWGlHOTgxU0JLa3VPTXJfcFh6dG1RNl9WN09hTGxxTTUwMnlpRUU3bDdtVDN3?oc=5",
+          "publishedAt": "2026-10-13T12:11:34.000Z"
+        }
+      ]
     },
     {
+      "name": "微信",
       "icon": "💬",
-      "name": "微信支付 AI专属卡",
-      "desc": "8月31日接入DeepSeek Harness、OpenClaw，已接入4家Agent平台；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：端午实测AI支付新功能：支付宝、微信卡位“第一支付入口”；本期继续跟踪：端午实测AI支付新功能：支付宝、微信卡位“第一支付入口”；本期继续跟踪：端午实测AI支付新功能：支付宝、微信卡位“第一支付入口”；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：端午实测AI支付新功能：支付宝、微信卡位“第一支付入口”；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速；本期继续跟踪：独家|微信支付“AI专属卡”最快本周上线，支付巨头AI对垒战加速"
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
     },
     {
+      "name": "Stripe",
       "icon": "💳",
-      "name": "Stripe Agentic Pay",
-      "desc": "2026年7月与Visa、Mastercard同期布局Agentic Commerce（据海外媒体）；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent 会用银行卡吗？Agentic Payment 为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与；本期继续跟踪：Google推出AI支付协议，万事达卡、Visa、PayPal、蚂蚁国际等参与；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI Agent会用银行卡吗？Agentic Payment为什么绕不开稳定币和区块链；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：AI版支付宝上线，拉开了超级App的AI化竞速序幕；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口；本期继续跟踪：2025全球AI支付行业全景研究报告 市场趋势技术应用与商业落地深度分析；本期继续跟踪：2025全球AI支付行业全景研究报告 市场趋势技术应用与商业落地深度分析；本期继续跟踪：2025全球AI支付行业全景研究报告 市场趋势技术应用与商业落地深度分析；本期继续跟踪：微信支付宝24小时内相继发布AI支付产品，AI支付成支付行业新风口"
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "XRP Ledger Wallets Join Privy in Ripple Push for AI Payments",
+          "source": "Bitget",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VNGpNd3o0eWt6eGJzTjBLZzV4S0FwWDIzRTN4QzVwblIwaERDVXVPVlhnWXZ5c0dwbE9xQUxkWDI1dDd6QWV6aG5LZGVFYU4tbVpoOTJVN0ZSNTljeVU2WTA0c9IBY0FVX3lxTE1VNGpNd3o0eWt6eGJzTjBLZzV4S0FwWDIzRTN4QzVwblIwaERDVXVPVlhnWXZ5c0dwbE9xQUxkWDI1dDd6QWV6aG5LZGVFYU4tbVpoOTJVN0ZSNTljeVU2WTA0cw?oc=5",
+          "publishedAt": "2026-10-14T23:11:02.000Z"
+        },
+        {
+          "title": "Stripe 的下一张牌：为 AI 支付搭建底座",
+          "source": "ChainCatcher",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1BQlpjamdJZ1ZBdWtsUWJyZGRMaTNpTTI4S0RmNlNSMDk2X1F4ZVJSWVJTc1JUYTlWMFFPS1k1cEpwNGxqMmxVSE9nVl8yRFl1UklOeTZpTQ?oc=5",
+          "publishedAt": "2026-10-13T18:22:52.000Z"
+        }
+      ]
     },
     {
+      "name": "银联",
       "icon": "🏦",
-      "name": "银联云闪付",
-      "desc": "本期未搜索到AI支付相关新动态，传统支付能力稳固"
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
+    },
+    {
+      "name": "Visa",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "AI智能体掀起支付行业新战局！伯恩斯坦：Visa(V.US)、万事达(MA.US)等迎新机遇提供者智通财经",
+          "source": "英为财情 Investing.com",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3TDNMZlZibUl0SlNmdFdDM19Ndmtja01JMTE2SGpiZHA0Um1fdFlRREhUSTdhZFZ1Q282YklIZUREVU5uZEhuS3ZQSlUyWUY1dVM5c2oxb1N5S2g5cXdZZ3NDRjdSQ3hpZGl1LVE2WlU?oc=5",
+          "publishedAt": "2026-10-14T06:52:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "Mastercard",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "AI智能体掀起支付行业新战局！伯恩斯坦：Visa(V.US)、万事达(MA.US)等迎新机遇提供者智通财经",
+          "source": "英为财情 Investing.com",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3TDNMZlZibUl0SlNmdFdDM19Ndmtja01JMTE2SGpiZHA0Um1fdFlRREhUSTdhZFZ1Q282YklIZUREVU5uZEhuS3ZQSlUyWUY1dVM5c2oxb1N5S2g5cXdZZ3NDRjdSQ3hpZGl1LVE2WlU?oc=5",
+          "publishedAt": "2026-10-14T06:52:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "PayPal",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
+    }
+  ],
+  "opportunities": [
+    {
+      "level": "mid",
+      "scene": "电商平台 · 待核验线索",
+      "reason": "本次窗口内有 4 条来源标题涉及该场景，尚不能据此认定商业落地。",
+      "action": "阅读来源，确认服务入口、授权方式及交易闭环后再评估优先级。",
+      "value": "待核验"
     }
   ],
   "suggestions": [
-    "<strong>【账户入口】</strong>把AI付做成用户可理解、可控的授权账户，而不是后台策略：限额、品类、商户白名单必须前台可见。",
-    "<strong>【订单托管】</strong>围绕「支付巨头纷纷押注AI支付，进入“开口即付”时代」拆一个电商代办交易样板，优先证明AI能安全完成“推荐到支付”。",
-    "<strong>【场景闭环】</strong>线下/车载PoC不要只做唤起演示，必须跑通履约、退款、风控和客服兜底。"
+    "\u003cstrong>【素材核验】\u003c/strong>本次整理 12 条近 7 天内来源线索。标题摘要不是完整研究结论，请沿来源链接核验原文。",
+    "\u003cstrong>【场景跟踪】\u003c/strong>历史底稿单独标识；只有匹配到新来源的场景才展示窗口内动态，没有新证据不改写为新结论。",
+    "\u003cstrong>【接入评估】\u003c/strong>优先核验真实开放接口、商户接入、用户授权及履约退款条件，再决定是否推进合作。"
   ]
 };
 
@@ -1065,6 +1213,39 @@ const REPORT = {
 // ============================================================
 // RENDER
 // ============================================================
+function escapeText(value = '') {
+  return String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}
+
+function sourceLink(item) {
+  return /^https?:\/\//i.test(item.link || '') ? `<a href="${escapeText(item.link)}" target="_blank" rel="noopener noreferrer" style="color:var(--jd-red)">${escapeText(item.title)}</a>` : escapeText(item.title);
+}
+
+function observationList(items = []) {
+  return items.length ? items.map(item => `<div style="margin-top:8px">${sourceLink(item)}<div class="data-time">${escapeText(item.source)} · ${new Date(item.publishedAt).toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' })}</div></div>`).join('') : '<div class="data-time" style="margin-top:8px">本期采集范围内暂无匹配线索，不代表该主体没有进展。</div>';
+}
+
+async function renderUpdateStatus() {
+  const target = document.getElementById('update-status');
+  if (location.pathname.includes('/archive/')) {
+    target.textContent = '历史存档快照；其中来源日期与结论仅对应当期。';
+    return;
+  }
+  try {
+    const response = await fetch('archive/last-updated.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('检查状态暂不可用');
+    const status = await response.json();
+    const labels = { updated: `本次内容已更新，首次收录 ${status.newItems || 0} 条`, unchanged: '检查完成，暂无新增或实质变化', 'no-new-items': '检查完成，当前窗口暂无新线索；保留上次内容', error: '采集或校验失败，保留上次有效内容' };
+    const checked = Date.parse(status.lastCheckedAt);
+    const stale = !Number.isFinite(checked) || Date.now() - checked > 36 * 3600000;
+    target.textContent = `${stale ? '检查已超时，请关注任务状态。' : ''}最后检查：${Number.isFinite(checked) ? new Date(checked).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false }) : '未知'}（北京时间） · ${labels[status.status] || '状态待确认'}${status.sourceErrors?.length ? ` · ${status.sourceErrors.length} 个查询失败，覆盖不完整` : ''}`;
+    target.dataset.status = status.status || 'unknown';
+  } catch {
+    target.textContent = '检查状态暂不可用；下方仍为上次发布内容，不能据此认定今日已更新。';
+    target.dataset.status = 'unavailable';
+  }
+}
+
 function render(data) {
   // Date
   document.getElementById('report-date').textContent = data.date;
@@ -1076,9 +1257,10 @@ function render(data) {
       `<span class="exec-tag exec-tag-${t.type}">${t.text}</span>`
     ).join('');
     document.getElementById('exec-summary').innerHTML = `
-      <div class="exec-summary-title">📋 今日摘要</div>
+      <div class="exec-summary-title">📋 本期摘要 · 自动整理待核验</div>
       <div class="exec-summary-text">${data.summary.text}</div>
       <div class="exec-summary-tags">${tagsHtml}</div>
+      <div class="data-time" style="margin-top:10px">${escapeText(data.baselineNotice || '')}</div>
     `;
   }
 
@@ -1092,15 +1274,15 @@ function render(data) {
   const newsHtml = data.news.map((n, i) => `
     <div class="news-card">
       <div class="news-rank">${i + 1}</div>
-      <div class="news-title">${n.title}</div>
-      <div class="news-summary">${n.summary}</div>
+      <div class="news-title">${sourceLink(n)}</div>
+      <div class="news-summary">${escapeText(n.summary)}</div>
       <div class="news-source">
-        <span>${n.source}</span>
-        <span>${n.time}</span>
+        <span>${escapeText(n.source)}</span>
+        <span>发布：${escapeText(n.time)}</span>
       </div>
     </div>
   `).join('');
-  document.getElementById('news-scroll').innerHTML = newsHtml;
+  document.getElementById('news-scroll').innerHTML = newsHtml || '<p class="data-time">当前窗口暂无有效新线索，不以旧新闻填充。</p>';
 
   // Opportunity Board
   const oppHtml = data.opportunities.map(o => `
@@ -1114,7 +1296,7 @@ function render(data) {
     </div>
   `).join('');
   document.getElementById('opp-board').innerHTML =
-    `<div class="opp-board-title">🎯 商机看板 · ${data.stats.high}个高优</div>` + oppHtml;
+    `<div class="opp-board-title">🎯 商机线索 · ${data.opportunities.length}个待评估</div>` + (oppHtml || '<p class="data-time">暂无足够证据形成新的场景商机判断。</p>');
 
   // Scene Cards
   const sceneHtml = data.scenes.map((s, si) => {
@@ -1153,6 +1335,9 @@ function render(data) {
         </div>
         <div class="card-body">
           <div class="card-content">
+            <p class="data-time">${escapeText(s.baselineNotice || '')}</p>
+            ${observationList(s.observations)}
+            <div class="data-time" style="margin-top:14px">历史场景底稿（以下内容未重新核验）</div>
             ${itemsHtml}
           </div>
         </div>
@@ -1164,8 +1349,8 @@ function render(data) {
   // Competitors
   const compHtml = data.competitors.map(c => `
     <div class="comp-card">
-      <div class="comp-name">${c.icon} ${c.name}</div>
-      <div class="comp-desc">${c.desc}</div>
+      <div class="comp-name">${escapeText(c.icon)} ${escapeText(c.name)}</div>
+      <div class="comp-desc">${escapeText(c.desc)}${observationList(c.observations)}</div>
     </div>
   `).join('');
   document.getElementById('comp-grid').innerHTML = compHtml;
@@ -1175,7 +1360,7 @@ function render(data) {
     `<div class="suggest-item">${s}</div>`
   ).join('');
   document.getElementById('suggest-box').innerHTML =
-    `<div class="suggest-title">💡 今日建议</div>` + sugHtml;
+    `<div class="suggest-title">💡 后续核验建议</div>` + sugHtml;
 }
 
 function toggleCard(id) {
@@ -1185,6 +1370,7 @@ function toggleCard(id) {
 
 // Init
 render(REPORT);
+renderUpdateStatus();
 </script>
 </body>
 </html>
