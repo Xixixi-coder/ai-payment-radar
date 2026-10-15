@@ -1,15 +1,15 @@
 {
   "date": "2026-10-15",
-  "generatedAt": "2026-10-15T03:18:53.253Z",
+  "generatedAt": "2026-10-15T05:50:53.994Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
   "checkedDate": "2026-10-15",
-  "lastCheckedAt": "2026-10-15T03:18:53.253Z",
+  "lastCheckedAt": "2026-10-15T05:50:53.994Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-15T03:18:53.253Z",
+  "contentUpdatedAt": "2026-10-15T05:50:53.994Z",
   "status": "updated",
-  "fingerprint": "6a613eeeb36b6b0459b848c6413e4fc895a022470e392b72e6b0a47a9f458831",
+  "fingerprint": "055b22a9aff654a4b2bb82d9b3f2d8c40f4d6e7ac6aec0057b25db1afd71142e",
   "newItems": 1,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -46,6 +46,7 @@
     "stepx与支付宝达成深度合作将打造定制化ai支付方案",
     "ai代理人进入支付环节退款与责任认定仍待解",
     "豆包打通对话缴费巨头角力ai交易入口",
-    "shopify向外部ai代理开放逾10亿件商品打通搜索到支付链路"
+    "shopify向外部ai代理开放逾10亿件商品打通搜索到支付链路",
+    "antonyjeyajamesalangaramreceives2026globalrecognitionawardforinnovativeagenticcommercearchitecture"
   ]
 }
