@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-15",
-  "generatedAt": "2026-10-15T05:50:53.994Z",
+  "date": "2026-10-16",
+  "generatedAt": "2026-10-16T05:47:20.861Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-15",
-  "lastCheckedAt": "2026-10-15T05:50:53.994Z",
+  "checkedDate": "2026-10-16",
+  "lastCheckedAt": "2026-10-16T05:47:20.861Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-15T05:50:53.994Z",
+  "contentUpdatedAt": "2026-10-16T05:47:20.861Z",
   "status": "updated",
-  "fingerprint": "055b22a9aff654a4b2bb82d9b3f2d8c40f4d6e7ac6aec0057b25db1afd71142e",
-  "newItems": 1,
+  "fingerprint": "5d63e4b6cd461eee5784adb0b8b4ebf3e41f95f0284c852f382c0d7674c7bfee",
+  "newItems": 11,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -47,6 +47,17 @@
     "ai代理人进入支付环节退款与责任认定仍待解",
     "豆包打通对话缴费巨头角力ai交易入口",
     "shopify向外部ai代理开放逾10亿件商品打通搜索到支付链路",
-    "antonyjeyajamesalangaramreceives2026globalrecognitionawardforinnovativeagenticcommercearchitecture"
+    "antonyjeyajamesalangaramreceives2026globalrecognitionawardforinnovativeagenticcommercearchitecture",
+    "时代周刊发布最佳发明榜单蚂蚁集团阿福ai支付入选",
+    "ai智能体拿起了你的信用卡支付金库正在成为新战场ai应用",
+    "usdcpowersaipaymentswith32kmonthlyactivesenders",
+    "wixstockfacesarealtestafteraipaymentslaunch",
+    "aimicropaymentspointtocryptosroleinagenticcommerce",
+    "truefitintroducesfitintelligencelayerforagenticcommerce",
+    "paypalandglancetointegrateagenticcommerceservices",
+    "glanceannouncesagenticcommerceintegrationwithpaypal",
+    "ai代理一年完成138亿笔加密支付逾87为小额支付",
+    "阿斯利康加码ai药物研发向insitro支付4000万美元预付款",
+    "ai智能体掀起支付行业新战局伯恩斯坦visa万事达等迎新机遇"
   ]
 }
