@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-18",
-  "generatedAt": "2026-10-18T05:48:10.239Z",
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19T06:05:16.588Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-18",
-  "lastCheckedAt": "2026-10-18T05:48:10.239Z",
+  "checkedDate": "2026-10-19",
+  "lastCheckedAt": "2026-10-19T06:05:16.588Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-18T05:48:10.239Z",
+  "contentUpdatedAt": "2026-10-19T06:05:16.588Z",
   "status": "updated",
-  "fingerprint": "4d34d37cd366a3afb91a172435f765a8376f855da0c23c3d1cf6b1f2a6eee89b",
-  "newItems": 7,
+  "fingerprint": "5fc5448edc0d2d0c03f338a9e24af04dc8d13ca1aad5ec49f51ec86e887eec68",
+  "newItems": 6,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -77,6 +77,12 @@
     "howsmallbusinessesbanksandfintechscanimplementagenticpayments",
     "suiintegratesalibabacloudforaipaymentspriceeyes140target",
     "智能体支付推动钱包大战支付授权与开放标准成竞争焦点",
-    "支付宝ai支付入选2026年度最佳发明10月16日消息时"
+    "支付宝ai支付入选2026年度最佳发明10月16日消息时",
+    "americanexpressworkswithpartnersonagenticcommercestandards",
+    "蚂蚁阿福支付宝ai支付双双入选时代2026全球最佳发明",
+    "dwflabs市场尚未定价ai与加密融合depin支付未来或成受益方向",
+    "微信测试首屏ai助手小微从聊天问答转向服务与交易执行",
+    "whyblockchainmaybethewrongfoundationforagenticpayments",
+    "openledgercontributorcallsagenticpaymentscryptosfirstaikillerapp"
   ]
 }
