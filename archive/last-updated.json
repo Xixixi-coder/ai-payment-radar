@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-19",
-  "generatedAt": "2026-10-19T06:05:16.588Z",
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T05:57:48.671Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-19",
-  "lastCheckedAt": "2026-10-19T06:05:16.588Z",
+  "checkedDate": "2026-10-20",
+  "lastCheckedAt": "2026-10-20T05:57:48.671Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-19T06:05:16.588Z",
+  "contentUpdatedAt": "2026-10-20T05:57:48.671Z",
   "status": "updated",
-  "fingerprint": "5fc5448edc0d2d0c03f338a9e24af04dc8d13ca1aad5ec49f51ec86e887eec68",
-  "newItems": 6,
+  "fingerprint": "0a3d29b8a49fb647ae0a4ef843d44bfb93f36d14b8e99071af5168a1b2ba13de",
+  "newItems": 7,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -83,6 +83,13 @@
     "dwflabs市场尚未定价ai与加密融合depin支付未来或成受益方向",
     "微信测试首屏ai助手小微从聊天问答转向服务与交易执行",
     "whyblockchainmaybethewrongfoundationforagenticpayments",
-    "openledgercontributorcallsagenticpaymentscryptosfirstaikillerapp"
+    "openledgercontributorcallsagenticpaymentscryptosfirstaikillerapp",
+    "asagenticcommercespreadsanalystspickabeneficiarystock",
+    "rippleswell2026opensoct27todiscussaipaymentsandxrpledgersecuritysolutions",
+    "theintelligentspendshifthowcardplatformscanprepareforagenticcommerce",
+    "turnagenttrafficintorevenuewithcpnmanagedpayments",
+    "howtosecurestablecoinsandagenticpaymentswithtrust",
+    "xrplcommonshosts36hournychackathontobuildonchainlendingandaipaymentsonxrpl",
+    "广交会六成企业应用ai数字内容与ai出海驱动ai支付"
   ]
 }
