@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>AI支付场景雷达</title>
+<style>
+  :root {
+    --jd-red: #E2231A;
+    --jd-red-light: #FFF1F0;
+    --jd-red-soft: #FFDAD6;
+    --bg: #F7F8FC;
+    --bg-white: #FFFFFF;
+    --text-primary: #1A1D2E;
+    --text-secondary: #6B7280;
+    --text-tertiary: #9CA3AF;
+    --border: #E8ECF4;
+    --border-light: #F0F2F8;
+    --accent-blue: #3B82F6;
+    --accent-blue-light: #EFF6FF;
+    --accent-green: #10B981;
+    --accent-green-light: #ECFDF5;
+    --accent-amber: #F59E0B;
+    --accent-amber-light: #FFFBEB;
+    --accent-purple: #8B5CF6;
+    --accent-purple-light: #F5F3FF;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.03);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding-bottom: 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    background: var(--bg-white);
+    padding: 32px 20px 28px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 20px; right: 20px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--jd-red), var(--accent-blue), var(--accent-green));
+    border-radius: 3px;
+  }
+  .header-label {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .header-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+  }
+  .header-title .icon { font-size: 30px; }
+  .header-date {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 16px;
+    margin: 16px 12px 0;
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+  }
+  .stat-item {
+    text-align: center;
+    padding: 10px 4px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+  }
+  .stat-item:hover { background: var(--bg); }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--jd-red);
+    line-height: 1.2;
+  }
+  .stat-num.green { color: var(--accent-green); }
+  .stat-num.blue { color: var(--accent-blue); }
+  .stat-num.red { color: var(--jd-red); }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  /* Executive Summary */
+  .exec-summary {
+    margin: 16px 12px 0;
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .exec-summary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--jd-red), var(--accent-amber));
+  }
+  .exec-summary-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .exec-summary-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  .exec-summary-text strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .exec-summary-text .highlight {
+    color: var(--jd-red);
+    font-weight: 700;
+  }
+  .exec-summary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .exec-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .exec-tag-red { background: var(--jd-red-light); color: var(--jd-red); }
+  .exec-tag-amber { background: var(--accent-amber-light); color: #D97706; }
+  .exec-tag-blue { background: var(--accent-blue-light); color: var(--accent-blue); }
+  .exec-tag-green { background: var(--accent-green-light); color: var(--accent-green); }
+
+  /* Section */
+  .section {
+    padding: 0 12px;
+    margin-top: 20px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .section-header .badge {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .badge-hot { background: var(--jd-red); color: #fff; }
+  .badge-new { background: var(--accent-green); color: #fff; }
+
+  /* News Cards */
+  .news-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 0 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .news-scroll::-webkit-scrollbar { display: none; }
+  .news-card {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    padding: 20px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .news-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .news-card:nth-child(1)::before { background: var(--jd-red); }
+  .news-card:nth-child(2)::before { background: var(--accent-amber); }
+  .news-card:nth-child(3)::before { background: var(--accent-blue); }
+  .news-rank {
+    width: 24px; height: 24px;
+    background: var(--jd-red);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .news-card:nth-child(2) .news-rank { background: var(--accent-amber); }
+  .news-card:nth-child(3) .news-rank { background: var(--accent-blue); }
+  .news-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .news-summary {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .news-source {
+    margin-top: 12px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* Expandable Cards */
+  .card {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+  }
+  .card.expanded {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md), 0 0 0 3px rgba(59,130,246,0.08);
+  }
+  .card-head {
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .card-head:hover { background: var(--bg); }
+  .card-head:active { background: var(--border-light); }
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .card-info { flex: 1; min-width: 0; }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .card-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-arrow {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-tertiary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    font-size: 12px;
+    background: var(--bg);
+    border-radius: 8px;
+  }
+  .card.expanded .card-arrow { transform: rotate(180deg); background: var(--accent-blue-light); color: var(--accent-blue); }
+
+  .card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .card.expanded .card-body { max-height: 2000px; }
+  .card-content {
+    padding: 0 18px 18px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* Scene Items */
+  .scene-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .scene-item:last-child { border-bottom: none; }
+  .scene-name {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .scene-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    line-height: 1.7;
+  }
+  .scene-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .tag-volume { background: var(--accent-blue-light); color: var(--accent-blue); }
+  .tag-tech { background: var(--accent-purple-light); color: var(--accent-purple); }
+  .tag-pay { background: var(--accent-amber-light); color: var(--accent-amber); }
+
+  /* Opportunity Indicator */
+  .opp {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .opp-high { background: var(--jd-red-light); color: var(--jd-red); }
+  .opp-mid { background: var(--accent-amber-light); color: #D97706; }
+  .opp-low { background: var(--accent-green-light); color: var(--accent-green); }
+
+  .opp-box {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--jd-red-light);
+    border-left: 3px solid var(--jd-red);
+  }
+  .opp-box.mid { background: var(--accent-amber-light); border-left-color: var(--accent-amber); }
+  .opp-box.low { background: var(--accent-green-light); border-left-color: var(--accent-green); }
+  .opp-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--jd-red);
+    margin-bottom: 4px;
+  }
+  .opp-box.mid .opp-title { color: #D97706; }
+  .opp-box.low .opp-title { color: var(--accent-green); }
+  .opp-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* Opportunity Board */
+  .opp-board {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .opp-board::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--jd-red), var(--accent-amber), var(--accent-green));
+  }
+  .opp-board-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .opp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .opp-row:last-child { border-bottom: none; }
+  .opp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .opp-dot.high { background: var(--jd-red); box-shadow: 0 0 0 3px var(--jd-red-soft); }
+  .opp-dot.mid { background: var(--accent-amber); box-shadow: 0 0 0 3px rgba(245,158,11,0.2); }
+  .opp-dot.low { background: var(--accent-green); box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
+  .opp-text { flex: 1; }
+  .opp-text-title { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+  .opp-text-desc { font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.6; }
+  .opp-value {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: var(--jd-red-light);
+    color: var(--jd-red);
+  }
+
+  /* Competitor Section */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .comp-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s;
+  }
+  .comp-card:hover { box-shadow: var(--shadow-md); }
+  .comp-name {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-primary);
+  }
+  .comp-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Suggestion Box */
+  .suggest-box {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .suggest-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  }
+  .suggest-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+  }
+  .suggest-item {
+    padding: 12px 14px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+  }
+  .suggest-item strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .suggest-item:last-child { margin-bottom: 0; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 16px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.5px;
+  }
+  .footer a { color: var(--jd-red); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Data loading placeholder */
+  .data-time { font-size: 10px; color: var(--text-tertiary); }
+
+  /* Pulse animation for live dot */
+  @keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .live-dot {
+    width: 7px; height: 7px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+  }
+
+  /* Responsive tweaks */
+  @media (min-width: 768px) {
+    body { max-width: 680px; margin: 0 auto; }
+    .header { border-radius: 0 0 var(--radius) var(--radius); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="header-label">JINGDONG AI PAY · DAILY RADAR</div>
+  <div class="header-title">
+    <span class="icon">📡</span>
+    AI支付场景雷达
+  </div>
+  <div class="header-date">
+    <span class="live-dot"></span>
+    内容更新：<span id="report-date">2026年10月21日 周三</span> · 第<span id="report-week">43</span>周
+  </div>
+  <div id="update-status" role="status" style="margin-top:10px;font-size:12px;line-height:1.7">正在读取检查状态…</div>
+</div>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num red" id="stat-high">0</div>
+    <div class="stat-label">🔴 已核验高优</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" id="stat-scenes">13</div>
+    <div class="stat-label">📍 追踪场景</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num green" id="stat-news">12</div>
+    <div class="stat-label">📰 本期线索</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num blue" id="stat-compete">7</div>
+    <div class="stat-label">⚔️ 竞品动态</div>
+  </div>
+</div>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<div class="exec-summary" id="exec-summary">
+  <!-- JS fills -->
+</div>
+
+<!-- ===== TOP NEWS ===== -->
+<div class="section">
+  <div class="section-header">
+    🔥 本期来源线索 <span class="badge badge-hot">实际发布日期</span>
+  </div>
+  <div class="news-scroll" id="news-scroll">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== OPPORTUNITY BOARD ===== -->
+<div class="section">
+  <div class="opp-board" id="opp-board">
+    <div class="opp-board-title">🎯 商机看板</div>
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== SCENE TRACKING ===== -->
+<div class="section">
+  <div class="section-header">
+    📍 场景追踪 <span class="badge badge-new">历史底稿＋来源线索</span>
+  </div>
+  <div id="scene-cards">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== COMPETITORS ===== -->
+<div class="section">
+  <div class="section-header">⚔️ 竞品来源线索</div>
+  <div class="comp-grid" id="comp-grid">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== SUGGESTIONS ===== -->
+<div class="section">
+  <div class="suggest-box" id="suggest-box">
+    <div class="suggest-title">💡 今日建议</div>
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  POWERED BY 京东AI付 · HERMES AGENT<br>
+  计划每日北京时间 09:05 检查（任务可能延迟），仅有内容变化时更新 · <a href="../history.html" style="color:var(--jd-red);text-decoration:none;font-weight:600;">查看历史日报 →</a>
+</div>
+
+<script>
+// ============================================================
+// DATA — cron job replaces this block each day
+// ============================================================
+const REPORT = {
+  "schemaVersion": 2,
+  "source": "google-news-rss",
+  "fingerprint": "53a2c237985042c5e2753273607aa64f344c4996ce5e7e064e95621b2f2eb6ce",
+  "contentUpdatedAt": "2026-10-21T05:57:54.921Z",
+  "windowDays": 7,
+  "date": "2026年10月21日 周三",
+  "week": 43,
+  "title": "Mastercard Begins Rolling Out AI Agent Payments Service With Coinbase, Base + Evervault La",
+  "baselineNotice": "场景库是历史底稿，不代表今日进展；自动摘要仅整理来源标题，需进一步核验。",
+  "stats": {
+    "high": 0,
+    "scenes": 13,
+    "news": 12,
+    "compete": 7
+  },
+  "summary": {
+    "text": "按来源实际发布日期筛选近 7 天的 12 条线索，本次首次收录 9 条。最新线索：Mastercard Begins Rolling Out AI Agent Payments Service With Coinbase, Base。以下为自动归类，不是已核实的商业结论。",
+    "tags": [
+      {
+        "text": "真实发布日期",
+        "type": "green"
+      },
+      {
+        "text": "来源可追溯",
+        "type": "blue"
+      },
+      {
+        "text": "自动整理·待核验",
+        "type": "amber"
+      }
+    ]
+  },
+  "news": [
+    {
+      "title": "Mastercard Begins Rolling Out AI Agent Payments Service With Coinbase, Base",
+      "source": "Bitcoin News",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaVZkOTNJNkFPN1NkeXcwXzdUd3R4U0NQNUZUa1oyUmlaN1ZXR0N6MXh5OVFhaDZaNDNpMmVTbHRMcjN1eFgwemRNNGdvVWlnRHBfbUlSWXR4OWt3ZVQwcWZJd3BQa01rVndfcWpQa2xONUlrbDdfYlRLSFNxUVYyZUhBVk9ROGJmSFBuS0h3eDYtLVczTnBj?oc=5",
+      "publishedAt": "2026-10-20T23:20:47.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "Evervault Launches Browser Tokens, Enabling Secure Agentic Payments",
+      "source": "01net",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNek14Vnk2NXJ0c1dYX2lPLU9iR2NKNmxrckNFbVg1aGZZZ3VJTVVzYXlKbWd4bTZVMW40aGRSb0hwTXkzUEhRSEZGUkdfdkRobW0zZUhDeDdKd2lobjVQZHQ2eU40U3EyN0xaclluVThpQTN3ZlY1MFM4QllyTTZWUG9EVjlPREZwUTRhWVpOZDNZZw?oc=5",
+      "publishedAt": "2026-10-20T21:50:00.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "How Is Visa (V) Turning Crypto And AI Payments Into Real World Use?",
+      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2lxSnVKNmlPUmpSMElDU0puN215MlpPRXlzU1hnTnZGVE5SeEZyVzA4bDgzQUd0UXEzOGpCU25SUVNLT0VhM2tkaXZCRXpDTWZqZ0ZoV2FuVE0zODR4VWdfcnQtdXIyczhBMGdzUmljZ3Q3X0ltZmFWTDgteUdrUFlGSHNVMkljeGlnZFpYVExUYzg?oc=5",
+      "publishedAt": "2026-10-20T21:10:30.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "Mastercard Agent Pay for Machines Launches Early Access",
+      "source": "The Cryptonomist",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BNlVYbXg1d1o1cUhmRHFZZFp6Unk1bGJiLXExdTl2LU5GOExwUjk2dnQ4WFhCM1V3TGx0aEN2Z3p6OGVpak1jd19yc0ZRMjd5QUN5RU9uRk90Q0pYc1dlZDl2V01GczVVWGhR?oc=5",
+      "publishedAt": "2026-10-20T21:08:29.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "COSIMO Venture Partners Signs Letter of Intent to Contribute Agentic Commerce Assets to Silver Scott Mines (OTC: SILS)",
+      "source": "USA Today",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNaWFPSUplTWlmTlJwSmlkT1QxZXlwbGhTbzhKajVucDhBNjRlZllmcVdjaTQwY2pBYzZQY3NTZTBnbXlFOElVSzJvcVd5QWRxVXpORTY0S2RTSGxGdGxMcFpoYVFPTFFTSzBWVGdRbTdVWnJYektaYVFLamJoM2R5c3RBdi16VkhualoteTlRSF8xLTBDR3FyRDNnbGQzcUlJdzBKcE1xTmNtQWRlanBjZzNYVnF6Nk1uWC1MTGh0bFNwRlJkZFJsUWI4VmpPSDVCU3pnYlZ3Y0dVVk9Cb0VXTW1FcHNPUTdzY3pCc1RCSmM4SklzN1ItOS13aw?oc=5",
+      "publishedAt": "2026-10-20T20:53:30.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "Kite 评测：超高速 AI 智能体执行与支付基础设施",
+      "source": "quasa.io",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdU1ZTGp6V3RubndxWlY4NFhUQ2szaV9MTzZpNkJyT05sN0JyREZoVThIOVBwaEVpcW93SF9MUHRPTmxfYXoxR2YwU2I2Qm9odENLQnV6SUxiREdyaW9RNlFKS284UUpKOHZKeWRTRDJBLXlwTGFHU28tQ0lKWnBiZUxVck00ZlBubjhOLVpEbDlUTG5pa2ltc1NZUXZXdHFS?oc=5",
+      "publishedAt": "2026-10-20T20:23:31.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "Mastercard and Cloudflare Venture into Agentic Payments",
+      "source": "Coinfomania",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQM2tSeWJlVUl4U0FQQktHUG9OXzdHLUl3cnJsdUl4U0hfWWRIRTdfeTFTcXBvSlZHeFgzWHNIdjM4VVNvdHNBWV8zeFltdmotM3Zpb3h2OWV0ZlVIYktWUlpvcTFlQm1Lb3JJZFEwN0E1czRZenRQR1hRUWVzVGVwSUJPVXM0d1E?oc=5",
+      "publishedAt": "2026-10-20T19:45:54.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "Sierra 与 Stripe 合作，将支付功能引入 AI 代理通话",
+      "source": "Unite.AI",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd1U1Q0tUSUJCNi1od3lDaDV2WFVQUWQybXdoZkdfWlpSZFZER05VSS1FOF9DZFZ6TVdrMXVoN2Qtelc0QkVwX1VZNEFlMzFiV3BpLU9sWDM3NXItLUN1aEtQeFp4YnJjXzdaVlZ0Y3hDd0laR1RRanQtMmlzX1B3bWd5b2F0Yk9TQ1h4eTlwdFlIcUdMUm1EcA?oc=5",
+      "publishedAt": "2026-10-20T17:25:09.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-21"
+    },
+    {
+      "title": "为AI支付立规！六家全球银行联合发布《构建可信的智能体商业》",
+      "source": "搜狐",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNmF6WWUweVJ1THg0bnNUcUtGV1UwbFpWd3NHVkxEOXZQUzhlZHFPNjhKQ2pkZm0wVnV4WnBIRWNRdDFDWFpNMzJTbmZPaDdzY21IZ19LckZqNktJNWxVT2JOUURqbGtMWHFsTW1CbjktQjh5bmpNc2hzVFozRjhBYzNjbUdFbTda?oc=5",
+      "publishedAt": "2026-10-20T09:44:04.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-20"
+    },
+    {
+      "title": "广交会六成企业应用AI，数字内容与AI出海驱动AI支付",
+      "source": "搜狐网",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPaE9hM3NJWW11YnhnSlBhVkY1U0k1OVFXV2kwd2swQXV3cGJQbjJnZC1SaE1PajVuQUxUMlJPMEZ1LVZIamdOMmgwaFFTdS14Q1YxMDJmdDczN3FoZ2MxZVo3U1huNklYYmllVE4xNzNFc0VBODhFY3BDMkIwbGFRZGpMcXk4ZEZ4Q19V?oc=5",
+      "publishedAt": "2026-10-19T07:31:41.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-19"
+    },
+    {
+      "title": "蚂蚁阿福、支付宝AI支付双双入选《时代》2026全球最佳发明",
+      "source": "搜狐",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVVGaGVLNGE2c1R4Z2xSU2ZuMF9HUzRuRFBrWUo1MzEyd1g5MDVsTy1CODRPTVYwNjVoS2l2LUZBMFVzdlZ1c01HVjhkZDZBQnZLU2JzTFhKRk9hVU1ERlIwZkVOSFRTV2JTdDVuM2xlTWpfNktPVTE0cG1wWkRkZTBlYjJiQThH?oc=5",
+      "publishedAt": "2026-10-19T01:50:19.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-19"
+    },
+    {
+      "title": "DWF Labs：市场尚未定价AI与加密融合，DePIN、支付未来或成受益方向",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA2RUdwa2FpT05hMmMydUY5cnhCblFHLVIwVF9vaVIweWdXQnNNUTl0ckhrOXZHRXFYNHM3SEY1eVcxRm5yT0s0RTRmV08xTHJnd1liaGVsalFzNVBSdE9KcnN4WUVDZw?oc=5",
+      "publishedAt": "2026-10-18T15:58:56.000Z",
+      "summary": "来源标题线索；请阅读原文核验具体能力、开放范围和发布时间。",
+      "time": "2026-10-18"
+    }
+  ],
+  "scenes": [
+    {
+      "icon": "🍔",
+      "color": "#FF6B6B",
+      "name": "快餐茶饮",
+      "summary": "瑞幸官方开放Agent接口",
+      "items": [
+        {
+          "name": "瑞幸咖啡 AI点单",
+          "opp": "high",
+          "oppLabel": "高优",
+          "desc": "官方推出CLI/MCP/Skill工具链，Codex等Agent已可下单。标准化程度高，复制门槛低",
+          "tags": [
+            {
+              "text": "9000+门店",
+              "type": "volume"
+            },
+            {
+              "text": "MCP标准化",
+              "type": "tech"
+            },
+            {
+              "text": "Agent→支付闭环",
+              "type": "pay"
+            }
+          ],
+          "oppBox": {
+            "type": "high",
+            "title": "🔴 高优商机",
+            "desc": "瑞幸开放接口是行业信号，京东AI付应快速对接MCP标准，抢占「AI点咖啡」支付入口"
+          }
+        },
+        {
+          "name": "麦当劳/肯德基",
+          "opp": "mid",
+          "oppLabel": "跟进",
+          "desc": "AI版支付宝阿宝助手已可点麦当劳（媒体报道），但官方API未开放。快餐巨头仍在观望",
+          "tags": [
+            {
+              "text": "千亿级市场",
+              "type": "volume"
+            },
+            {
+              "text": "支付宝已接入",
+              "type": "pay"
+            }
+          ],
+          "oppBox": {
+            "type": "mid",
+            "title": "🟡 跟进",
+            "desc": "竞品已验证可行性，建议BD头部快餐品牌，提供标准化Agent支付方案"
+          }
+        },
+        {
+          "name": "喜茶/奈雪",
+          "opp": "mid",
+          "oppLabel": "跟进",
+          "desc": "新茶饮头部品牌，小程序体系成熟但尚未见AI点单动作。",
+          "tags": [
+            {
+              "text": "高客单价",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
+    },
+    {
+      "icon": "🛒",
+      "color": "#E2231A",
+      "name": "电商平台",
+      "summary": "京东自有场景优先验证",
+      "items": [
+        {
+          "name": "京东商城 AI购物助手",
+          "opp": "low",
+          "oppLabel": "自有",
+          "desc": "京东小智已有对话能力，可优先在自有场景测试「AI推荐→加车→支付」全链路",
+          "tags": [
+            {
+              "text": "自有场景",
+              "type": "volume"
+            },
+            {
+              "text": "先行验证",
+              "type": "tech"
+            }
+          ],
+          "oppBox": null
+        },
+        {
+          "name": "淘宝天猫 AI导购",
+          "opp": "low",
+          "oppLabel": "竞品",
+          "desc": "阿里系支付宝AI Pay已率先落地，电商场景卡位较早。",
+          "tags": [
+            {
+              "text": "竞品占位",
+              "type": "pay"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": [
+        {
+          "title": "COSIMO Venture Partners Signs Letter of Intent to Contribute Agentic Commerce Assets to Silver Scott Mines (OTC: SILS)",
+          "source": "USA Today",
+          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNaWFPSUplTWlmTlJwSmlkT1QxZXlwbGhTbzhKajVucDhBNjRlZllmcVdjaTQwY2pBYzZQY3NTZTBnbXlFOElVSzJvcVd5QWRxVXpORTY0S2RTSGxGdGxMcFpoYVFPTFFTSzBWVGdRbTdVWnJYektaYVFLamJoM2R5c3RBdi16VkhualoteTlRSF8xLTBDR3FyRDNnbGQzcUlJdzBKcE1xTmNtQWRlanBjZzNYVnF6Nk1uWC1MTGh0bFNwRlJkZFJsUWI4VmpPSDVCU3pnYlZ3Y0dVVk9Cb0VXTW1FcHNPUTdzY3pCc1RCSmM4SklzN1ItOS13aw?oc=5",
+          "publishedAt": "2026-10-20T20:53:30.000Z"
+        }
+      ]
+    },
+    {
+      "icon": "🚗",
+      "color": "#4CC9F0",
+      "name": "出行车载",
+      "summary": "语音交互基础成熟，支付待打通",
+      "items": [
+        {
+          "name": "滴滴/高德打车",
+          "opp": "mid",
+          "oppLabel": "跟进",
+          "desc": "语音叫车已普及，但「语音确认支付」仍需手动操作。AI支付可简化体验",
+          "tags": [
+            {
+              "text": "日均千万单",
+              "type": "volume"
+            },
+            {
+              "text": "语音交互成熟",
+              "type": "tech"
+            }
+          ],
+          "oppBox": {
+            "type": "mid",
+            "title": "🟡 跟进",
+            "desc": "与出行平台联合测试「免唤醒支付」，车载场景是AI支付的天然场景"
+          }
+        },
+        {
+          "name": "车企车载支付",
+          "opp": "mid",
+          "oppLabel": "跟进",
+          "desc": "理想/蔚来等车企车机已有AI助手，ETC/停车/充电等高频支付场景可结合。",
+          "tags": [
+            {
+              "text": "高频刚需",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
+    },
+    {
+      "icon": "🏪",
+      "color": "#7B61FF",
+      "name": "线下零售",
+      "summary": "自助结算+AI识别探索中",
+      "items": [
+        {
+          "name": "便利店/超市自助收银",
+          "opp": "low",
+          "oppLabel": "防守",
+          "desc": "7-11、罗森等已有扫码自助收银，AI支付需结合视觉识别。尚未见落地案例",
+          "tags": [
+            {
+              "text": "成本敏感",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        },
+        {
+          "name": "无人货架/智能售货机",
+          "opp": "low",
+          "oppLabel": "防守",
+          "desc": "技术已成熟但未大规模推广，AI支付可作为增值能力。",
+          "tags": [
+            {
+              "text": "小额高频",
+              "type": "pay"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
+    },
+    {
+      "icon": "🎮",
+      "color": "#F2A900",
+      "name": "游戏娱乐",
+      "summary": "虚拟商品自动充值空间",
+      "items": [
+        {
+          "name": "手游/网游充值",
+          "opp": "low",
+          "oppLabel": "防守",
+          "desc": "网易、米哈游等已有AI客服，支付环节尚未深度结合。",
+          "tags": [
+            {
+              "text": "高客单价",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        },
+        {
+          "name": "直播打赏",
+          "opp": "low",
+          "oppLabel": "防守",
+          "desc": "抖音/快手打赏已高度简化，AI支付提升空间有限。",
+          "tags": [
+            {
+              "text": "冲动消费",
+              "type": "pay"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
+    },
+    {
+      "icon": "🏨",
+      "color": "#00C9A7",
+      "name": "酒旅生活",
+      "summary": "预订+支付组合场景",
+      "items": [
+        {
+          "name": "酒店/机票预订",
+          "opp": "mid",
+          "oppLabel": "跟进",
+          "desc": "携程/飞猪等OTA已有AI客服，「查询→预订→支付」链路可简化。",
+          "tags": [
+            {
+              "text": "高客单价",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        },
+        {
+          "name": "外卖点餐",
+          "opp": "low",
+          "oppLabel": "防守",
+          "desc": "美团/饿了么场景理论可行，但尚未见竞品动作。",
+          "tags": [
+            {
+              "text": "日均千万单",
+              "type": "volume"
+            }
+          ],
+          "oppBox": null
+        }
+      ],
+      "baselineNotice": "历史场景底稿（未重新核验）；以下来源线索不代表已落地。",
+      "observations": []
+    }
+  ],
+  "competitors": [
+    {
+      "name": "支付宝",
+      "icon": "🐜",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "蚂蚁阿福、支付宝AI支付双双入选《时代》2026全球最佳发明",
+          "source": "搜狐",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVVGaGVLNGE2c1R4Z2xSU2ZuMF9HUzRuRFBrWUo1MzEyd1g5MDVsTy1CODRPTVYwNjVoS2l2LUZBMFVzdlZ1c01HVjhkZDZBQnZLU2JzTFhKRk9hVU1ERlIwZkVOSFRTV2JTdDVuM2xlTWpfNktPVTE0cG1wWkRkZTBlYjJiQThH?oc=5",
+          "publishedAt": "2026-10-19T01:50:19.000Z"
+        }
+      ]
+    },
+    {
+      "name": "微信",
+      "icon": "💬",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
+    },
+    {
+      "name": "Stripe",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "Sierra 与 Stripe 合作，将支付功能引入 AI 代理通话",
+          "source": "Unite.AI",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd1U1Q0tUSUJCNi1od3lDaDV2WFVQUWQybXdoZkdfWlpSZFZER05VSS1FOF9DZFZ6TVdrMXVoN2Qtelc0QkVwX1VZNEFlMzFiV3BpLU9sWDM3NXItLUN1aEtQeFp4YnJjXzdaVlZ0Y3hDd0laR1RRanQtMmlzX1B3bWd5b2F0Yk9TQ1h4eTlwdFlIcUdMUm1EcA?oc=5",
+          "publishedAt": "2026-10-20T17:25:09.000Z"
+        }
+      ]
+    },
+    {
+      "name": "银联",
+      "icon": "🏦",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
+    },
+    {
+      "name": "Visa",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "How Is Visa (V) Turning Crypto And AI Payments Into Real World Use?",
+          "source": "Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX2lxSnVKNmlPUmpSMElDU0puN215MlpPRXlzU1hnTnZGVE5SeEZyVzA4bDgzQUd0UXEzOGpCU25SUVNLT0VhM2tkaXZCRXpDTWZqZ0ZoV2FuVE0zODR4VWdfcnQtdXIyczhBMGdzUmljZ3Q3X0ltZmFWTDgteUdrUFlGSHNVMkljeGlnZFpYVExUYzg?oc=5",
+          "publishedAt": "2026-10-20T21:10:30.000Z"
+        }
+      ]
+    },
+    {
+      "name": "Mastercard",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": [
+        {
+          "title": "Mastercard Begins Rolling Out AI Agent Payments Service With Coinbase, Base",
+          "source": "Bitcoin News",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaVZkOTNJNkFPN1NkeXcwXzdUd3R4U0NQNUZUa1oyUmlaN1ZXR0N6MXh5OVFhaDZaNDNpMmVTbHRMcjN1eFgwemRNNGdvVWlnRHBfbUlSWXR4OWt3ZVQwcWZJd3BQa01rVndfcWpQa2xONUlrbDdfYlRLSFNxUVYyZUhBVk9ROGJmSFBuS0h3eDYtLVczTnBj?oc=5",
+          "publishedAt": "2026-10-20T23:20:47.000Z"
+        },
+        {
+          "title": "Mastercard Agent Pay for Machines Launches Early Access",
+          "source": "The Cryptonomist",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BNlVYbXg1d1o1cUhmRHFZZFp6Unk1bGJiLXExdTl2LU5GOExwUjk2dnQ4WFhCM1V3TGx0aEN2Z3p6OGVpak1jd19yc0ZRMjd5QUN5RU9uRk90Q0pYc1dlZDl2V01GczVVWGhR?oc=5",
+          "publishedAt": "2026-10-20T21:08:29.000Z"
+        },
+        {
+          "title": "Mastercard and Cloudflare Venture into Agentic Payments",
+          "source": "Coinfomania",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQM2tSeWJlVUl4U0FQQktHUG9OXzdHLUl3cnJsdUl4U0hfWWRIRTdfeTFTcXBvSlZHeFgzWHNIdjM4VVNvdHNBWV8zeFltdmotM3Zpb3h2OWV0ZlVIYktWUlpvcTFlQm1Lb3JJZFEwN0E1czRZenRQR1hRUWVzVGVwSUJPVXM0d1E?oc=5",
+          "publishedAt": "2026-10-20T19:45:54.000Z"
+        }
+      ]
+    },
+    {
+      "name": "PayPal",
+      "icon": "💳",
+      "desc": "仅列出本次窗口内标题提及该主体的来源线索；合作角色及具体能力需阅读原文核验。",
+      "observations": []
+    }
+  ],
+  "opportunities": [
+    {
+      "level": "mid",
+      "scene": "电商平台 · 待核验线索",
+      "reason": "本次窗口内有 1 条来源标题涉及该场景，尚不能据此认定商业落地。",
+      "action": "阅读来源，确认服务入口、授权方式及交易闭环后再评估优先级。",
+      "value": "待核验"
+    }
+  ],
+  "suggestions": [
+    "\u003cstrong>【素材核验】\u003c/strong>本次整理 12 条近 7 天内来源线索。标题摘要不是完整研究结论，请沿来源链接核验原文。",
+    "\u003cstrong>【场景跟踪】\u003c/strong>历史底稿单独标识；只有匹配到新来源的场景才展示窗口内动态，没有新证据不改写为新结论。",
+    "\u003cstrong>【接入评估】\u003c/strong>优先核验真实开放接口、商户接入、用户授权及履约退款条件，再决定是否推进合作。"
+  ]
+};
+
+
+// ============================================================
+// RENDER
+// ============================================================
+function escapeText(value = '') {
+  return String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}
+
+function sourceLink(item) {
+  return /^https?:\/\//i.test(item.link || '') ? `<a href="${escapeText(item.link)}" target="_blank" rel="noopener noreferrer" style="color:var(--jd-red)">${escapeText(item.title)}</a>` : escapeText(item.title);
+}
+
+function observationList(items = []) {
+  return items.length ? items.map(item => `<div style="margin-top:8px">${sourceLink(item)}<div class="data-time">${escapeText(item.source)} · ${new Date(item.publishedAt).toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' })}</div></div>`).join('') : '<div class="data-time" style="margin-top:8px">本期采集范围内暂无匹配线索，不代表该主体没有进展。</div>';
+}
+
+async function renderUpdateStatus() {
+  const target = document.getElementById('update-status');
+  if (location.pathname.includes('/archive/')) {
+    target.textContent = '历史存档快照；其中来源日期与结论仅对应当期。';
+    return;
+  }
+  try {
+    const response = await fetch('archive/last-updated.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('检查状态暂不可用');
+    const status = await response.json();
+    const labels = { updated: `本次内容已更新，首次收录 ${status.newItems || 0} 条`, unchanged: '检查完成，暂无新增或实质变化', 'no-new-items': '检查完成，当前窗口暂无新线索；保留上次内容', error: '采集或校验失败，保留上次有效内容' };
+    const checked = Date.parse(status.lastCheckedAt);
+    const stale = !Number.isFinite(checked) || Date.now() - checked > 36 * 3600000;
+    target.textContent = `${stale ? '检查已超时，请关注任务状态。' : ''}最后检查：${Number.isFinite(checked) ? new Date(checked).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false }) : '未知'}（北京时间） · ${labels[status.status] || '状态待确认'}${status.sourceErrors?.length ? ` · ${status.sourceErrors.length} 个查询失败，覆盖不完整` : ''}`;
+    target.dataset.status = status.status || 'unknown';
+  } catch {
+    target.textContent = '检查状态暂不可用；下方仍为上次发布内容，不能据此认定今日已更新。';
+    target.dataset.status = 'unavailable';
+  }
+}
+
+function render(data) {
+  // Date
+  document.getElementById('report-date').textContent = data.date;
+  document.getElementById('report-week').textContent = data.week;
+
+  // Executive Summary
+  if (data.summary) {
+    const tagsHtml = data.summary.tags.map(t =>
+      `<span class="exec-tag exec-tag-${t.type}">${t.text}</span>`
+    ).join('');
+    document.getElementById('exec-summary').innerHTML = `
+      <div class="exec-summary-title">📋 本期摘要 · 自动整理待核验</div>
+      <div class="exec-summary-text">${data.summary.text}</div>
+      <div class="exec-summary-tags">${tagsHtml}</div>
+      <div class="data-time" style="margin-top:10px">${escapeText(data.baselineNotice || '')}</div>
+    `;
+  }
+
+  // Stats
+  document.getElementById('stat-high').textContent = data.stats.high;
+  document.getElementById('stat-scenes').textContent = data.stats.scenes;
+  document.getElementById('stat-news').textContent = data.stats.news;
+  document.getElementById('stat-compete').textContent = data.stats.compete;
+
+  // News
+  const newsHtml = data.news.map((n, i) => `
+    <div class="news-card">
+      <div class="news-rank">${i + 1}</div>
+      <div class="news-title">${sourceLink(n)}</div>
+      <div class="news-summary">${escapeText(n.summary)}</div>
+      <div class="news-source">
+        <span>${escapeText(n.source)}</span>
+        <span>发布：${escapeText(n.time)}</span>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('news-scroll').innerHTML = newsHtml || '<p class="data-time">当前窗口暂无有效新线索，不以旧新闻填充。</p>';
+
+  // Opportunity Board
+  const oppHtml = data.opportunities.map(o => `
+    <div class="opp-row">
+      <div class="opp-dot ${o.level === 'high' ? 'high' : o.level === 'mid' ? 'mid' : 'low'}"></div>
+      <div class="opp-text">
+        <div class="opp-text-title">${o.scene}</div>
+        <div class="opp-text-desc">${o.reason}<br>💡 ${o.action}</div>
+      </div>
+      <div class="opp-value">${o.value}</div>
+    </div>
+  `).join('');
+  document.getElementById('opp-board').innerHTML =
+    `<div class="opp-board-title">🎯 商机线索 · ${data.opportunities.length}个待评估</div>` + (oppHtml || '<p class="data-time">暂无足够证据形成新的场景商机判断。</p>');
+
+  // Scene Cards
+  const sceneHtml = data.scenes.map((s, si) => {
+    const itemsHtml = s.items.map(item => {
+      const tagsHtml = (item.tags || []).map(t =>
+        `<span class="tag tag-${t.type}">${t.text}</span>`
+      ).join('');
+      const oppBoxHtml = item.oppBox ? `
+        <div class="opp-box ${item.oppBox.type === 'high' ? '' : item.oppBox.type}">
+          <div class="opp-title">${item.oppBox.title}</div>
+          <div class="opp-desc">${item.oppBox.desc}</div>
+        </div>
+      ` : '';
+      return `
+        <div class="scene-item">
+          <div class="scene-name">
+            ${item.name}
+            <span class="opp opp-${item.opp === 'high' ? 'high' : item.opp === 'mid' ? 'mid' : 'low'}">${item.oppLabel}</span>
+          </div>
+          <div class="scene-desc">${item.desc}</div>
+          <div class="scene-tags">${tagsHtml}</div>
+          ${oppBoxHtml}
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="card" id="card-${si}">
+        <div class="card-head" onclick="toggleCard('card-${si}')">
+          <div class="card-icon" style="background:${s.color}15">${s.icon}</div>
+          <div class="card-info">
+            <div class="card-title">${s.name}</div>
+            <div class="card-subtitle">${s.summary}</div>
+          </div>
+          <div class="card-arrow">▼</div>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="data-time">${escapeText(s.baselineNotice || '')}</p>
+            ${observationList(s.observations)}
+            <div class="data-time" style="margin-top:14px">历史场景底稿（以下内容未重新核验）</div>
+            ${itemsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('scene-cards').innerHTML = sceneHtml;
+
+  // Competitors
+  const compHtml = data.competitors.map(c => `
+    <div class="comp-card">
+      <div class="comp-name">${escapeText(c.icon)} ${escapeText(c.name)}</div>
+      <div class="comp-desc">${escapeText(c.desc)}${observationList(c.observations)}</div>
+    </div>
+  `).join('');
+  document.getElementById('comp-grid').innerHTML = compHtml;
+
+  // Suggestions
+  const sugHtml = data.suggestions.map(s =>
+    `<div class="suggest-item">${s}</div>`
+  ).join('');
+  document.getElementById('suggest-box').innerHTML =
+    `<div class="suggest-title">💡 后续核验建议</div>` + sugHtml;
+}
+
+function toggleCard(id) {
+  const card = document.getElementById(id);
+  card.classList.toggle('expanded');
+}
+
+// Init
+render(REPORT);
+renderUpdateStatus();
+</script>
+</body>
+</html>

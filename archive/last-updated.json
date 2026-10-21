@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-20",
-  "generatedAt": "2026-10-20T05:57:48.671Z",
+  "date": "2026-10-21",
+  "generatedAt": "2026-10-21T05:57:54.921Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-20",
-  "lastCheckedAt": "2026-10-20T05:57:48.671Z",
+  "checkedDate": "2026-10-21",
+  "lastCheckedAt": "2026-10-21T05:57:54.921Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-20T05:57:48.671Z",
+  "contentUpdatedAt": "2026-10-21T05:57:54.921Z",
   "status": "updated",
-  "fingerprint": "0a3d29b8a49fb647ae0a4ef843d44bfb93f36d14b8e99071af5168a1b2ba13de",
-  "newItems": 7,
+  "fingerprint": "53a2c237985042c5e2753273607aa64f344c4996ce5e7e064e95621b2f2eb6ce",
+  "newItems": 9,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -90,6 +90,15 @@
     "turnagenttrafficintorevenuewithcpnmanagedpayments",
     "howtosecurestablecoinsandagenticpaymentswithtrust",
     "xrplcommonshosts36hournychackathontobuildonchainlendingandaipaymentsonxrpl",
-    "广交会六成企业应用ai数字内容与ai出海驱动ai支付"
+    "广交会六成企业应用ai数字内容与ai出海驱动ai支付",
+    "mastercardbeginsrollingoutaiagentpaymentsservicewithcoinbasebase",
+    "evervaultlaunchesbrowsertokensenablingsecureagenticpayments",
+    "howisvisavturningcryptoandaipaymentsintorealworlduse",
+    "mastercardagentpayformachineslaunchesearlyaccess",
+    "cosimoventurepartnerssignsletterofintenttocontributeagenticcommerceassetstosilverscottminesotcsils",
+    "kite评测超高速ai智能体执行与支付基础设施",
+    "mastercardandcloudflareventureintoagenticpayments",
+    "sierra与stripe合作将支付功能引入ai代理通话",
+    "为ai支付立规六家全球银行联合发布构建可信的智能体商业"
   ]
 }
