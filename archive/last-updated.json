@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-21",
-  "generatedAt": "2026-10-21T05:57:54.921Z",
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22T06:03:28.616Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-21",
-  "lastCheckedAt": "2026-10-21T05:57:54.921Z",
+  "checkedDate": "2026-10-22",
+  "lastCheckedAt": "2026-10-22T06:03:28.616Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-21T05:57:54.921Z",
+  "contentUpdatedAt": "2026-10-22T06:03:28.616Z",
   "status": "updated",
-  "fingerprint": "53a2c237985042c5e2753273607aa64f344c4996ce5e7e064e95621b2f2eb6ce",
-  "newItems": 9,
+  "fingerprint": "a9d9b4dde475ebed97cceb91a6125a5a8646235114d515f4fc2cfb8703af2aa2",
+  "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -99,6 +99,14 @@
     "kite评测超高速ai智能体执行与支付基础设施",
     "mastercardandcloudflareventureintoagenticpayments",
     "sierra与stripe合作将支付功能引入ai代理通话",
-    "为ai支付立规六家全球银行联合发布构建可信的智能体商业"
+    "为ai支付立规六家全球银行联合发布构建可信的智能体商业",
+    "agenticcommerceplatformazomaraises112millioninseriesaroundledbypumagrowthpartners",
+    "agenticcommerceaishoppingagentspaymentsrisks",
+    "gleif张彦钊智能体支付影响下的授权意图和数字身份",
+    "proofandcircledemonstrateendtoendagenticcommercethex401x402handshake",
+    "spreedlyappointsdarrenboundsascfoasitscalespaymentsinfrastructureforagenticcommerce",
+    "ecommercefacesanewrivalagenticcommerce",
+    "paypalbetsonaishoppingwithglanceafterits53billionbuyoutcollapses",
+    "万事达卡帅意华智能体商务的五大支付挑战"
   ]
 }
