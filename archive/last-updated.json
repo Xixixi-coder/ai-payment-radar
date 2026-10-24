@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-23",
-  "generatedAt": "2026-10-23T05:59:02.832Z",
+  "date": "2026-10-24",
+  "generatedAt": "2026-10-24T05:43:54.971Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-23",
-  "lastCheckedAt": "2026-10-23T05:59:02.832Z",
+  "checkedDate": "2026-10-24",
+  "lastCheckedAt": "2026-10-24T05:43:54.971Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-23T05:59:02.832Z",
+  "contentUpdatedAt": "2026-10-24T05:43:54.971Z",
   "status": "updated",
-  "fingerprint": "b54a502a636d8018c3b9a965bb242004fb0bfc5434f99decd88ebd9dc4ad20ac",
-  "newItems": 10,
+  "fingerprint": "0fd3b3a38508319a14443153a167c663ef43fa6767ab82a222d81953168e2dad",
+  "newItems": 12,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -117,6 +117,18 @@
     "wooshpay与云锋金融集团00376hk旗下alphatoken签署战略合作协议共同推进ai支付技术创新与智能体支付应用",
     "yeahpay亮相mag新加坡支付峰会ai正重新定义未来支付",
     "tether领投人工智能支付初创公司mural的1500万融资轮",
-    "saharaai评测自主智能体与微支付如何驱动全新ai经济"
+    "saharaai评测自主智能体与微支付如何驱动全新ai经济",
+    "money2020aiagentsagenticcommerceandstablecoins",
+    "nearprotocoladvancesagenticcommerceinfluencingmarket",
+    "agenticcommerceaidrivenfraudshakeupfinancialservicesdealmaking",
+    "aistartupworldlaunchesproofofhumantoolsaimedatagenticcommerce",
+    "支付机构向中小商户推广ai以增收并布局智能体支付",
+    "visanysevnearsrecordhighscanaipaymentskeepitrising",
+    "支付机构争相让中小商户用上ai打着什么算盘",
+    "当ai从给建议到做交易跨境支付的agentic时刻来临",
+    "ai代客落单付款wooshpay联手云锋金融alphatoken攻智能体支付",
+    "whoownsthecustomerinagenticcommerceafourlayerframework",
+    "cobolucasyangaiagent重新定义链上支付安全边界",
+    "当agent开始托管商户经营移卡的完整ai支付栈正在打开支付之外的新空间"
   ]
 }
