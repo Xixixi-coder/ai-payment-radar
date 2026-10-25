@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-24",
-  "generatedAt": "2026-10-24T05:43:54.971Z",
+  "date": "2026-10-25",
+  "generatedAt": "2026-10-25T05:59:45.556Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-24",
-  "lastCheckedAt": "2026-10-24T05:43:54.971Z",
+  "checkedDate": "2026-10-25",
+  "lastCheckedAt": "2026-10-25T05:59:45.556Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-24T05:43:54.971Z",
+  "contentUpdatedAt": "2026-10-25T05:59:45.556Z",
   "status": "updated",
-  "fingerprint": "0fd3b3a38508319a14443153a167c663ef43fa6767ab82a222d81953168e2dad",
-  "newItems": 12,
+  "fingerprint": "8559c7e9f784076f6d07ec11d97af19db29cf7451b2f566c2e2f6e10b1db370b",
+  "newItems": 4,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -129,6 +129,10 @@
     "ai代客落单付款wooshpay联手云锋金融alphatoken攻智能体支付",
     "whoownsthecustomerinagenticcommerceafourlayerframework",
     "cobolucasyangaiagent重新定义链上支付安全边界",
-    "当agent开始托管商户经营移卡的完整ai支付栈正在打开支付之外的新空间"
+    "当agent开始托管商户经营移卡的完整ai支付栈正在打开支付之外的新空间",
+    "cryptonewstodaytetherleads15maipaymentsroundasremittixearnpreparesaavemorphoandfluidpools",
+    "whychimestockandpaymentpeersmatterasbanksreininaipayments",
+    "從完整ai支付棧到agent商戶託管移卡正在進入商戶經營的下一層",
+    "支付宝ai支付发起年度黑客松大赛邀开发者把ai创意变成生意"
   ]
 }
