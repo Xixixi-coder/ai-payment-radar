@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-27",
-  "generatedAt": "2026-10-27T06:12:39.689Z",
+  "date": "2026-10-28",
+  "generatedAt": "2026-10-28T06:49:06.170Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-27",
-  "lastCheckedAt": "2026-10-27T06:12:39.689Z",
+  "checkedDate": "2026-10-28",
+  "lastCheckedAt": "2026-10-28T06:49:06.170Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-27T06:12:39.689Z",
+  "contentUpdatedAt": "2026-10-28T06:49:06.170Z",
   "status": "updated",
-  "fingerprint": "7ea01b92bef07c499f4b4e078d9b7487c58aaed620653fdcc1fb3b6315c752cd",
-  "newItems": 12,
+  "fingerprint": "601bed6cdf5080cf4d855a271ca8f087b4bf9220acb43a72fdef57c5ef06f8eb",
+  "newItems": 9,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -151,6 +151,15 @@
     "agenticcommercetheinfrastructureisreadyforaiagentsisyourstore",
     "观点ai支付成嵌入式能力机构无需从交易本身获利",
     "摩根大通ai购物代理支付仍走银行卡网络渗透率上限约93",
-    "小摩研报解读ai购物代理落地支付仍走银行卡网络"
+    "小摩研报解读ai购物代理落地支付仍走银行卡网络",
+    "circleinternetgroupcrclgainsanaipaymentsidentityangleasfairvaluestaysinview",
+    "aeonexpandsagenticcommercebeyondretailintotravelbookingsviatravala",
+    "visacredentialsreach52billionasnetworkexpandsintoagenticcommerce",
+    "metasmuseretailpushdrawswalmartnasdaqwmtintoagenticcommerceraceashedgefundinterestclimbs",
+    "bfsisummitagenticpaymentsneedclearliabilityrulestobuildtrust",
+    "vgstohostannualagentconnectthepremierindustrygatheringshapingthefutureofagenticcommerce",
+    "ai重构跨境支付效率升级风控革新agent商业时代新机遇",
+    "stripe领跑ai代理购物令两大卡巨头如坐针毡",
+    "ppro发起成立ai智能体商业本地支付委员会"
   ]
 }
