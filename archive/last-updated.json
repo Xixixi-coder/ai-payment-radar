@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-28",
-  "generatedAt": "2026-10-28T06:49:06.170Z",
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T06:59:20.440Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-28",
-  "lastCheckedAt": "2026-10-28T06:49:06.170Z",
+  "checkedDate": "2026-10-29",
+  "lastCheckedAt": "2026-10-29T06:59:20.440Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-28T06:49:06.170Z",
+  "contentUpdatedAt": "2026-10-29T06:59:20.440Z",
   "status": "updated",
-  "fingerprint": "601bed6cdf5080cf4d855a271ca8f087b4bf9220acb43a72fdef57c5ef06f8eb",
-  "newItems": 9,
+  "fingerprint": "fa92e9f6c67975275ddd4cac2ac41fe137b7e867fc9a5c4465eade87ad1d5889",
+  "newItems": 10,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -160,6 +160,16 @@
     "vgstohostannualagentconnectthepremierindustrygatheringshapingthefutureofagenticcommerce",
     "ai重构跨境支付效率升级风控革新agent商业时代新机遇",
     "stripe领跑ai代理购物令两大卡巨头如坐针毡",
-    "ppro发起成立ai智能体商业本地支付委员会"
+    "ppro发起成立ai智能体商业本地支付委员会",
+    "openhouse将亮相静冈未来的祭典lab验证ai机器人表演与jpyc支付",
+    "腾讯与visa宣布战略合作包含跨境支付企业级ai智能体支付等",
+    "tencentvisaexpandpartnershiptoexploreaipoweredpayments",
+    "shopify在shoppay引入visamastercard和americanexpress的ai代理支付代币方案",
+    "腾讯与visa签署合作备忘录拟共同探索智能体支付",
+    "willprivacyconcernsholdbacktheriseofagenticcommerce",
+    "stripe接入claudeduetlink智能体钱包与stripemcp布局ai支付入口",
+    "stripe切入ai代理购物支付visa和mastercard承压",
+    "visatargetsmoreagenticcommerceamidthintransactions",
+    "arebusinessesignoringabigriskwithaiagenticpayments"
   ]
 }
