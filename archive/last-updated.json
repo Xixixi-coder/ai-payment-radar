@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-29",
-  "generatedAt": "2026-10-29T06:59:20.440Z",
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30T07:01:23.665Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-29",
-  "lastCheckedAt": "2026-10-29T06:59:20.440Z",
+  "checkedDate": "2026-10-30",
+  "lastCheckedAt": "2026-10-30T07:01:23.665Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-29T06:59:20.440Z",
+  "contentUpdatedAt": "2026-10-30T07:01:23.665Z",
   "status": "updated",
-  "fingerprint": "fa92e9f6c67975275ddd4cac2ac41fe137b7e867fc9a5c4465eade87ad1d5889",
+  "fingerprint": "a70e54b40fe864e86ea99fe8bc5881ec3f6407824599b1fe219ddad86f4e986f",
   "newItems": 10,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -170,6 +170,16 @@
     "stripe接入claudeduetlink智能体钱包与stripemcp布局ai支付入口",
     "stripe切入ai代理购物支付visa和mastercard承压",
     "visatargetsmoreagenticcommerceamidthintransactions",
-    "arebusinessesignoringabigriskwithaiagenticpayments"
+    "arebusinessesignoringabigriskwithaiagenticpayments",
+    "niqandgooglepartnertoadvanceagenticcommerce",
+    "mastercardsearningsbeatunderscorespaymentspivottocryptocurrencyfraudservicesagenticcommerce",
+    "quackaimovestoexpandq402treasuryfunctionscombiningaipaymentsyieldandsettlement",
+    "celestiaunveilsvoyagerforaipaymentsciting21milliontpsbenchmark",
+    "elavonpursuespazeagenticcommerce",
+    "腾讯与visa达成战略合作探索新一代智能体支付瞄准跨境支付与ai商务",
+    "shopify采用维萨万事达卡的智能体支付技术36氪",
+    "微信支付智慧经营机器人首次上岗落地腾讯总部园区7eleven门店",
+    "腾讯与visa宣布战略合作探索新一代智能体支付",
+    "腾讯与visa宣布战略合作包含跨境支付企业级ai智能体支付等领域"
   ]
 }
