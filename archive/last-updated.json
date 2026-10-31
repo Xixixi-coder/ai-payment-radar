@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-30",
-  "generatedAt": "2026-10-30T07:01:23.665Z",
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T06:56:04.951Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-10-30",
-  "lastCheckedAt": "2026-10-30T07:01:23.665Z",
+  "checkedDate": "2026-10-31",
+  "lastCheckedAt": "2026-10-31T06:56:04.951Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-10-30T07:01:23.665Z",
+  "contentUpdatedAt": "2026-10-31T06:56:04.951Z",
   "status": "updated",
-  "fingerprint": "a70e54b40fe864e86ea99fe8bc5881ec3f6407824599b1fe219ddad86f4e986f",
-  "newItems": 10,
+  "fingerprint": "f75a91236a1f9772dddaee24cb6d5790821b2beb54d5ac6b8ba2146892942339",
+  "newItems": 12,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -180,6 +180,18 @@
     "shopify采用维萨万事达卡的智能体支付技术36氪",
     "微信支付智慧经营机器人首次上岗落地腾讯总部园区7eleven门店",
     "腾讯与visa宣布战略合作探索新一代智能体支付",
-    "腾讯与visa宣布战略合作包含跨境支付企业级ai智能体支付等领域"
+    "腾讯与visa宣布战略合作包含跨境支付企业级ai智能体支付等领域",
+    "beyondjargonswhatagenticcommercemeansford2cbrands",
+    "the63billionwarningfortheageofaipaymentsanalysis",
+    "vq3deepdivevalueaddedservicesandagenticcommercedrivesteadygrowth",
+    "whytrustisbecomingessentialforagenticcommerce",
+    "agenticcommercethegapbetweenaitrafficandmonetizationshopnasdaq",
+    "aiagentswontpaythewayyoudo",
+    "微信支付机器人亮相腾讯总部迎宾导购点单都能干",
+    "电商晚报shopify联合卡组织推出智能体支付技术适配ai购物代理结算栏目",
+    "微信支付智慧经营机器人首进线下门店",
+    "微信支付智慧经营机器人进店打工",
+    "stripe用ai代理重塑支付它的算盘是怎么打的",
+    "shopify联合卡组织推出智能体支付技术适配ai购物代理结算"
   ]
 }
