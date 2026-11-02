@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-01",
-  "generatedAt": "2026-11-01T07:26:42.804Z",
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T07:37:02.691Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-01",
-  "lastCheckedAt": "2026-11-01T07:26:42.804Z",
+  "checkedDate": "2026-11-02",
+  "lastCheckedAt": "2026-11-02T07:37:02.691Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-01T07:26:42.804Z",
+  "contentUpdatedAt": "2026-11-02T07:37:02.691Z",
   "status": "updated",
-  "fingerprint": "e3ea3d583aeaabc2b11094ae7ad59a1f43fec13c06635bab44026d1e3033c64d",
-  "newItems": 2,
+  "fingerprint": "8a2768dcab8f423b51b09864998510125790d2c7ad38c3de6a5bd900056c4553",
+  "newItems": 4,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -194,6 +194,10 @@
     "stripe用ai代理重塑支付它的算盘是怎么打的",
     "shopify联合卡组织推出智能体支付技术适配ai购物代理结算",
     "billholdingsbillcouldbe15undervaluedafteritsvisaaipaymentspilot",
-    "whyagenticcommerceisbecomingtechnicallypossiblenow"
+    "whyagenticcommerceisbecomingtechnicallypossiblenow",
+    "tencentandmastercardsignmouoncrossborderpaymentinteroperabilityandagenticpayments",
+    "微信支付机器人进驻7eleven可迎宾导购和点单",
+    "egyptsagenticcommercebusinesscasestartswithrevenue",
+    "nubanksuspushandtheagenticpaymentsliabilitygap"
   ]
 }
