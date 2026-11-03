@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-02",
-  "generatedAt": "2026-11-02T07:37:02.691Z",
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-03T07:50:36.216Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-02",
-  "lastCheckedAt": "2026-11-02T07:37:02.691Z",
+  "checkedDate": "2026-11-03",
+  "lastCheckedAt": "2026-11-03T07:50:36.216Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-02T07:37:02.691Z",
+  "contentUpdatedAt": "2026-11-03T07:50:36.216Z",
   "status": "updated",
-  "fingerprint": "8a2768dcab8f423b51b09864998510125790d2c7ad38c3de6a5bd900056c4553",
-  "newItems": 4,
+  "fingerprint": "00681cb71756b066715e6d31059baa1bfc684777f49d0c4a3c3079c8bba72a40",
+  "newItems": 11,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -198,6 +198,17 @@
     "tencentandmastercardsignmouoncrossborderpaymentinteroperabilityandagenticpayments",
     "微信支付机器人进驻7eleven可迎宾导购和点单",
     "egyptsagenticcommercebusinesscasestartswithrevenue",
-    "nubanksuspushandtheagenticpaymentsliabilitygap"
+    "nubanksuspushandtheagenticpaymentsliabilitygap",
+    "tencentmastercardtoexploreagenticpaymentsdeeperremittanceties",
+    "howcisoscansecureagenticcommerceandpreventabuse",
+    "mastercardformsopenaiandtencentpartnershipstodriveagenticcommerce",
+    "腾讯tenpayglobal与万事达卡签署合作备忘录入境扫码支付汇款与智能体支付同步推进",
+    "howagenticcommerceischangingthecustomerexperience",
+    "腾讯与visa签署合作备忘录将探索智能体支付",
+    "withagenticcommercethewalletwillbeasimportantasthebot",
+    "腾讯与visa深化跨境支付合作探索智能体支付",
+    "agenticcommerceatscalewhytrustisthenewfoundationforpayments",
+    "ai智能体支付从白皮书走向落地寻汇正式发布sunrateagenticcard",
+    "从餐厅推荐到支付功能tiktok正打造超级应用ai应用"
   ]
 }
