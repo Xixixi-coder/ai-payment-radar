@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-03",
-  "generatedAt": "2026-11-03T07:50:36.216Z",
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04T07:27:33.783Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-03",
-  "lastCheckedAt": "2026-11-03T07:50:36.216Z",
+  "checkedDate": "2026-11-04",
+  "lastCheckedAt": "2026-11-04T07:27:33.783Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-03T07:50:36.216Z",
+  "contentUpdatedAt": "2026-11-04T07:27:33.783Z",
   "status": "updated",
-  "fingerprint": "00681cb71756b066715e6d31059baa1bfc684777f49d0c4a3c3079c8bba72a40",
-  "newItems": 11,
+  "fingerprint": "01de098666a0ca41e9db36ac8b7bac5310c1447d9a5e88585fddb5da7ad04281",
+  "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -209,6 +209,14 @@
     "腾讯与visa深化跨境支付合作探索智能体支付",
     "agenticcommerceatscalewhytrustisthenewfoundationforpayments",
     "ai智能体支付从白皮书走向落地寻汇正式发布sunrateagenticcard",
-    "从餐厅推荐到支付功能tiktok正打造超级应用ai应用"
+    "从餐厅推荐到支付功能tiktok正打造超级应用ai应用",
+    "zombieswithwalletsthedarksideofaipayments",
+    "agenticcommercedrivesshopifyrevenueup32",
+    "mastercardstocksmovelowerwithtencentaipaymentsplaninfocus",
+    "walmartbuildsinfrastructureforagenticcommercewithimplicationsforbrands",
+    "ixopaylaunchesixooneamodularpaymentsplatformbuiltforagenticcommerce",
+    "visabill与billtrust测试可信智能体b2b支付",
+    "马斯克旗下ai应用grok支持银联支付宝订阅",
+    "微信支付机器人落地腾讯总部便利店"
   ]
 }
