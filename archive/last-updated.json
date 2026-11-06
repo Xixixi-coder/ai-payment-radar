@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-05",
-  "generatedAt": "2026-11-05T07:52:51.910Z",
+  "date": "2026-11-06",
+  "generatedAt": "2026-11-06T07:52:37.799Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-05",
-  "lastCheckedAt": "2026-11-05T07:52:51.910Z",
+  "checkedDate": "2026-11-06",
+  "lastCheckedAt": "2026-11-06T07:52:37.799Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-05T07:52:51.910Z",
+  "contentUpdatedAt": "2026-11-06T07:52:37.799Z",
   "status": "updated",
-  "fingerprint": "0c17dc3b2f9ee3006930e67c94ad196b59c17e3700d61f649fabefc0e3328e1e",
-  "newItems": 7,
+  "fingerprint": "a808d78aaab667269c0bfe93e39c85659c45fc98c94f7f43c282d13958af3929",
+  "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -224,6 +224,14 @@
     "circlesarcblockchainlaunchesasagenticaipaymentsalreadyrunonusdc",
     "questionprobuyscontlotobuilditsagenticcommercestack",
     "questionproacquirescontlotoexpandintoaipoweredagenticcommerce",
-    "questionproacquirescontlotoadvanceagenticcommerce"
+    "questionproacquirescontlotoadvanceagenticcommerce",
+    "firmlyraises15mseriesaforagenticcommerce2026",
+    "agenticcommercestartupfirmlyannounces15millionseriesaledbysquarepointcapital",
+    "jpmorganpaymentsandmastercardinvestinagenticcommercestartupfirmly",
+    "pliantraises80millionforuscanadaexpansionandaipayments",
+    "visaprepsagenticcommercebenchmarkandforecastsa45holidayspendingjump",
+    "agenticcommerceoptimizationadobeforecasts130aishoppingtrafficgrowthgooglelaunchesuniversalcart",
+    "人工智能驱动的自动化如何打破支付入账瓶颈",
+    "扫条形码太麻烦了基山电子推出ai支付解决方案"
   ]
 }
