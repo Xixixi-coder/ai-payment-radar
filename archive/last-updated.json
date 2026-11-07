@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-06",
-  "generatedAt": "2026-11-06T07:52:37.799Z",
+  "date": "2026-11-07",
+  "generatedAt": "2026-11-07T07:01:57.781Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-06",
-  "lastCheckedAt": "2026-11-06T07:52:37.799Z",
+  "checkedDate": "2026-11-07",
+  "lastCheckedAt": "2026-11-07T07:01:57.781Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-06T07:52:37.799Z",
+  "contentUpdatedAt": "2026-11-07T07:01:57.781Z",
   "status": "updated",
-  "fingerprint": "a808d78aaab667269c0bfe93e39c85659c45fc98c94f7f43c282d13958af3929",
+  "fingerprint": "8fd05b633b02fad1548501ddc7b50fefb8083e52ca1463793b25e58beb801e7c",
   "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -232,6 +232,14 @@
     "visaprepsagenticcommercebenchmarkandforecastsa45holidayspendingjump",
     "agenticcommerceoptimizationadobeforecasts130aishoppingtrafficgrowthgooglelaunchesuniversalcart",
     "人工智能驱动的自动化如何打破支付入账瓶颈",
-    "扫条形码太麻烦了基山电子推出ai支付解决方案"
+    "扫条形码太麻烦了基山电子推出ai支付解决方案",
+    "cashfreebringsagenticpaymentstoindianmerchants",
+    "firmlyraises15millioninseriesafundingledbysquarepointcapitaltoexpandagenticcommerceinfrastructure",
+    "americasbiggeststoresarentreadyforagenticcommercethisblackfriday",
+    "nocodeagenticcommerceplatformfirmlyraises15mseriesa",
+    "cashfreelaunchesaiagenticpaymentsformerchantsthroughwebmcp",
+    "谷歌钱包转型购物伴侣规划收据存储与ai代理支付",
+    "uberreportsjustfouraiagentbookedridesinitsbusiestweekasagenticcommercestrugglestogaintraction",
+    "pingpong上线一站式ai行业支付方案开放全球收付与智能体支付能力"
   ]
 }
