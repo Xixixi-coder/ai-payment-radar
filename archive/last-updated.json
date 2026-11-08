@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-07",
-  "generatedAt": "2026-11-07T07:01:57.781Z",
+  "date": "2026-11-08",
+  "generatedAt": "2026-11-08T07:14:07.206Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-07",
-  "lastCheckedAt": "2026-11-07T07:01:57.781Z",
+  "checkedDate": "2026-11-08",
+  "lastCheckedAt": "2026-11-08T07:14:07.206Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-07T07:01:57.781Z",
+  "contentUpdatedAt": "2026-11-08T07:14:07.206Z",
   "status": "updated",
-  "fingerprint": "8fd05b633b02fad1548501ddc7b50fefb8083e52ca1463793b25e58beb801e7c",
-  "newItems": 8,
+  "fingerprint": "0197f8e5fc899d3a4ef0f3aae9808911eab342a18ce7be4b6eca1beeb8cc8f40",
+  "newItems": 5,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -240,6 +240,11 @@
     "cashfreelaunchesaiagenticpaymentsformerchantsthroughwebmcp",
     "谷歌钱包转型购物伴侣规划收据存储与ai代理支付",
     "uberreportsjustfouraiagentbookedridesinitsbusiestweekasagenticcommercestrugglestogaintraction",
-    "pingpong上线一站式ai行业支付方案开放全球收付与智能体支付能力"
+    "pingpong上线一站式ai行业支付方案开放全球收付与智能体支付能力",
+    "niqandsimilarwebadvanceagenticcommercemeasurementfortheaishoppingera",
+    "mastercardsvisionfortrustedagenticcommerce",
+    "consumersembraceagenticcommerceforsmallerpurchases10232026",
+    "thevanishingpointinagenticcommerce",
+    "aiagent重构商业交易从流量入口到支付授权"
   ]
 }
