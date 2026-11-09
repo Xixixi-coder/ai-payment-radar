@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-08",
-  "generatedAt": "2026-11-08T07:14:07.206Z",
+  "date": "2026-11-09",
+  "generatedAt": "2026-11-09T07:53:16.017Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-08",
-  "lastCheckedAt": "2026-11-08T07:14:07.206Z",
+  "checkedDate": "2026-11-09",
+  "lastCheckedAt": "2026-11-09T07:53:16.017Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-08T07:14:07.206Z",
+  "contentUpdatedAt": "2026-11-09T07:53:16.017Z",
   "status": "updated",
-  "fingerprint": "0197f8e5fc899d3a4ef0f3aae9808911eab342a18ce7be4b6eca1beeb8cc8f40",
-  "newItems": 5,
+  "fingerprint": "96ab6fae5c96ce32844ed9c239ea2f0baed03abdbef2d080addd96fcb5f8aa6a",
+  "newItems": 4,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -245,6 +245,10 @@
     "mastercardsvisionfortrustedagenticcommerce",
     "consumersembraceagenticcommerceforsmallerpurchases10232026",
     "thevanishingpointinagenticcommerce",
-    "aiagent重构商业交易从流量入口到支付授权"
+    "aiagent重构商业交易从流量入口到支付授权",
+    "jcrewbringsstripeintotechnologystackasitboostsbnploptionsandmakesagenticcommercemove",
+    "visaexpandshongkongpartnershipstoenableaipayments",
+    "seouleconomicdailytohostforumonaipaymentsandstablecoinsecurity",
+    "当agent开始替人花钱一场围绕ai支付的信任基建竞赛已开场"
   ]
 }
