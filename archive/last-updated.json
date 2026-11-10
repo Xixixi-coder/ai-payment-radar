@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-09",
-  "generatedAt": "2026-11-09T07:53:16.017Z",
+  "date": "2026-11-10",
+  "generatedAt": "2026-11-10T08:20:56.362Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-09",
-  "lastCheckedAt": "2026-11-09T07:53:16.017Z",
+  "checkedDate": "2026-11-10",
+  "lastCheckedAt": "2026-11-10T08:20:56.362Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-09T07:53:16.017Z",
+  "contentUpdatedAt": "2026-11-10T08:20:56.362Z",
   "status": "updated",
-  "fingerprint": "96ab6fae5c96ce32844ed9c239ea2f0baed03abdbef2d080addd96fcb5f8aa6a",
-  "newItems": 4,
+  "fingerprint": "7b177299dc2c82a08de70a7d742de86b2e8230c7948954f15351faec3bb32852",
+  "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -249,6 +249,14 @@
     "jcrewbringsstripeintotechnologystackasitboostsbnploptionsandmakesagenticcommercemove",
     "visaexpandshongkongpartnershipstoenableaipayments",
     "seouleconomicdailytohostforumonaipaymentsandstablecoinsecurity",
-    "当agent开始替人花钱一场围绕ai支付的信任基建竞赛已开场"
+    "当agent开始替人花钱一场围绕ai支付的信任基建竞赛已开场",
+    "earningrecommendationsvsbuyingclicksintheeraofagenticcommerce",
+    "visanysevexpandsdigitalpaymentscapabilitiesasagenticcommerceprogramsadvance",
+    "nhnrampsupstablecoinaipaymentsbusinesswithgroupwidepush",
+    "nearprotocolsshifttoagenticcommercegainsattention",
+    "bitcoinlightningcouldpoweraipaymentsandmachineauthenticationlqwdchiefsays",
+    "mastercardseesnewgrowthinaipaymentscybersecurityanddigitalassets",
+    "出海周报万事达卡明确ai支付规则支付机构外汇业务范围拓宽",
+    "ai智能体支付massive与支付宝aws的落地案例"
   ]
 }
