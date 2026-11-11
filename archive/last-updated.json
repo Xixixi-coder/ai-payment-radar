@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-10",
-  "generatedAt": "2026-11-10T08:20:56.362Z",
+  "date": "2026-11-11",
+  "generatedAt": "2026-11-11T07:42:25.952Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-10",
-  "lastCheckedAt": "2026-11-10T08:20:56.362Z",
+  "checkedDate": "2026-11-11",
+  "lastCheckedAt": "2026-11-11T07:42:25.952Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-10T08:20:56.362Z",
+  "contentUpdatedAt": "2026-11-11T07:42:25.952Z",
   "status": "updated",
-  "fingerprint": "7b177299dc2c82a08de70a7d742de86b2e8230c7948954f15351faec3bb32852",
+  "fingerprint": "a0eac39eb946c7e159fbe3b76a0e821bd334b17c2b2c8493b75fb6b1a5d82304",
   "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -257,6 +257,14 @@
     "bitcoinlightningcouldpoweraipaymentsandmachineauthenticationlqwdchiefsays",
     "mastercardseesnewgrowthinaipaymentscybersecurityanddigitalassets",
     "出海周报万事达卡明确ai支付规则支付机构外汇业务范围拓宽",
-    "ai智能体支付massive与支付宝aws的落地案例"
+    "ai智能体支付massive与支付宝aws的落地案例",
+    "kunalshahoutlineswhatsappsnextphasewithaipaymentsricherconversations",
+    "cardnetworksuseb2bpaymentstowritetherulesforagenticcommerce",
+    "aipaymentssmartermessagingwhatiswhatsappsbigplanglobalheadkunalshahreveals",
+    "solanaandcardanocompetetopowerthenextgenerationofaiagentpayments",
+    "consumerintelligenceintheageofagenticcommerce",
+    "circlemakesthecaseforaiagentpaymentswithspendingcontrolsatthecenter",
+    "支付宝为什么还在不断加码ai支付",
+    "nhn拟将ai数据中心运营规模扩至100mw加码gpu与ai支付布局"
   ]
 }
