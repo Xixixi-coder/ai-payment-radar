@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-11",
-  "generatedAt": "2026-11-11T07:42:25.952Z",
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T08:13:04.867Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-11",
-  "lastCheckedAt": "2026-11-11T07:42:25.952Z",
+  "checkedDate": "2026-11-12",
+  "lastCheckedAt": "2026-11-12T08:13:04.867Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-11T07:42:25.952Z",
+  "contentUpdatedAt": "2026-11-12T08:13:04.867Z",
   "status": "updated",
-  "fingerprint": "a0eac39eb946c7e159fbe3b76a0e821bd334b17c2b2c8493b75fb6b1a5d82304",
-  "newItems": 8,
+  "fingerprint": "83190f89ad4821b2334aa94d8245c04352444892e90177d53c4f2b181eff64f5",
+  "newItems": 11,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -265,6 +265,17 @@
     "consumerintelligenceintheageofagenticcommerce",
     "circlemakesthecaseforaiagentpaymentswithspendingcontrolsatthecenter",
     "支付宝为什么还在不断加码ai支付",
-    "nhn拟将ai数据中心运营规模扩至100mw加码gpu与ai支付布局"
+    "nhn拟将ai数据中心运营规模扩至100mw加码gpu与ai支付布局",
+    "agustinasartorielevatedtovpofagenticcommerceexperienceatultabeauty",
+    "中国ai购物迅速扩展通过ai聊天机器人交易超过5",
+    "naver年内将推个人ai代理覆盖购物预约和支付",
+    "paypaljoinsx402foundationaspremiermemberinaipaymentseffort",
+    "kunalshahchartsnewcourseforwhatsappwithaipayments",
+    "spotlightonagenticaithedigitalfairnessactandagenticcommerceviapassle",
+    "aipaymentsandamajorappmakeoverwhatsappceokunalshahrevealswhatscomingnext",
+    "韩国央行呼吁在ai支付普及前重新审视金融安全网经济财经日报",
+    "kunalshahrevealswhatsappsfutureplansaipaymentsandmorefeaturescoming",
+    "paypal加入x402基金会参与推动ai智能体支付开放标准",
+    "ai股崩盘波及加密杠杆出清后流动性与代理支付危机并存滚动新闻财经"
   ]
 }
