@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-12",
-  "generatedAt": "2026-11-12T08:13:04.867Z",
+  "date": "2026-11-13",
+  "generatedAt": "2026-11-13T07:51:16.782Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-12",
-  "lastCheckedAt": "2026-11-12T08:13:04.867Z",
+  "checkedDate": "2026-11-13",
+  "lastCheckedAt": "2026-11-13T07:51:16.782Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-12T08:13:04.867Z",
+  "contentUpdatedAt": "2026-11-13T07:51:16.782Z",
   "status": "updated",
-  "fingerprint": "83190f89ad4821b2334aa94d8245c04352444892e90177d53c4f2b181eff64f5",
-  "newItems": 11,
+  "fingerprint": "d121e91d507c5698af585e137d9df1845c09f36071218fa00214d6a126e94cb1",
+  "newItems": 8,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -276,6 +276,14 @@
     "韩国央行呼吁在ai支付普及前重新审视金融安全网经济财经日报",
     "kunalshahrevealswhatsappsfutureplansaipaymentsandmorefeaturescoming",
     "paypal加入x402基金会参与推动ai智能体支付开放标准",
-    "ai股崩盘波及加密杠杆出清后流动性与代理支付危机并存滚动新闻财经"
+    "ai股崩盘波及加密杠杆出清后流动性与代理支付危机并存滚动新闻财经",
+    "vercelnotenoughretailersareagenticcommercereadybutitsnotacrisisyet",
+    "sachinbansalinvesting2030millioninmanavgargsagenticcommercestartup",
+    "flipkartandnavifoundersachinbansalteamsupwithmanavgargfornewagenticcommercestartup",
+    "bankspaymentscompaniesracetogethandleonagenticpaymentswsj",
+    "retailersstepupresponseasaitakestheleadinshoppingandagenticcommercegainsmomentum",
+    "ptrntechnologyledbrandgrowthinternationalexpansionandagenticcommerceunderpintheopportunity",
+    "navoka推出面向ai的支付工具额度由账户持有人设定",
+    "paypal加入x402基金会推动ai智能体支付开放标准"
   ]
 }
