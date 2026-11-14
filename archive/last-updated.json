@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-13",
-  "generatedAt": "2026-11-13T07:51:16.782Z",
+  "date": "2026-11-14",
+  "generatedAt": "2026-11-14T07:32:56.813Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-13",
-  "lastCheckedAt": "2026-11-13T07:51:16.782Z",
+  "checkedDate": "2026-11-14",
+  "lastCheckedAt": "2026-11-14T07:32:56.813Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-13T07:51:16.782Z",
+  "contentUpdatedAt": "2026-11-14T07:32:56.813Z",
   "status": "updated",
-  "fingerprint": "d121e91d507c5698af585e137d9df1845c09f36071218fa00214d6a126e94cb1",
-  "newItems": 8,
+  "fingerprint": "2650d302bbef20fc063d80a20bdb0f1f54177310aa904b80f01c092315756f44",
+  "newItems": 10,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -284,6 +284,16 @@
     "retailersstepupresponseasaitakestheleadinshoppingandagenticcommercegainsmomentum",
     "ptrntechnologyledbrandgrowthinternationalexpansionandagenticcommerceunderpintheopportunity",
     "navoka推出面向ai的支付工具额度由账户持有人设定",
-    "paypal加入x402基金会推动ai智能体支付开放标准"
+    "paypal加入x402基金会推动ai智能体支付开放标准",
+    "americanexpressaxpbringsaipaymentstocardholdersandbroadensbasketballperks",
+    "americanexpressaxpaddsaipaymentsthroughchatgptwallet",
+    "openaisaipaymentsareherestablecoinpaymentsarenext",
+    "openaientersaipaymentsmarketwithchatgptwallet",
+    "openailauncheschatgptwalletforaipayments",
+    "openailauncheschatgptwalletforaipaymentstaptoknowmoreinshorts",
+    "让智能体帮你购物openai推出支付功能chatgptwallet",
+    "openai推出chatgpt钱包让ai代理能够支付购物费用",
+    "市场传闻摩根大通阻止ai购物代理支付",
+    "万事达卡启用创新中心涉ai支付安全等领域"
   ]
 }
