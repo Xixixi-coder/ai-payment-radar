@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-14",
-  "generatedAt": "2026-11-14T07:32:56.813Z",
+  "date": "2026-11-15",
+  "generatedAt": "2026-11-15T07:47:15.870Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-14",
-  "lastCheckedAt": "2026-11-14T07:32:56.813Z",
+  "checkedDate": "2026-11-15",
+  "lastCheckedAt": "2026-11-15T07:47:15.870Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-14T07:32:56.813Z",
+  "contentUpdatedAt": "2026-11-15T07:47:15.870Z",
   "status": "updated",
-  "fingerprint": "2650d302bbef20fc063d80a20bdb0f1f54177310aa904b80f01c092315756f44",
-  "newItems": 10,
+  "fingerprint": "5ef065163da506f19d64fbf68efc8f841a810b5232eb1c3f704d2eaed2965a5a",
+  "newItems": 3,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -294,6 +294,9 @@
     "让智能体帮你购物openai推出支付功能chatgptwallet",
     "openai推出chatgpt钱包让ai代理能够支付购物费用",
     "市场传闻摩根大通阻止ai购物代理支付",
-    "万事达卡启用创新中心涉ai支付安全等领域"
+    "万事达卡启用创新中心涉ai支付安全等领域",
+    "openaichatgptwalletenters8bagenticcommercerace",
+    "yournextcustomerisanaiagenttheshopifyplusplaybookforagenticcommercein2027",
+    "openailaunchesaipaymentsinchatgptwithvisamastercardandamex"
   ]
 }
