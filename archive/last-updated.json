@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-17",
-  "generatedAt": "2026-11-17T09:06:34.266Z",
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T08:28:16.960Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-17",
-  "lastCheckedAt": "2026-11-17T09:06:34.266Z",
+  "checkedDate": "2026-11-18",
+  "lastCheckedAt": "2026-11-18T08:28:16.960Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-17T09:06:34.266Z",
+  "contentUpdatedAt": "2026-11-18T08:28:16.960Z",
   "status": "updated",
-  "fingerprint": "46e6ddfdbb4c3758d5f4439444209d13b9bc9ef30161458f2d3c51bae0e0a484",
+  "fingerprint": "91166e928e61dca7a20970d19a758a1c7e8273267b1acb31dd63f177cf683e64",
   "newItems": 10,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -310,6 +310,16 @@
     "openailauncheschatgptwalletforagenticpaymentsintheus",
     "chatgpt钱包上线openai的dots智能体可代你完成购物支付ai应用",
     "rain推出agentvaults让企业以自有品牌嵌入智能体支付",
-    "万事达卡完成首笔ai智能体机票预订与支付"
+    "万事达卡完成首笔ai智能体机票预订与支付",
+    "visaexpandsaipaymentsandstablecoinpushacrossasiapacific",
+    "visaexpandsasiapacificaipaymentsprogramtestsstablecoinprefunding",
+    "中国社科院杨涛跨境支付与ai支付的融合创新",
+    "visaexpandsagenticaipaymentsstablecoinservicesinapac",
+    "wouldyouletaispendyourmoneyinsidevisasplanforagenticcommerce",
+    "韩国bc卡联手pickle开发智能体支付服务",
+    "visatapsover50partnerstoprepareforaiagentpayments",
+    "solana基金会发布solanaai加码ai智能体支付基础设施",
+    "visaexpandsagenticreadytohelpscaletrustedaicommerceinasiapacific",
+    "openai推出ai支付钱包可代用户购物付款"
   ]
 }
