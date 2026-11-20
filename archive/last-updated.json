@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-19",
-  "generatedAt": "2026-11-19T08:41:17.158Z",
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-20T08:26:48.412Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-19",
-  "lastCheckedAt": "2026-11-19T08:41:17.158Z",
+  "checkedDate": "2026-11-20",
+  "lastCheckedAt": "2026-11-20T08:26:48.412Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-19T08:41:17.158Z",
+  "contentUpdatedAt": "2026-11-20T08:26:48.412Z",
   "status": "updated",
-  "fingerprint": "9d69bfc3d90f233427fdc9848ea0988e4e798f101365412e7eee9fecf83111c3",
+  "fingerprint": "1441ad50bfb3d932d13cc2ac92e3ffe967734d95b13faef25bd07537de6f8da1",
   "newItems": 12,
   "successfulSources": 4,
   "seenArticleKeys": [
@@ -332,6 +332,18 @@
     "payful亮相2026新加坡金融科技节开启ai支付新篇章",
     "绿联国际银行取得2项智能体金融进展涉ai智能体支付",
     "传音与visa签署战略合作备忘录智能体支付完成真实交易验证",
-    "传音与visa达成战略合作携手推动新兴市场数字支付与智能体支付创新"
+    "传音与visa达成战略合作携手推动新兴市场数字支付与智能体支付创新",
+    "howisagenticcommerceshapingvisanysevafterrecordrevenue",
+    "visa发布首个ai购物行业基准测试近半数测试失败",
+    "netsandantinternationaldeepenpartnershiptoadvancesingaporesagenticcommerce",
+    "同程旅行接入支付宝ai支付上线考试抢房助手",
+    "agenticpaymentstogrowatthespeedoftrust",
+    "swedishagenticcommercestartupwilgotsecures3millioninseedfundingroundledbyindustrifonden",
+    "同程旅行接入支付宝ai支付考前抢好价房让智能体来办",
+    "whyagenticcommercewillchangebrandstorytelling",
+    "移动支付网早报1120alipay与pix联通visa扩大智能体支付计划",
+    "tacnodecontextlakequeryapinowavailableforaiagentsthroughagenticcommerceonawsmarketplace",
+    "visa智能体支付扩至欧洲收单85家机构加入",
+    "visa调查七成消费者信任visa处理ai代购支付仅一成愿提供财务信息"
   ]
 }
