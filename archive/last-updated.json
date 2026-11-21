@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-20",
-  "generatedAt": "2026-11-20T08:26:48.412Z",
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T08:13:43.445Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-20",
-  "lastCheckedAt": "2026-11-20T08:26:48.412Z",
+  "checkedDate": "2026-11-21",
+  "lastCheckedAt": "2026-11-21T08:13:43.445Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-20T08:26:48.412Z",
+  "contentUpdatedAt": "2026-11-21T08:13:43.445Z",
   "status": "updated",
-  "fingerprint": "1441ad50bfb3d932d13cc2ac92e3ffe967734d95b13faef25bd07537de6f8da1",
-  "newItems": 12,
+  "fingerprint": "7f67f24b1cc71260f7cdb3672f1a3f02b27023e685d6381f9216f02be29efeae",
+  "newItems": 10,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -344,6 +344,16 @@
     "移动支付网早报1120alipay与pix联通visa扩大智能体支付计划",
     "tacnodecontextlakequeryapinowavailableforaiagentsthroughagenticcommerceonawsmarketplace",
     "visa智能体支付扩至欧洲收单85家机构加入",
-    "visa调查七成消费者信任visa处理ai代购支付仅一成愿提供财务信息"
+    "visa调查七成消费者信任visa处理ai代购支付仅一成愿提供财务信息",
+    "paypal宣布多项高管任命推进三年战略涉venmo支付ai等",
+    "adyentapsklarnatoenableagenticcommercepaymentoptionsbeyondcards",
+    "realitycheckagenticcommerceinretail",
+    "newagenticcommerceguidearrivesas22ofaiagentusersreportblockedpurchases",
+    "harnessbuysignsmouwithmastercardonagenticcommerceinapac",
+    "adyenstockcompanyjoinsvisaaipaymentprogramadhocnewsde",
+    "theevolutionofcommercegettingreadyforafluidagenticfuture",
+    "nets与蚂蚁国际深化合作拟接入amp探索ai智能体支付",
+    "移卡携手mastercard探索agent支付推动ai智能体商业交易场景落地",
+    "推动ai智能体商业交易场景落地mastercard探索agent支付"
   ]
 }
