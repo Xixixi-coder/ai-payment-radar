@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-21",
-  "generatedAt": "2026-11-21T08:13:43.445Z",
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22T07:57:37.779Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-21",
-  "lastCheckedAt": "2026-11-21T08:13:43.445Z",
+  "checkedDate": "2026-11-22",
+  "lastCheckedAt": "2026-11-22T07:57:37.779Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-21T08:13:43.445Z",
+  "contentUpdatedAt": "2026-11-22T07:57:37.779Z",
   "status": "updated",
-  "fingerprint": "7f67f24b1cc71260f7cdb3672f1a3f02b27023e685d6381f9216f02be29efeae",
-  "newItems": 10,
+  "fingerprint": "aefa8910963a68d8794339bcb3af64fb8f7439f038a1739c617bae4478ba61da",
+  "newItems": 3,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -354,6 +354,9 @@
     "theevolutionofcommercegettingreadyforafluidagenticfuture",
     "nets与蚂蚁国际深化合作拟接入amp探索ai智能体支付",
     "移卡携手mastercard探索agent支付推动ai智能体商业交易场景落地",
-    "推动ai智能体商业交易场景落地mastercard探索agent支付"
+    "推动ai智能体商业交易场景落地mastercard探索agent支付",
+    "跨境收款之后中国公司盯上智能体支付的新生意",
+    "meinsteinoutlinesframeworkforevaluatingconsumerintentinagenticcommerce",
+    "3fintechstockstiedtoaipaymentsgrowthincludingriskifiedstock"
   ]
 }
