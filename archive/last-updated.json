@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-22",
-  "generatedAt": "2026-11-22T07:57:37.779Z",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T08:56:36.839Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-22",
-  "lastCheckedAt": "2026-11-22T07:57:37.779Z",
+  "checkedDate": "2026-11-23",
+  "lastCheckedAt": "2026-11-23T08:56:36.839Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-22T07:57:37.779Z",
+  "contentUpdatedAt": "2026-11-23T08:56:36.839Z",
   "status": "updated",
-  "fingerprint": "aefa8910963a68d8794339bcb3af64fb8f7439f038a1739c617bae4478ba61da",
-  "newItems": 3,
+  "fingerprint": "900ea4dd68215b0d1354133ae91c02f16809b822cc3730896850d04e77c375db",
+  "newItems": 7,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -357,6 +357,13 @@
     "推动ai智能体商业交易场景落地mastercard探索agent支付",
     "跨境收款之后中国公司盯上智能体支付的新生意",
     "meinsteinoutlinesframeworkforevaluatingconsumerintentinagenticcommerce",
-    "3fintechstockstiedtoaipaymentsgrowthincludingriskifiedstock"
+    "3fintechstockstiedtoaipaymentsgrowthincludingriskifiedstock",
+    "unionpayinternationalshowcasesagenticpaymentsandfinancialaiinnovationsatsingaporefintechfestival2026",
+    "agenticcommerceaccountabilitywhopayswhenanaiagentbuyswrong",
+    "tossbankceoeunmirheeaipaymentsmustfirsthaveclearidentityauthorityandresponsibility",
+    "gstar2026forter展示其ai支付安全技术",
+    "pinelabslaunchesresearchseriesonagenticcommerce",
+    "agenticcommerceiscomingforyourbanksbalancesheetisyourfraudstrategyready",
+    "paymentsgrouplaunches12monthdriveforagenticcommercepolicy"
   ]
 }
