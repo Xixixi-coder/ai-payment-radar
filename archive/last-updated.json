@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-23",
-  "generatedAt": "2026-11-23T08:56:36.839Z",
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T10:50:56.489Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-23",
-  "lastCheckedAt": "2026-11-23T08:56:36.839Z",
+  "checkedDate": "2026-11-24",
+  "lastCheckedAt": "2026-11-24T10:50:56.489Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-23T08:56:36.839Z",
+  "contentUpdatedAt": "2026-11-24T10:50:56.489Z",
   "status": "updated",
-  "fingerprint": "900ea4dd68215b0d1354133ae91c02f16809b822cc3730896850d04e77c375db",
-  "newItems": 7,
+  "fingerprint": "3621369e965e853751d3a2983ee1ef0efa422c7fc9d7b54cfb5d027dc0c2617b",
+  "newItems": 12,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -364,6 +364,18 @@
     "gstar2026forter展示其ai支付安全技术",
     "pinelabslaunchesresearchseriesonagenticcommerce",
     "agenticcommerceiscomingforyourbanksbalancesheetisyourfraudstrategyready",
-    "paymentsgrouplaunches12monthdriveforagenticcommercepolicy"
+    "paymentsgrouplaunches12monthdriveforagenticcommercepolicy",
+    "azerbaijanpreparingtointroduceinnovationsinagenticcommerce",
+    "mastercardtobringnewagenticcommercesolutionstoazerbaijan",
+    "cashfreelauncheswalletforaipayments100agentintegrationsgoliveforbillpayments",
+    "谷歌拟为浏览器ai加权限锁禁止进入支付页面",
+    "国产agent推荐丨chatgpt钱包发布引发ai交易安全新思考九科信息bitagent探索效率与安全兼顾的人机协同新模式",
+    "paypalsetsvirtualcardrulesforagenticcommerce",
+    "blockstockand2aipaymentssharesridingthefraudpreventionboom",
+    "xrpledgerpilotbundles213008aipaymentsinto6324onchainsettlements",
+    "visa准备推出ai支付系统数字代理可以管理购物",
+    "visa报告ai赋能的欺诈和第三方攻击正在全球范围内蔓延",
+    "wooshpay发布agenticpayments产品演示将于2027年第一季度试点",
+    "银联国际与新加坡收单机构debia推动智能体支付应用"
   ]
 }
