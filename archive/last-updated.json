@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-24",
-  "generatedAt": "2026-11-24T10:50:56.489Z",
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T09:46:47.671Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-24",
-  "lastCheckedAt": "2026-11-24T10:50:56.489Z",
+  "checkedDate": "2026-11-25",
+  "lastCheckedAt": "2026-11-25T09:46:47.671Z",
   "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-24T10:50:56.489Z",
+  "contentUpdatedAt": "2026-11-25T09:46:47.671Z",
   "status": "updated",
-  "fingerprint": "3621369e965e853751d3a2983ee1ef0efa422c7fc9d7b54cfb5d027dc0c2617b",
-  "newItems": 12,
+  "fingerprint": "d67babb3f83cf644f83ef785b3d200b844afd5df8f1efd43065b3076b877d3c0",
+  "newItems": 4,
   "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
@@ -376,6 +376,10 @@
     "visa准备推出ai支付系统数字代理可以管理购物",
     "visa报告ai赋能的欺诈和第三方攻击正在全球范围内蔓延",
     "wooshpay发布agenticpayments产品演示将于2027年第一季度试点",
-    "银联国际与新加坡收单机构debia推动智能体支付应用"
+    "银联国际与新加坡收单机构debia推动智能体支付应用",
+    "lianliandigitechlauncheslianlianxcardclosingtheloopbetweenaitaskexecutionandagenticpayments",
+    "gocardlesscompletesfcaaitestingasresearchrevealsukconsumertrustgapinagenticpayments",
+    "agenticcommercehitsthehighstreetmarksspencerandsainsburyspartnerwithmetamuse",
+    "杨涛等智能体支付需构建系统性治理框架"
   ]
 }
