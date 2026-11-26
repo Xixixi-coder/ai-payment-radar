@@ -1,17 +1,19 @@
 {
-  "date": "2026-11-25",
-  "generatedAt": "2026-11-25T09:46:47.671Z",
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T09:26:02.720Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-25",
-  "lastCheckedAt": "2026-11-25T09:46:47.671Z",
-  "sourceErrors": [],
+  "checkedDate": "2026-11-26",
+  "lastCheckedAt": "2026-11-26T09:26:02.720Z",
+  "sourceErrors": [
+    "终端与场景: HTTP 429"
+  ],
   "error": null,
-  "contentUpdatedAt": "2026-11-25T09:46:47.671Z",
+  "contentUpdatedAt": "2026-11-26T09:26:02.720Z",
   "status": "updated",
-  "fingerprint": "d67babb3f83cf644f83ef785b3d200b844afd5df8f1efd43065b3076b877d3c0",
-  "newItems": 4,
-  "successfulSources": 4,
+  "fingerprint": "e61355b12f9ad4fdd680262f2264878e6c2a20ca2de36b022148b5ec89fbdac9",
+  "newItems": 6,
+  "successfulSources": 3,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
     "bestcryptotoinvestinoctober2026xrphits139maipaymentsasapeings00007presalesells496mtokens",
@@ -380,6 +382,12 @@
     "lianliandigitechlauncheslianlianxcardclosingtheloopbetweenaitaskexecutionandagenticpayments",
     "gocardlesscompletesfcaaitestingasresearchrevealsukconsumertrustgapinagenticpayments",
     "agenticcommercehitsthehighstreetmarksspencerandsainsburyspartnerwithmetamuse",
-    "杨涛等智能体支付需构建系统性治理框架"
+    "杨涛等智能体支付需构建系统性治理框架",
+    "blackfridayexposesthetrustgapinaipayments",
+    "whatisagenticcommercehowaiagentsarechangingonlineshopping",
+    "singaporebaseddebiapartnerswithmastercardtopilotagenticcommerce",
+    "howmarketplacesareadaptingtotheageofagenticcommerce",
+    "debiaandmastercardsignmoutoadvanceagenticcommerce",
+    "cequirecapitalbetsonaipaymentsandtokenizedfinance"
   ]
 }
