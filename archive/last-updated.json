@@ -1,19 +1,17 @@
 {
-  "date": "2026-11-26",
-  "generatedAt": "2026-11-26T09:26:02.720Z",
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T09:37:37.129Z",
   "source": "google-news-rss",
   "schemaVersion": 2,
-  "checkedDate": "2026-11-26",
-  "lastCheckedAt": "2026-11-26T09:26:02.720Z",
-  "sourceErrors": [
-    "终端与场景: HTTP 429"
-  ],
+  "checkedDate": "2026-11-27",
+  "lastCheckedAt": "2026-11-27T09:37:37.129Z",
+  "sourceErrors": [],
   "error": null,
-  "contentUpdatedAt": "2026-11-26T09:26:02.720Z",
+  "contentUpdatedAt": "2026-11-27T09:37:37.129Z",
   "status": "updated",
-  "fingerprint": "e61355b12f9ad4fdd680262f2264878e6c2a20ca2de36b022148b5ec89fbdac9",
-  "newItems": 6,
-  "successfulSources": 3,
+  "fingerprint": "f53375922c5751ef77a6a2fdf86343518a0f6cd2de56f470a06a20054f37dce4",
+  "newItems": 8,
+  "successfulSources": 4,
   "seenArticleKeys": [
     "transcendingseotheriseofagenticcommerceoptimization",
     "bestcryptotoinvestinoctober2026xrphits139maipaymentsasapeings00007presalesells496mtokens",
@@ -388,6 +386,14 @@
     "singaporebaseddebiapartnerswithmastercardtopilotagenticcommerce",
     "howmarketplacesareadaptingtotheageofagenticcommerce",
     "debiaandmastercardsignmoutoadvanceagenticcommerce",
-    "cequirecapitalbetsonaipaymentsandtokenizedfinance"
+    "cequirecapitalbetsonaipaymentsandtokenizedfinance",
+    "introducingbnbchaindevelopsnewlayer1networktargetingtradingagenticpaymentsprivatefinance",
+    "digitalregulatorslookingatagenticcommerce",
+    "xrppriceanalysisfornovember27aipaymentsrecordbrokengrowthfueled",
+    "mastercardmasignsupforliveaicommercepilottesting",
+    "agenticpaymentsthenextevolutionofcommerceandanewroleforfinancialinstitutions",
+    "trustly获6000万美元战略投资加码ai支付智能",
+    "连连数字推出lianlianxcard打通ai任务执行到支付的最后一环",
+    "谷歌拟给浏览器ai加道权限锁允许看商品不许进支付页"
   ]
 }
